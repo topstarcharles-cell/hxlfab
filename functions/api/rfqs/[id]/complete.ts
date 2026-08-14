@@ -3,6 +3,47 @@ import type { RfqFileRow } from "../../_shared";
 
 type CompleteBody = { accessToken?: unknown };
 
+type Notification = {
+  id: string;
+  customerEmail: string;
+  company: string;
+  text: string;
+};
+
+async function sendRfqNotification(env: Env, notification: Notification): Promise<void> {
+  const accountId = env.CF_ACCOUNT_ID.trim();
+  const apiToken = env.CF_EMAIL_API_TOKEN.trim();
+  const from = env.RFQ_FROM_EMAIL.trim();
+  const to = env.RFQ_NOTIFY_EMAIL.trim();
+
+  if (!accountId || !apiToken || !from || !to) {
+    throw new Error("RFQ email notification secrets are not fully configured.");
+  }
+
+  const response = await fetch(
+    `https://api.cloudflare.com/client/v4/accounts/${encodeURIComponent(accountId)}/email/sending/send`,
+    {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${apiToken}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from: { address: from, name: "HXLFAB RFQ" },
+        to,
+        reply_to: notification.customerEmail,
+        subject: `[${notification.id}] New PCB RFQ from ${notification.company}`,
+        text: notification.text,
+      }),
+    },
+  );
+
+  await response.body?.cancel();
+  if (!response.ok) {
+    throw new Error(`Cloudflare Email Service returned HTTP ${response.status}.`);
+  }
+}
+
 export const onRequestPost: PagesFunction<Env> = async (context) => {
   const { request, env, params } = context;
   const id = String(params.id || "");
@@ -57,11 +98,10 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
   ].join("\n");
 
   context.waitUntil(
-    env.RFQ_EMAIL.send({
-      from: env.RFQ_FROM_EMAIL,
-      to: env.RFQ_NOTIFY_EMAIL,
-      replyTo: rfq.email,
-      subject: `[${id}] New PCB RFQ from ${rfq.company}`,
+    sendRfqNotification(env, {
+      id,
+      customerEmail: rfq.email,
+      company: rfq.company,
       text,
     }).then(
       () => console.log(JSON.stringify({ event: "rfq_notification_sent", id })),
