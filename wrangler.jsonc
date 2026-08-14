@@ -12,6 +12,12 @@
       "migrations_dir": "./migrations"
     }
   ],
+  "r2_buckets": [
+    {
+      "binding": "RFQ_FILES",
+      "bucket_name": "hxlfab-rfq-files"
+    }
+  ],
   "vars": {
     "PUBLIC_SITE_URL": "https://hxlfab.com",
     "RFQ_FROM_EMAIL": "rfq@hxlfab.com",
