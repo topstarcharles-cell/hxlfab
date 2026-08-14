@@ -18,12 +18,6 @@
       "bucket_name": "hxlfab-rfq-files"
     }
   ],
-  "send_email": [
-    {
-      "name": "RFQ_EMAIL",
-      "destination_address": "sales@hxlfab.com"
-    }
-  ],
   "vars": {
     "PUBLIC_SITE_URL": "https://hxlfab.com",
     "RFQ_FROM_EMAIL": "rfq@hxlfab.com",
@@ -31,9 +25,5 @@
     "MAX_FILE_BYTES": "104857600",
     "MAX_TOTAL_BYTES": "209715200",
     "MAX_FILE_COUNT": "10"
-  },
-  "observability": {
-    "enabled": true,
-    "head_sampling_rate": 1
   }
 }
