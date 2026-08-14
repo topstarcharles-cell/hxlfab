@@ -8,7 +8,7 @@
     {
       "binding": "RFQ_DB",
       "database_name": "hxlfab-rfq",
-      "database_id": "REPLACE_AFTER_PROVISIONING",
+      "database_id": "b91a74c3-071d-4251-8852-1534cb608dbe",
       "migrations_dir": "./migrations"
     }
   ],
