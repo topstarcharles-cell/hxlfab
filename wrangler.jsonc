@@ -20,8 +20,7 @@
   ],
   "vars": {
     "PUBLIC_SITE_URL": "https://hxlfab.com",
-    "RFQ_FROM_EMAIL": "rfq@hxlfab.com",
-    "RFQ_NOTIFY_EMAIL": "sales@hxlfab.com",
+    "RFQ_FROM_EMAIL": "sales@hxlfab.com",
     "MAX_FILE_BYTES": "104857600",
     "MAX_TOTAL_BYTES": "209715200",
     "MAX_FILE_COUNT": "10"
