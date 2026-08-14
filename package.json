@@ -1,0 +1,17 @@
+{
+  "name": "hxlfab",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler pages dev public --d1=RFQ_DB --r2=RFQ_FILES",
+    "deploy": "wrangler pages deploy public --project-name hxlfab",
+    "typecheck": "tsc --noEmit",
+    "check": "wrangler deploy --dry-run --config wrangler.jsonc",
+    "types": "wrangler types worker-configuration.d.ts"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260814.1",
+    "typescript": "^5.9.2",
+    "wrangler": "^4.30.0"
+  }
+}
