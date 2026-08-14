@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HXLFAB - Shenzhen Hengxinlong Precision Electronics Co., Ltd</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- 顶部快捷信息栏 (含官方业务邮箱) -->
+    <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-6">
+                <span>📍 Shenzhen Hengxinlong Precision Electronics Co., Ltd</span>
+                <a href="mailto:sales@hxlfab.com" class="hover:text-white transition flex items-center space-x-1">
+                    <span>✉️ sales@hxlfab.com</span>
+                </a>
+            </div>
+            <div class="text-slate-400">
+                <span>⚡ 24/7 Engineering Support & Fast Turnaround</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 顶部导航栏 -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <a href="#" class="text-2xl font-black tracking-tight text-slate-900">HXL<span class="text-blue-600">FAB</span></a>
+            </div>
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold text-slate-600">
+                <a href="#products" class="hover:text-blue-600 transition">Products</a>
+                <a href="#calculator" class="hover:text-blue-600 transition">Instant Quote</a>
+                <a href="#pricing-guide" class="hover:text-blue-600 transition">Pricing Guide</a>
+                <a href="#capabilities" class="hover:text-blue-600 transition">Capabilities</a>
+                <a href="#facility" class="hover:text-blue-600 transition">Facility & QA</a>
+                <a href="#faq" class="hover:text-blue-600 transition">FAQ</a>
+            </nav>
+            <div>
+                <a href="#calculator" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg font-semibold text-sm transition shadow-md shadow-blue-600/20">
+                    Request a Quote
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 顶层深色大横幅 -->
+    <section class="bg-[#070d1d] text-white py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#3b82f6_1.5px,transparent_1.5px)] [background-size:24px_24px]"></div>
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center space-x-2 bg-blue-900/60 border border-blue-500/30 px-4 py-1.5 rounded-full text-blue-400 text-xs font-semibold uppercase tracking-wider mb-6">
+                <span>⚡ Certified Global PCB & PCBA Manufacturer</span>
+            </div>
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                Engineering the Future with <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">High-Precision PCBs</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed">
+                Shenzhen Hengxinlong Precision Electronics delivers advanced Multilayer, HDI, and High-Frequency circuit boards to global innovators. Contact us at <span class="text-blue-400 font-semibold">sales@hxlfab.com</span>.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#calculator" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition shadow-xl shadow-blue-600/30">
+                    Get an Instant Quote
+                </a>
+                <a href="#products" class="bg-slate-800/80 hover:bg-slate-700 text-slate-200 border border-slate-700 px-8 py-4 rounded-xl font-bold text-lg transition backdrop-blur">
+                    View Products
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 工厂实力数据统计栏 -->
+    <section class="bg-white border-b border-slate-200 py-12 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div class="border-r last:border-none border-slate-100">
+                <div class="text-3xl sm:text-4xl font-extrabold text-slate-900">50,000<span class="text-blue-600">m²</span></div>
+                <div class="text-xs font-bold text-slate-500 mt-1 uppercase tracking-wider">Manufacturing Facility</div>
+            </div>
+            <div class="border-r last:border-none border-slate-100">
+                <div class="text-3xl sm:text-4xl font-extrabold text-slate-900">1M<span class="text-blue-600">+</span></div>
+                <div class="text-xs font-bold text-slate-500 mt-1 uppercase tracking-wider">Annual Capacity (M²)</div>
+            </div>
+            <div class="border-r last:border-none border-slate-100">
+                <div class="text-3xl sm:text-4xl font-extrabold text-slate-900">15<span class="text-blue-600">+</span></div>
+                <div class="text-xs font-bold text-slate-500 mt-1 uppercase tracking-wider">Years of Excellence</div>
+            </div>
+            <div>
+                <div class="text-3xl sm:text-4xl font-extrabold text-slate-900">IATF16949</div>
+                <div class="text-xs font-bold text-slate-500 mt-1 uppercase tracking-wider">ISO & UL Certified</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品介绍与图文展示区 (Products & Introduction) - 已适配 .jpeg 后缀 -->
+    <section id="products" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-blue-600 font-bold text-xs uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full">Our Product Portfolio</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">High-Performance PCB Solutions</h2>
+                <p class="text-slate-600 mt-2">Engineered to meet rigorous international standards for automotive, telecommunications, medical, and industrial electronics.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- 产品 1 -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
+                    <div class="h-48 relative bg-slate-200">
+                        <img src="./images/pcb1.jpeg" alt="Multilayer Rigid PCBs" class="w-full h-full object-cover">
+                        <div class="absolute top-3 right-3 bg-blue-600 text-white text-xs px-2 py-1 rounded font-semibold shadow">Popular</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Multilayer Circuit Boards</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-4">Precision impedance control, advanced lamination, and high reliability for complex motherboards and control units.</p>
+                        <a href="#calculator" class="text-blue-600 text-xs font-bold hover:underline">Calculate Price &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- 产品 2 -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
+                    <div class="h-48 relative bg-slate-200">
+                        <img src="./images/pcb2.jpeg" alt="HDI & Microvia PCBs" class="w-full h-full object-cover">
+                        <div class="absolute top-3 right-3 bg-indigo-600 text-white text-xs px-2 py-1 rounded font-semibold shadow">Advanced</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-slate-900 text-base mb-2">HDI & Microvia Boards</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-4">Designed for high-density mobile devices, 5G modules, and high-speed data transmission equipment.</p>
+                        <a href="#calculator" class="text-blue-600 text-xs font-bold hover:underline">Calculate Price &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- 产品 3 -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
+                    <div class="h-48 relative bg-slate-200">
+                        <img src="./images/pcb3.jpeg" alt="Aluminum Metal Core" class="w-full h-full object-cover">
+                        <div class="absolute top-3 right-3 bg-blue-500 text-white text-xs px-2 py-1 rounded font-semibold shadow">Thermal</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Aluminum / Metal Core PCBs</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-4">Optimal thermal management solutions built specifically for high-power LED lighting and power electronics.</p>
+                        <a href="#calculator" class="text-blue-600 text-xs font-bold hover:underline">Calculate Price &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- 产品 4 -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
+                    <div class="h-48 relative bg-slate-200">
+                        <img src="./images/pcb4.jpeg" alt="Rogers & High-Frequency" class="w-full h-full object-cover">
+                        <div class="absolute top-3 right-3 bg-emerald-600 text-white text-xs px-2 py-1 rounded font-semibold shadow">RF / High-Freq</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-slate-900 text-base mb-2">High-Frequency RF Boards</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-4">Utilizing Rogers and PTFE substrates for aerospace, radar systems, and microwave communication.</p>
+                        <a href="#calculator" class="text-blue-600 text-xs font-bold hover:underline">Calculate Price &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 在线计价与成本试算工具 -->
+    <section id="calculator" class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="text-blue-600 font-bold text-xs uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full">Transparent Pricing</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Online PCB Quote & Cost Calculator</h2>
+            <p class="text-slate-600 mt-2 max-w-xl mx-auto">Configure your exact PCB specifications below for an instant price breakdown. For custom batch RFQs, email <a href="mailto:sales@hxlfab.com" class="text-blue-600 underline font-semibold">sales@hxlfab.com</a>.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-xl border border-slate-200/80 p-6 sm:p-10 space-y-8">
+            <!-- Step 1: 尺寸与数量 -->
+            <div>
+                <div class="flex items-center space-x-3 mb-4">
+                    <span class="flex items-center justify-center w-7 h-7 rounded-full bg-blue-600 text-white font-bold text-sm">1</span>
+                    <h3 class="text-lg font-bold text-slate-900">Board Dimensions & Quantity</h3>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Length (mm) *</label>
+                        <input type="number" id="length" value="100" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-4 py-3 text-slate-800 font-medium focus:ring-2 focus:ring-blue-600 focus:outline-none" oninput="calculatePrice()">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Width (mm) *</label>
+                        <input type="number" id="width" value="80" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-4 py-3 text-slate-800 font-medium focus:ring-2 focus:ring-blue-600 focus:outline-none" oninput="calculatePrice()">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Quantity (pcs) *</label>
+                        <input type="number" id="quantity" value="500" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-4 py-3 text-slate-800 font-medium focus:ring-2 focus:ring-blue-600 focus:outline-none" oninput="calculatePrice()">
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-slate-100">
+
+            <!-- Step 2: PCB 规格参数 -->
+            <div>
+                <div class="flex items-center space-x-3 mb-4">
+                    <span class="flex items-center justify-center w-7 h-7 rounded-full bg-blue-600 text-white font-bold text-sm">2</span>
+                    <h3 class="text-lg font-bold text-slate-900">PCB Specifications</h3>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-xs font-bold uppercase text-slate-600 mb-2">Layers</label>
+                    <div class="grid grid-cols-3 sm:grid-cols-6 gap-2" id="layerOptions">
+                        <button type="button" onclick="setParam('layers', 1, this)" class="layer-btn py-2.5 text-sm font-semibold rounded-lg border border-slate-200 bg-slate-50 text-slate-700 hover:border-blue-600 transition">1 Layer</button>
+                        <button type="button" onclick="setParam('layers', 2, this)" class="layer-btn py-2.5 text-sm font-semibold rounded-lg border border-blue-600 bg-blue-50 text-blue-700 transition">2 Layers</button>
+                        <button type="button" onclick="setParam('layers', 4, this)" class="layer-btn py-2.5 text-sm font-semibold rounded-lg border border-slate-200 bg-slate-50 text-slate-700 hover:border-blue-600 transition">4 Layers</button>
+                        <button type="button" onclick="setParam('layers', 6, this)" class="layer-btn py-2.5 text-sm font-semibold rounded-lg border border-slate-200 bg-slate-50 text-slate-700 hover:border-blue-600 transition">6 Layers</button>
+                        <button type="button" onclick="setParam('layers', 8, this)" class="layer-btn py-2.5 text-sm font-semibold rounded-lg border border-slate-200 bg-slate-50 text-slate-700 hover:border-blue-600 transition">8 Layers</button>
+                        <button type="button" onclick="setParam('layers', 10, this)" class="layer-btn py-2.5 text-sm font-semibold rounded-lg border border-slate-200 bg-slate-50 text-slate-700 hover:border-blue-600 transition">10+ Layers</button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Material</label>
+                        <select id="material" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-3 text-sm font-medium text-slate-800 focus:ring-2 focus:ring-blue-600 focus:outline-none" onchange="calculatePrice()">
+                            <option value="1.0">FR-4 Standard TG (130-140)</option>
+                            <option value="1.3">FR-4 High TG (170)</option>
+                            <option value="1.8">Aluminum (Metal Core)</option>
+                            <option value="2.2">Rogers High Frequency</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Thickness</label>
+                        <select id="thickness" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-3 text-sm font-medium text-slate-800 focus:ring-2 focus:ring-blue-600 focus:outline-none" onchange="calculatePrice()">
+                            <option value="1.0">1.6 mm (Standard)</option>
+                            <option value="1.1">1.0 mm</option>
+                            <option value="1.2">1.2 mm</option>
+                            <option value="1.4">2.0 mm</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Finished Copper</label>
+                        <select id="copper" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-3 text-sm font-medium text-slate-800 focus:ring-2 focus:ring-blue-600 focus:outline-none" onchange="calculatePrice()">
+                            <option value="1.0">1 oz (Standard)</option>
+                            <option value="1.4">2 oz</option>
+                            <option value="1.8">3 oz</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-slate-600 mb-2">Surface Finish</label>
+                    <div class="grid grid-cols-2 sm:grid-cols-5 gap-2" id="finishOptions">
+                        <button type="button" onclick="setParam('finish', 'HASL', this)" class="finish-btn py-2.5 text-xs font-semibold rounded-lg border border-slate-200 bg-slate-50 text-slate-700 hover:border-blue-600 transition">HASL (with lead)</button>
+                        <button type="button" onclick="setParam('finish', 'HASL_LF', this)" class="finish-btn py-2.5 text-xs font-semibold rounded-lg border border-blue-600 bg-blue-50 text-blue-700 transition">HASL (lead free)</button>
+                        <button type="button" onclick="setParam('finish', 'ENIG', this)" class="finish-btn py-2.5 text-xs font-semibold rounded-lg border border-slate-200 bg-slate-50 text-slate-700 hover:border-blue-600 transition">ENIG (Gold)</button>
+                        <button type="button" onclick="setParam('finish', 'OSP', this)" class="finish-btn py-2.5 text-xs font-semibold rounded-lg border border-slate-200 bg-slate-50 text-slate-700 hover:border-blue-600 transition">OSP</button>
+                        <button type="button" onclick="setParam('finish', 'HardGold', this)" class="finish-btn py-2.5 text-xs font-semibold rounded-lg border border-slate-200 bg-slate-50 text-slate-700 hover:border-blue-600 transition">Hard Gold</button>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-slate-900 text-white rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
+                <div>
+                    <div class="text-xs uppercase tracking-widest text-slate-400 font-semibold">Estimated Total Cost</div>
+                    <div class="text-3xl sm:text-5xl font-black text-blue-400 mt-1" id="totalPrice">$185.00</div>
+                    <div class="text-xs text-slate-400 mt-1.5 font-medium">Unit Price: <span id="unitPrice" class="text-white font-bold">$0.37 / pcs</span> | Est. Lead Time: 4-5 Days</div>
+                </div>
+                <button onclick="alert('Success! Your official quote request has been submitted to HXLFAB Engineering. Our sales team will reply via sales@hxlfab.com within 2 hours.')" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold text-base transition shadow-lg shadow-blue-600/30 whitespace-nowrap">
+                    Submit Order / Get Quote
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品价格参考指南页面区块 (Pricing Guide) -->
+    <section id="pricing-guide" class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-blue-600 font-bold text-xs uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full">Cost Transparency</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Standard Pricing & Turnaround Guide</h2>
+                <p class="text-slate-600 mt-2">Competitive direct-factory pricing with zero hidden fees. Explore typical cost structures below.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-8">
+                    <div class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-2">Prototype Service</div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-4">2-Layer Standard</h3>
+                    <div class="text-3xl font-extrabold text-slate-900 mb-4">$50 <span class="text-xs text-slate-500 font-normal">/ base batch</span></div>
+                    <ul class="space-y-3 text-sm text-slate-600 mb-8">
+                        <li>✔️ Fast 24-48h Turnaround</li>
+                        <li>✔️ Free DFM Engineering Check</li>
+                        <li>✔️ HASL Lead-Free Finish Included</li>
+                        <li>✔️ 100% Flying Probe Testing</li>
+                    </ul>
+                    <a href="#calculator" class="block text-center bg-slate-900 hover:bg-blue-600 text-white py-3 rounded-xl font-bold text-sm transition">Calculate Custom Size</a>
+                </div>
+
+                <div class="bg-blue-600 text-white rounded-2xl p-8 shadow-xl relative transform md:-translate-y-2">
+                    <div class="absolute top-4 right-4 bg-white/20 text-xs px-2.5 py-1 rounded-full font-bold">Best Value</div>
+                    <div class="text-xs font-bold text-blue-200 uppercase tracking-wider mb-2">Multi-Layer Prototyping</div>
+                    <h3 class="text-2xl font-black mb-4">4 & 6 Layer Boards</h3>
+                    <div class="text-3xl font-extrabold mb-4">From $120 <span class="text-xs text-blue-200 font-normal">/ base batch</span></div>
+                    <ul class="space-y-3 text-sm text-blue-100 mb-8">
+                        <li>✔️ 4-6 Days Standard Turnaround</li>
+                        <li>✔️ Precision Impedance Control</li>
+                        <li>✔️ ENIG (Gold) or HASL Options</li>
+                        <li>✔️ Advanced Lamination Audit</li>
+                    </ul>
+                    <a href="#calculator" class="block text-center bg-white text-blue-600 hover:bg-slate-100 py-3 rounded-xl font-bold text-sm transition">Calculate 4-Layer Cost</a>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-8">
+                    <div class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-2">High-Volume Production</div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-4">Volume Mass Production</h3>
+                    <div class="text-3xl font-extrabold text-slate-900 mb-4">Custom Quote</div>
+                    <ul class="space-y-3 text-sm text-slate-600 mb-8">
+                        <li>✔️ Lowest Unit Price Guarantee</li>
+                        <li>✔️ Dedicated Account Manager</li>
+                        <li>✔️ Global Express Shipping (DHL/FedEx)</li>
+                        <li>✔️ Direct Inquiry via sales@hxlfab.com</li>
+                    </ul>
+                    <a href="mailto:sales@hxlfab.com" class="block text-center bg-slate-900 hover:bg-blue-600 text-white py-3 rounded-xl font-bold text-sm transition">Email Sales Team</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 制造能力展示区 (Capabilities) -->
+    <section id="capabilities" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-blue-600 font-bold text-xs uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full">Advanced Technology</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Our Manufacturing Capabilities</h2>
+                <p class="text-slate-600 mt-2">Built for complex prototypes and high-volume industrial production with strict quality control.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white border border-slate-200 rounded-2xl p-8 hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-blue-600/10 rounded-xl flex items-center justify-center text-blue-600 font-bold text-xl mb-6">01</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Multilayer & Rigid PCBs</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Up to 32 layers with high-precision impedance control, blind/buried vias, and advanced lamination for demanding applications.</p>
+                </div>
+                <div class="bg-white border border-slate-200 rounded-2xl p-8 hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-blue-600/10 rounded-xl flex items-center justify-center text-blue-600 font-bold text-xl mb-6">02</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">HDI & High-Frequency</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Microvia technology (Any-layer HDI) and Rogers/PTFE high-frequency materials designed for 5G and aerospace RF modules.</p>
+                </div>
+                <div class="bg-white border border-slate-200 rounded-2xl p-8 hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-blue-600/10 rounded-xl flex items-center justify-center text-blue-600 font-bold text-xl mb-6">03</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Aluminum & Metal Core</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Superior thermal management solutions tailored for high-power LED lighting, automotive electronics, and power supplies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 工厂车间与质量保证 (Facility & QA) -->
+    <section id="facility" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-blue-600 font-bold text-xs uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full">World-Class Facility</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 mb-6">Advanced Equipment & Strict QA Inspection</h2>
+                <p class="text-slate-600 leading-relaxed mb-6">
+                    Our 50,000 square meter smart factory in Shenzhen is equipped with state-of-the-art German and Japanese automated production lines. From laser direct imaging (LDI) to 100% automated optical inspection (AOI) and flying probe testing, we ensure zero defects before shipment.
+                </p>
+                <ul class="space-y-3 text-slate-700 font-medium">
+                    <li class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span>100% Flying Probe & AOI Electrical Testing</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span>IATF16949 Automotive Quality Management System</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span>RoHS & REACH Environmental Compliance</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-[#0b1329] rounded-2xl p-8 text-white shadow-2xl relative overflow-hidden">
+                <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                <div class="relative z-10 space-y-6">
+                    <div class="text-blue-400 font-bold tracking-widest text-xs uppercase">HXLFAB Quality Standard</div>
+                    <h3 class="text-2xl font-bold">Rigorous 6-Stage Inspection</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Every single circuit board undergoes incoming material inspection, inner layer etch check, impedance test, solder mask inspection, surface finish analysis, and final packaging audit.
+                    </p>
+                    <div class="pt-4 border-t border-slate-800 flex justify-between items-center text-sm font-semibold">
+                        <span class="text-slate-400">Direct Contact Email</span>
+                        <a href="mailto:sales@hxlfab.com" class="text-blue-400 font-bold hover:underline">sales@hxlfab.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见问题解答 (FAQ) -->
+    <section id="faq" class="py-20 bg-slate-100 border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 font-bold text-xs uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full">Helpful Info</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mt-3">Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
+                    <h3 class="font-bold text-slate-900 text-base mb-2">1. What file formats do you accept for production?</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">We accept standard Gerber files (RS-274X format), ODB++, and drill files. Our engineering team checks every file for free before manufacturing.</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
+                    <h3 class="font-bold text-slate-900 text-base mb-2">2. How can I contact the sales or engineering team directly?</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">You can send your inquiry, BOM lists, or Gerber files directly to our business email at <a href="mailto:sales@hxlfab.com" class="text-blue-600 font-semibold underline">sales@hxlfab.com</a> for a prompt quotation.</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
+                    <h3 class="font-bold text-slate-900 text-base mb-2">3. What is the typical turnaround time for prototypes?</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Standard 2-layer PCB prototypes can be manufactured and shipped within 24 to 48 hours. Multilayer boards usually take 4 to 6 days.</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
+                    <h3 class="font-bold text-slate-900 text-base mb-2">4. How do you ship international orders?</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">We partner with global courier giants like DHL, FedEx, and UPS to ensure rapid, secure door-to-door delivery worldwide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 text-sm">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+                <span class="text-white font-bold text-lg tracking-tight">HXL<span class="text-blue-500">FAB</span></span>
+                <p class="text-xs text-slate-400 mt-1">&copy; 2026 HXLFAB (Shenzhen Hengxinlong Precision Electronics Co., Ltd). All rights reserved.</p>
+                <p class="text-xs text-slate-500 mt-1">Official Business Inquiry: <a href="mailto:sales@hxlfab.com" class="text-blue-400 hover:underline">sales@hxlfab.com</a></p>
+            </div>
+            <div class="flex flex-wrap gap-6 text-xs font-semibold">
+                <a href="#products" class="hover:text-white transition">Products</a>
+                <a href="#calculator" class="hover:text-white transition">Instant Quote</a>
+                <a href="#pricing-guide" class="hover:text-white transition">Pricing Guide</a>
+                <a href="#capabilities" class="hover:text-white transition">Capabilities</a>
+                <a href="#facility" class="hover:text-white transition">Facility</a>
+                <a href="#faq" class="hover:text-white transition">FAQ</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 实时算价逻辑脚本 -->
+    <script>
+        let currentConfig = { layers: 2, finish: 'HASL_LF' };
+
+        function setParam(type, value, btn) {
+            if (type === 'layers') {
+                currentConfig.layers = value;
+                document.querySelectorAll('.layer-btn').forEach(b => {
+                    b.classList.remove('border-blue-600', 'bg-blue-50', 'text-blue-700');
+                    b.classList.add('border-slate-200', 'bg-slate-50', 'text-slate-700');
+                });
+            } else if (type === 'finish') {
+                currentConfig.finish = value;
+                document.querySelectorAll('.finish-btn').forEach(b => {
+                    b.classList.remove('border-blue-600', 'bg-blue-50', 'text-blue-700');
+                    b.classList.add('border-slate-200', 'bg-slate-50', 'text-slate-700');
+                });
+            }
+            btn.classList.remove('border-slate-200', 'bg-slate-50', 'text-slate-700');
+            btn.classList.add('border-blue-600', 'bg-blue-50', 'text-blue-700');
+            calculatePrice();
+        }
+
+        function calculatePrice() {
+            let l = parseFloat(document.getElementById('length').value) || 100;
+            let w = parseFloat(document.getElementById('width').value) || 80;
+            let qty = parseFloat(document.getElementById('quantity').value) || 500;
+            let materialMul = parseFloat(document.getElementById('material').value) || 1.0;
+            let copperMul = parseFloat(document.getElementById('copper').value) || 1.0;
+            
+            let layerMul = 1.0;
+            if (currentConfig.layers == 4) layerMul = 1.6;
+            if (currentConfig.layers == 6) layerMul = 2.4;
+            if (currentConfig.layers == 8) layerMul = 3.2;
+            if (currentConfig.layers >= 10) layerMul = 4.5;
+            if (currentConfig.layers == 1) layerMul = 0.8;
+
+            let finishMul = currentConfig.finish === 'ENIG' || currentConfig.finish === 'HardGold' ? 1.3 : 1.0;
+
+            let areaM2 = (l * w / 1000000) * qty;
+            let baseRate = 80;
+            let total = areaM2 * baseRate * layerMul * materialMul * copperMul * finishMul;
+            if(total < 50) total = 50;
+
+            let unit = total / qty;
+
+            document.getElementById('totalPrice').innerText = '$' + total.toFixed(2);
+            document.getElementById('unitPrice').innerText = '$' + unit.toFixed(4) + ' / pcs';
+        }
+
+        calculatePrice();
+    </script>
+</body>
+</html>
