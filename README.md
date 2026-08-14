@@ -5,12 +5,23 @@ This branch contains the redesigned HXLFAB manufacturing website and a Cloudflar
 ## Architecture
 
 - `public/` — static website, quote configurator, drag-and-drop uploader
+- `scripts/generate-seo-pages.mjs` — source data and shared template for product landing pages
 - `functions/` — RFQ creation, streamed upload, completion email and protected download endpoints
 - Cloudflare R2 binding `RFQ_FILES` — private Gerber/ODB++ archives
 - Cloudflare D1 binding `RFQ_DB` — RFQ and file metadata
 - Cloudflare Send Email binding `RFQ_EMAIL` — notification to `sales@hxlfab.com`
 
 Customer files are never added to Git. The R2 bucket must remain private.
+
+## SEO landing pages
+
+Product and capability landing pages are generated into `public/<slug>/index.html`. After editing the page data or shared template, regenerate them with:
+
+```bash
+npm run generate:seo
+```
+
+Keep every canonical page in `public/sitemap.xml` and use the root domain `https://hxlfab.com/` as the only canonical host.
 
 ## Production provisioning
 

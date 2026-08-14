@@ -1,5 +1,11 @@
 export const onRequest: PagesFunction<Env> = async (context) => {
   const requestUrl = new URL(context.request.url);
+  if (requestUrl.hostname === "www.hxlfab.com") {
+    requestUrl.hostname = "hxlfab.com";
+    requestUrl.protocol = "https:";
+    return Response.redirect(requestUrl.toString(), 301);
+  }
+
   const origin = context.request.headers.get("Origin");
 
   if (origin && origin !== requestUrl.origin) {

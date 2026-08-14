@@ -3,10 +3,12 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
+    "generate:seo": "node scripts/generate-seo-pages.mjs",
+    "validate:site": "node scripts/validate-site.mjs",
     "dev": "wrangler pages dev public --d1=RFQ_DB --r2=RFQ_FILES",
     "deploy": "wrangler pages deploy public --project-name hxlfab",
     "typecheck": "tsc --noEmit",
-    "check": "wrangler deploy --dry-run --config wrangler.jsonc",
+    "check": "wrangler pages functions build functions --outdir .wrangler/pages-check",
     "types": "wrangler types worker-configuration.d.ts"
   },
   "devDependencies": {
