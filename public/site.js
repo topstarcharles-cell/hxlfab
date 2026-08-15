@@ -29,9 +29,10 @@
         <a href="/quality-certifications/"><span>02</span>Quality & Certifications</a>
         <a href="/factory-process/"><span>03</span>Factory & Process</a>
         <a href="/engineering-scenarios/"><span>04</span>Engineering Scenarios</a>
-        <a href="/working-with-us/"><span>05</span>Working With Us</a>
-        <a href="/about/"><span>06</span>About & Team</a>
-        <a href="/contact/"><span>07</span>Contact</a>
+        <a href="/help-center/"><span>05</span>Help Center</a>
+        <a href="/working-with-us/"><span>06</span>Working With Us</a>
+        <a href="/about/"><span>07</span>About & Team</a>
+        <a href="/contact/"><span>08</span>Contact</a>
       </nav>
       <div class="mobile-menu-actions">
         <a href="mailto:sales@hxlfab.com?subject=PCB%20engineering%20question">Email engineering</a>
