@@ -167,9 +167,9 @@ function render(page) {
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="canonical" href="https://hxlfab.com/${page.slug}/">
   <meta property="og:type" content="website"><meta property="og:site_name" content="HXLFAB"><meta property="og:title" content="${page.title}"><meta property="og:description" content="${page.description}"><meta property="og:url" content="https://hxlfab.com/${page.slug}/"><meta property="og:image" content="https://hxlfab.com${page.image}">
-  <link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/product-pages.css">
+  <link rel="stylesheet" href="/styles.css?v=20260815b"><link rel="stylesheet" href="/product-pages.css?v=20260815b">
   <script type="application/ld+json">${jsonLd(page)}</script>
-  <script src="/site.js" defer></script>
+  <script src="/site.js?v=20260815b" defer></script>
 </head>
 <body>
   <div class="utility"><div class="shell utility-inner"><span>PCB manufacturing · Guilin production base · Shenzhen service office</span><a href="mailto:${common.email}">${common.email}</a></div></div>
