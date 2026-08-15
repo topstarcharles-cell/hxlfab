@@ -74,9 +74,9 @@ function head(page) {
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="canonical" href="${canonical}">
   <meta property="og:type" content="website"><meta property="og:site_name" content="HXLFAB"><meta property="og:title" content="${page.title}"><meta property="og:description" content="${page.description}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${siteUrl}${page.image}">
-  <link rel="stylesheet" href="/styles.css?v=20260815d"><link rel="stylesheet" href="/product-pages.css?v=20260815d"><link rel="stylesheet" href="/content-pages.css?v=20260815d">
+  <link rel="stylesheet" href="/styles.css?v=20260815e"><link rel="stylesheet" href="/product-pages.css?v=20260815e"><link rel="stylesheet" href="/content-pages.css?v=20260815e">
   <script type="application/ld+json">${jsonLd}</script>
-  <script src="/site.js?v=20260815d" defer></script>
+  <script src="/site.js?v=20260815e" defer></script>
 </head>`;
 }
 
@@ -84,7 +84,7 @@ function hero(page) {
   return `<section class="info-hero"><div class="shell">
     <p class="breadcrumbs"><a href="/">Home</a> / ${page.h1}</p>
     <div class="info-hero-grid"><div><span class="status-note">${page.status}</span><h1>${page.h1}</h1><p class="lede">${page.intro}</p><div class="info-hero-actions"><a class="button" href="${page.primaryHref}">${page.primaryLabel} <span>↗</span></a><a class="text-link" href="${page.secondaryHref}">${page.secondaryLabel} <span>→</span></a></div></div>
-    <figure class="info-hero-media"><img src="${page.image}" alt="${page.imageAlt}" width="1536" height="1024"><figcaption>${page.caption}</figcaption></figure></div>
+    <figure class="info-hero-media${page.mediaClass ? ` ${page.mediaClass}` : ""}"><img src="${page.image}" alt="${page.imageAlt}" width="${page.imageWidth ?? 1536}" height="${page.imageHeight ?? 1024}"><figcaption>${page.caption}</figcaption></figure></div>
   </div></section>`;
 }
 
@@ -165,7 +165,7 @@ const factory = {
     </div>
   </div></section>
   <section class="page-section dark"><div class="shell"><div class="page-heading"><p class="eyebrow">Company-supplied photographs</p><h2>Factory imagery, labeled by source.</h2><p>These photographs were supplied with the website project as factory imagery. Equipment model, count and calibration records are confirmed separately during technical or supplier review.</p></div>
-    <div class="photo-evidence-grid"><figure class="evidence-photo"><img src="/images/cam-production.webp" alt="Company-supplied photograph of operators preparing PCB production data"><figcaption>Company-supplied factory photograph · production preparation</figcaption></figure><figure class="evidence-photo"><img src="/images/automated-line.webp" alt="Company-supplied photograph of automated PCB production equipment"><figcaption>Company-supplied factory photograph · automated line</figcaption></figure><figure class="evidence-photo"><img src="/images/cnc-drilling.webp" alt="Company-supplied photograph of multi-spindle PCB drilling equipment"><figcaption>Company-supplied factory photograph · CNC drilling</figcaption></figure></div>
+    <div class="photo-evidence-grid"><figure class="evidence-photo factory-exterior"><img src="/images/guilin-production-base.jpg" alt="Company-supplied exterior photograph of the Guilin production base building with Hengxinlong signage" width="1050" height="1000" loading="lazy" decoding="async"><figcaption>Company-supplied exterior photograph · Guilin production base</figcaption></figure><figure class="evidence-photo"><img src="/images/automated-line.webp" alt="Company-supplied photograph of automated PCB production equipment"><figcaption>Company-supplied factory photograph · automated line</figcaption></figure><figure class="evidence-photo"><img src="/images/cnc-drilling.webp" alt="Company-supplied photograph of multi-spindle PCB drilling equipment"><figcaption>Company-supplied factory photograph · CNC drilling</figcaption></figure></div>
     <div class="inspection-heading"><h3>Inspection and test evidence</h3><p>Cropped from the supplied company profile; model, quantity and calibration status are confirmed during supplier review.</p></div>
     <div class="inspection-photo-grid dark-cards"><figure><img src="/images/inspection-automatic-test.jpg" alt="Company-supplied photograph of automated PCB test equipment"><figcaption><strong>Automated electrical test</strong><span>Company-supplied photograph</span></figcaption></figure><figure><img src="/images/inspection-flying-probe.jpg" alt="Company-supplied photograph of flying-probe PCB test equipment"><figcaption><strong>Flying-probe test</strong><span>Company-supplied photograph</span></figcaption></figure><figure><img src="/images/inspection-hole-position.jpg" alt="Company-supplied photograph of PCB hole-position measurement equipment"><figcaption><strong>Hole-position measurement</strong><span>Company-supplied photograph</span></figcaption></figure><figure><img src="/images/inspection-tg.jpg" alt="Company-supplied photograph of PCB material TG test equipment"><figcaption><strong>TG material test</strong><span>Company-supplied photograph</span></figcaption></figure></div>
   </div></section>
@@ -230,9 +230,12 @@ const about = {
   h1: "The roles behind the RFQ.",
   status: "About HXLFAB & project ownership",
   intro: "PCB programs move through sales coordination, CAM and DFM, process engineering, quality and production coordination. This page explains who owns each step without inventing names or team profiles.",
-  image: "/images/cam-production.webp",
-  imageAlt: "Company-supplied photograph of people preparing PCB production data",
-  caption: "Company-supplied factory photograph · production preparation",
+  image: "/images/guilin-production-base.jpg",
+  imageAlt: "Company-supplied exterior photograph of the Guilin production base building with Hengxinlong signage",
+  imageWidth: 1050,
+  imageHeight: 1000,
+  mediaClass: "factory-exterior",
+  caption: "Company-supplied exterior photograph · Guilin production base",
   primaryHref: "mailto:sales@hxlfab.com?subject=Meet%20the%20HXLFAB%20project%20team",
   primaryLabel: "Meet your project team",
   secondaryHref: "/factory-process/",
