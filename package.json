@@ -3,9 +3,11 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "generate": "npm run generate:seo && npm run generate:content",
+    "generate": "npm run generate:seo && npm run generate:content && npm run generate:help && npm run generate:sitemap",
     "generate:seo": "node scripts/generate-seo-pages.mjs",
     "generate:content": "node scripts/generate-trust-pages.mjs",
+    "generate:help": "node scripts/generate-help-center.mjs",
+    "generate:sitemap": "node scripts/generate-sitemap.mjs",
     "validate:site": "node scripts/validate-site.mjs",
     "dev": "wrangler pages dev public --d1=RFQ_DB --r2=RFQ_FILES",
     "deploy": "wrangler pages deploy public --project-name hxlfab",

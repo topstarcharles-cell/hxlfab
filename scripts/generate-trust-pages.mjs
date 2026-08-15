@@ -18,7 +18,7 @@ function siteHeader(slug) {
   <div class="utility"><div class="shell utility-inner"><span>PCB manufacturing · Guilin production base · Shenzhen service office</span><a href="mailto:${company.email}">${company.email}</a></div></div>
   <header class="header"><div class="shell nav">
     <a class="brand" href="/" aria-label="HXLFAB home"><span class="brand-bars"><i></i><i></i><i></i></span><span>HXL<strong>FAB</strong></span></a>
-    <nav aria-label="Main navigation">${link(slug, "/pcb-manufacturing/", "Manufacturing")}${link(slug, "/quality-certifications/", "Quality")}${link(slug, "/factory-process/", "Factory")}${link(slug, "/engineering-scenarios/", "Engineering reviews")}${link(slug, "/about/", "About")}</nav>
+    <nav aria-label="Main navigation">${link(slug, "/pcb-manufacturing/", "Manufacturing")}${link(slug, "/quality-certifications/", "Quality")}${link(slug, "/factory-process/", "Factory")}${link(slug, "/engineering-scenarios/", "Engineering reviews")}${link(slug, "/help-center/", "Help")}${link(slug, "/about/", "About")}</nav>
     <a class="button small" href="/#quote">Start an RFQ <span>↗</span></a>
   </div></header>`;
 }
@@ -28,7 +28,7 @@ function siteFooter() {
   <footer><div class="shell footer-grid">
     <div><a class="brand footer-brand" href="/"><span class="brand-bars"><i></i><i></i><i></i></span><span>HXL<strong>FAB</strong></span></a><p>PCB manufacturing brand<br>Guilin production base · Shenzhen service office</p></div>
     <div><span>Evidence</span><p><a href="/quality-certifications/">Quality & certifications</a><br><a href="/factory-process/">Factory & process</a><br><a href="/engineering-scenarios/">Engineering scenarios</a></p></div>
-    <div><span>Working together</span><p><a href="/working-with-us/">Working with us</a><br><a href="/about/">About & team</a><br><a href="/contact/">Contact engineering</a></p></div>
+    <div><span>Working together</span><p><a href="/help-center/">Help center</a><br><a href="/working-with-us/">Working with us</a><br><a href="/about/">About & team</a><br><a href="/contact/">Contact engineering</a></p></div>
     <div><span>Contact</span><p><a href="mailto:${company.email}">${company.email}</a><br><a href="tel:+8613823663114">${company.phone}</a></p></div>
   </div><div class="shell footer-bottom"><span>© 2026 HXLFAB. All rights reserved.</span><span><a href="/privacy-file-handling/">Privacy & file handling</a> · Technical data subject to engineering confirmation.</span></div></footer>`;
 }
@@ -74,9 +74,9 @@ function head(page) {
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="canonical" href="${canonical}">
   <meta property="og:type" content="website"><meta property="og:site_name" content="HXLFAB"><meta property="og:title" content="${page.title}"><meta property="og:description" content="${page.description}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${siteUrl}${page.image}">
-  <link rel="stylesheet" href="/styles.css?v=20260815e"><link rel="stylesheet" href="/product-pages.css?v=20260815e"><link rel="stylesheet" href="/content-pages.css?v=20260815e">
+  <link rel="stylesheet" href="/styles.css?v=20260815f"><link rel="stylesheet" href="/product-pages.css?v=20260815f"><link rel="stylesheet" href="/content-pages.css?v=20260815f">
   <script type="application/ld+json">${jsonLd}</script>
-  <script src="/site.js?v=20260815e" defer></script>
+  <script src="/site.js?v=20260815f" defer></script>
 </head>`;
 }
 
@@ -283,7 +283,7 @@ const privacy = {
   secondaryHref: "/working-with-us/",
   secondaryLabel: "See the RFQ process",
   body: `
-  <section class="page-section"><div class="shell"><div class="content-split"><article class="long-copy"><p class="eyebrow dark">What the website collects</p><h2>Information used to review and quote your PCB request.</h2><p>The RFQ form may collect your name, work email, company, target date, project notes, board configuration and the production files you choose to upload. Basic security and operational logs may also be created when the service is used.</p><h3>How the information is used</h3><p>Information is used to create a traceable RFQ, review manufacturability and commercial requirements, communicate with you, prepare a quotation and operate or secure the upload service.</p><h3>Where production files are stored</h3><p>Uploaded files are stored in private Cloudflare R2 object storage rather than the public website repository. File access is routed through token-controlled endpoints linked to the RFQ. The public website does not publish the uploaded archives.</p><h3>Retention</h3><p>Production files are scheduled for automatic deletion after 60 days. RFQ metadata and business correspondence may be retained longer for quotation, security, legal or operational records. If your project needs a different retention period, confirm it before upload.</p><h3>Who receives access</h3><p>Access is intended for personnel involved in quotation and engineering review, plus service providers needed to operate hosting, storage, email delivery and security. File links should not be forwarded outside the authorized project team.</p><h3>Your choices</h3><p>You may ask what contact information is held, request a correction or raise a deletion question by emailing <a href="mailto:sales@hxlfab.com?subject=Privacy%20request">sales@hxlfab.com</a>. A request may require identity or project verification.</p><h3>Restricted or regulated data</h3><p>Do not upload export-controlled, government-restricted, health, payment, identity or other specially regulated data until an appropriate handling route has been agreed in writing. Contact HXLFAB before uploading if an NDA or customer-specific security requirement applies.</p><h3>Security limits</h3><p>The service uses access controls, bounded file types and sizes, non-public storage and short-lived project tokens. No internet service can promise absolute security; notify HXLFAB promptly if you believe a file link or account detail has been exposed.</p></article><aside class="side-note"><p class="eyebrow">RFQ file controls</p><h2>Current website limits</h2><ul><li>Up to 10 files per RFQ</li><li>100 MB maximum per file</li><li>200 MB maximum total</li><li>Supported PCB files and archives only</li><li>60-day production-file schedule</li></ul><a class="button" href="mailto:sales@hxlfab.com?subject=Privacy%20or%20file-handling%20question">Contact HXLFAB <span>↗</span></a></aside></div></div></section>
+  <section class="page-section"><div class="shell"><div class="content-split"><article class="long-copy"><p class="eyebrow dark">What the website collects</p><h2>Information used to review and quote your PCB request.</h2><p>The RFQ form may collect your name, work email, company, target date, project notes, board configuration and the production files you choose to upload. Basic security and operational logs may also be created when the service is used.</p><h3>How the information is used</h3><p>Information is used to create a traceable RFQ, review manufacturability and commercial requirements, communicate with you, prepare a quotation and operate or secure the upload service.</p><h3>Where production files are stored</h3><p>Uploaded files are stored in private Cloudflare R2 object storage rather than the public website repository. File access is routed through token-controlled endpoints linked to the RFQ. The public website does not publish the uploaded archives.</p><h3>Retention</h3><p>Production files are scheduled for automatic deletion after 60 days. RFQ metadata and business correspondence may be retained longer for quotation, security, legal or operational records. If your project needs a different retention period, confirm it before upload.</p><h3>Who receives access</h3><p>Access is intended for personnel involved in quotation and engineering review, plus service providers needed to operate hosting, storage, email delivery and security. File links should not be forwarded outside the authorized project team.</p><h3>Your choices</h3><p>You may ask what contact information is held, request a correction or raise a deletion question by emailing <a href="mailto:sales@hxlfab.com?subject=Privacy%20request">sales@hxlfab.com</a>. A request may require identity or project verification.</p><h3>Restricted or regulated data</h3><p>Do not upload export-controlled, government-restricted, health, payment, identity or other specially regulated data until an appropriate handling route has been agreed in writing. Contact HXLFAB before uploading if an NDA or customer-specific security requirement applies.</p><h3>Security limits</h3><p>The service uses access controls, bounded file types and sizes, non-public storage and project access tokens. No internet service can promise absolute security; notify HXLFAB promptly if you believe a file link or account detail has been exposed.</p></article><aside class="side-note"><p class="eyebrow">RFQ file controls</p><h2>Current website limits</h2><ul><li>Up to 10 files per RFQ</li><li>100 MB maximum per file</li><li>200 MB maximum total</li><li>Supported PCB files and archives only</li><li>60-day production-file schedule</li></ul><a class="button" href="mailto:sales@hxlfab.com?subject=Privacy%20or%20file-handling%20question">Contact HXLFAB <span>↗</span></a></aside></div></div></section>
   <section class="cta-band"><div class="shell cta-band-inner"><h2>Need an NDA or a different data-handling route?</h2><a class="button" href="mailto:sales@hxlfab.com?subject=NDA%20or%20restricted-data%20workflow">Contact us before upload <span>↗</span></a></div></section>`,
 };
 
@@ -294,25 +294,5 @@ for (const page of pages) {
   await mkdir(directory, { recursive: true });
   await writeFile(join(directory, "index.html"), render(page));
 }
-
-const routes = [
-  ["/", "1.0"],
-  ["/pcb-manufacturing/", "0.9"],
-  ["/multilayer-pcb/", "0.9"],
-  ["/hdi-pcb/", "0.9"],
-  ["/high-frequency-pcb/", "0.9"],
-  ["/heavy-copper-pcb/", "0.9"],
-  ["/impedance-controlled-pcb/", "0.9"],
-  ["/pcb-prototype/", "0.9"],
-  ["/quality-certifications/", "0.8"],
-  ["/factory-process/", "0.8"],
-  ["/engineering-scenarios/", "0.8"],
-  ["/working-with-us/", "0.8"],
-  ["/about/", "0.7"],
-  ["/contact/", "0.7"],
-  ["/privacy-file-handling/", "0.4"],
-];
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${routes.map(([path, priority]) => `  <url>\n    <loc>${siteUrl}${path}</loc>\n    <lastmod>2026-08-15</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>${priority}</priority>\n  </url>`).join("\n")}\n</urlset>\n`;
-await writeFile(join(publicDir, "sitemap.xml"), sitemap);
 
 console.log(`Generated ${pages.length} trust and procurement pages.`);

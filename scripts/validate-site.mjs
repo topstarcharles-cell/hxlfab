@@ -1,7 +1,8 @@
 import { existsSync, readFileSync, readdirSync } from "node:fs";
-import { join } from "node:path";
+import { join, relative } from "node:path";
 
 const publicDir = new URL("../public/", import.meta.url).pathname;
+const siteUrl = "https://hxlfab.com";
 const htmlFiles = [];
 
 function walk(directory) {
@@ -15,6 +16,7 @@ function walk(directory) {
 walk(publicDir);
 const errors = [];
 const titles = new Map();
+const canonicals = new Map();
 
 for (const file of htmlFiles) {
   const html = readFileSync(file, "utf8");
@@ -28,6 +30,16 @@ for (const file of htmlFiles) {
   }
   if (titles.has(title)) errors.push(`${file}: duplicate title also used by ${titles.get(title)}`);
   titles.set(title, file);
+
+  const fileRoute = relative(publicDir, file).replaceAll("\\", "/").replace(/index\.html$/, "");
+  const expectedCanonical = `${siteUrl}/${fileRoute}`;
+  if (canonical && canonical !== expectedCanonical) {
+    errors.push(`${file}: canonical ${canonical} does not match ${expectedCanonical}`);
+  }
+  if (canonical && canonicals.has(canonical)) {
+    errors.push(`${file}: duplicate canonical also used by ${canonicals.get(canonical)}`);
+  }
+  if (canonical) canonicals.set(canonical, file);
 
   for (const match of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
     try { JSON.parse(match[1]); }
@@ -46,8 +58,14 @@ for (const file of htmlFiles) {
 
 const sitemap = readFileSync(join(publicDir, "sitemap.xml"), "utf8");
 const sitemapUrls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1]);
-if (sitemapUrls.length !== htmlFiles.length || new Set(sitemapUrls).size !== sitemapUrls.length) {
-  errors.push(`sitemap contains ${sitemapUrls.length} unique URL entries for ${htmlFiles.length} HTML pages`);
+const sitemapSet = new Set(sitemapUrls);
+const canonicalSet = new Set(canonicals.keys());
+if (sitemapSet.size !== sitemapUrls.length) errors.push("sitemap contains duplicate URL entries");
+for (const canonical of canonicalSet) {
+  if (!sitemapSet.has(canonical)) errors.push(`sitemap is missing ${canonical}`);
+}
+for (const url of sitemapSet) {
+  if (!canonicalSet.has(url)) errors.push(`sitemap contains an unknown page ${url}`);
 }
 
 if (errors.length) {
