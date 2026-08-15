@@ -74,9 +74,9 @@ function head(page) {
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="canonical" href="${canonical}">
   <meta property="og:type" content="website"><meta property="og:site_name" content="HXLFAB"><meta property="og:title" content="${page.title}"><meta property="og:description" content="${page.description}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${siteUrl}${page.image}">
-  <link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/product-pages.css"><link rel="stylesheet" href="/content-pages.css">
+  <link rel="stylesheet" href="/styles.css?v=20260815b"><link rel="stylesheet" href="/product-pages.css?v=20260815b"><link rel="stylesheet" href="/content-pages.css?v=20260815b">
   <script type="application/ld+json">${jsonLd}</script>
-  <script src="/site.js" defer></script>
+  <script src="/site.js?v=20260815b" defer></script>
 </head>`;
 }
 
