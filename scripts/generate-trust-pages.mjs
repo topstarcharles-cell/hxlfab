@@ -6,6 +6,8 @@ const siteUrl = "https://hxlfab.com";
 const company = {
   legalName: "Guilin Hengxinlong Electronic Technology Co., Ltd.",
   email: "sales@hxlfab.com",
+  contactName: "Charles Liu",
+  contactEmail: "charles@hxlfab.com",
   phone: "+86 138 2366 3114",
 };
 
@@ -29,7 +31,7 @@ function siteFooter() {
     <div><a class="brand footer-brand" href="/"><span class="brand-bars"><i></i><i></i><i></i></span><span>HXL<strong>FAB</strong></span></a><p>PCB manufacturing brand<br>Guilin production base · Shenzhen service office</p></div>
     <div><span>Evidence</span><p><a href="/quality-certifications/">Quality & certifications</a><br><a href="/factory-process/">Factory & process</a><br><a href="/engineering-scenarios/">Engineering scenarios</a></p></div>
     <div><span>Working together</span><p><a href="/help-center/">Help center</a><br><a href="/working-with-us/">Working with us</a><br><a href="/about/">About & team</a><br><a href="/contact/">Contact engineering</a></p></div>
-    <div><span>Contact</span><p><a href="mailto:${company.email}">${company.email}</a><br><a href="tel:+8613823663114">${company.phone}</a></p></div>
+    <div><span>Contact</span><p>${company.contactName}<br>International customer contact<br><a href="mailto:${company.contactEmail}">${company.contactEmail}</a><br><a href="mailto:${company.email}">${company.email}</a><br><a href="tel:+8613823663114">${company.phone}</a></p></div>
   </div><div class="shell footer-bottom"><span>© 2026 HXLFAB. All rights reserved.</span><span><a href="/privacy-file-handling/">Privacy & file handling</a> · Technical data subject to engineering confirmation.</span></div></footer>`;
 }
 
@@ -45,6 +47,12 @@ function head(page) {
         url: `${siteUrl}/`,
         email: company.email,
         telephone: company.phone,
+        contactPoint: {
+          "@type": "ContactPoint",
+          name: company.contactName,
+          email: company.contactEmail,
+          contactType: "international customer enquiries",
+        },
       },
       {
         "@type": "WebPage",
@@ -229,23 +237,23 @@ const about = {
   description: "Learn how HXLFAB connects sales coordination, CAM and DFM, process engineering, quality and production coordination for PCB programs.",
   h1: "The roles behind the RFQ.",
   status: "About HXLFAB & project ownership",
-  intro: "PCB programs move through sales coordination, CAM and DFM, process engineering, quality and production coordination. This page explains who owns each step without inventing names or team profiles.",
+  intro: "Charles Liu is the named first contact for international customer enquiries. He coordinates the initial RFQ and connects each project with CAM, process, quality and production support.",
   image: "/images/guilin-production-base.jpg",
   imageAlt: "Company-supplied exterior photograph of the Guilin production base building with Hengxinlong signage",
   imageWidth: 1050,
   imageHeight: 1000,
   mediaClass: "factory-exterior",
   caption: "Company-supplied exterior photograph · Guilin production base",
-  primaryHref: "mailto:sales@hxlfab.com?subject=Meet%20the%20HXLFAB%20project%20team",
-  primaryLabel: "Meet your project team",
+  primaryHref: "mailto:charles@hxlfab.com?subject=PCB%20project%20introduction",
+  primaryLabel: "Email Charles Liu",
   secondaryHref: "/factory-process/",
   secondaryLabel: "See the factory process",
   body: `
   <section class="page-section"><div class="shell"><div class="page-heading"><p class="eyebrow dark">Company identity</p><h2>Brand, profile name and operating locations.</h2><p>Supplier records must be matched to current controlled documents. The supplied company profile uses the name below, while contracts, certificates, banking details and corporate relationships should be verified for each project.</p></div><div class="evidence-grid"><article class="evidence-card"><span>Brand</span><h3>HXLFAB</h3><p>The customer-facing PCB manufacturing brand used on this website.</p></article><article class="evidence-card"><span>Name in supplied profile</span><h3>Guilin Hengxinlong Electronic Technology Co., Ltd.</h3><p>Use the current registration or contracting document—not this web page—as the legal-entity record.</p></article><article class="evidence-card"><span>Operating locations</span><h3>Guilin · Shenzhen</h3><p>The profile identifies a Guilin production base and a Shenzhen service office. The responsible contracting entity is confirmed in project documents.</p></article></div></div></section>
-  <section class="fact-grid shell" aria-label="Operating structure"><article><strong>Guilin</strong><span>Production base</span></article><article><strong>Shenzhen</strong><span>Service office</span></article><article><strong>NPI → volume</strong><span>Program range</span></article><article><strong>${company.email}</strong><span>Sales engineering contact</span></article></section>
-  <section class="page-section mist"><div class="shell"><div class="page-heading"><p class="eyebrow dark">Your project team</p><h2>Clear ownership at each stage.</h2><p>Named profiles will only be published with verified job titles, company email addresses, real photographs and the team member’s approval. Until then, these are the functions responsible for the work.</p></div><div class="role-grid"><article class="role-card"><span>01 · RFQ coordination</span><h3>Sales engineering</h3><p>Owns initial scope, commercial assumptions, required inputs and schedule communication.</p></article><article class="role-card"><span>02 · Data review</span><h3>CAM & DFM engineering</h3><p>Reviews fabrication data, stack-up, tooling, design rules and manufacturability questions.</p></article><article class="role-card"><span>03 · Process route</span><h3>Process engineering</h3><p>Confirms materials, via structures, plating, lamination and special-process requirements.</p></article><article class="role-card"><span>04 · Acceptance plan</span><h3>Quality</h3><p>Aligns inspection, electrical test, targeted verification and required project records.</p></article><article class="role-card"><span>05 · Released build</span><h3>Production coordination</h3><p>Tracks the released revision through the confirmed process route and shipment preparation.</p></article><article class="role-card"><span>06 · Customer decisions</span><h3>Your technical contact</h3><p>Questions and approvals are documented through the sales engineering contact for the project.</p></article></div></div></section>
-  <section class="page-section"><div class="shell"><div class="content-split"><div class="long-copy"><p class="eyebrow dark">Locations</p><h2>Where the work is coordinated.</h2><h3>Production base</h3><p>Jinjiping Industrial Park, Xinping Town, Lipu City, Guilin, Guangxi, China.</p><h3>Service office</h3><p>Room 911, Haichuan Building, Baoyuan Road, Xixiang, Bao’an District, Shenzhen, Guangdong, China.</p><p class="small-print">For supplier registration, contracts, payments, certificates or site audits, confirm the current legal address and responsible entity in the project documents.</p></div><aside class="side-note"><p class="eyebrow">Direct contact</p><h2>Start with sales engineering.</h2><p>Describe the board, quantity and decision you need. The request can then be routed to CAM, process or quality support.</p><a class="button" href="mailto:sales@hxlfab.com?subject=PCB%20project%20introduction">Introduce your project <span>↗</span></a></aside></div></div></section>
-  <section class="cta-band"><div class="shell cta-band-inner"><h2>Ask to meet the people responsible for your build.</h2><a class="button" href="mailto:sales@hxlfab.com?subject=Meet%20the%20HXLFAB%20project%20team">Contact the team <span>↗</span></a></div></section>`,
+  <section class="fact-grid shell" aria-label="Operating structure"><article><strong>Guilin</strong><span>Production base</span></article><article><strong>Shenzhen</strong><span>Service office</span></article><article><strong>NPI → volume</strong><span>Program range</span></article><article><strong>${company.contactName}</strong><span>International customer contact</span></article></section>
+  <section class="page-section mist"><div class="shell"><div class="page-heading"><p class="eyebrow dark">Your project team</p><h2>A named first contact, with clear ownership behind him.</h2><p>Charles Liu is the authorized first contact shown on HXLFAB customer correspondence. He coordinates initial enquiries and routes technical decisions to the responsible CAM, process, quality and production functions.</p></div><div class="role-grid"><article class="role-card"><span>01 · Named customer contact</span><h3>Charles Liu</h3><p>International customer enquiries, RFQ coordination, supplier-qualification requests and project communication.</p><a href="mailto:${company.contactEmail}?subject=PCB%20project%20introduction">${company.contactEmail} →</a></article><article class="role-card"><span>02 · Data review</span><h3>CAM & DFM engineering</h3><p>Reviews fabrication data, stack-up, tooling, design rules and manufacturability questions.</p></article><article class="role-card"><span>03 · Process route</span><h3>Process engineering</h3><p>Confirms materials, via structures, plating, lamination and special-process requirements.</p></article><article class="role-card"><span>04 · Acceptance plan</span><h3>Quality</h3><p>Aligns inspection, electrical test, targeted verification and required project records.</p></article><article class="role-card"><span>05 · Released build</span><h3>Production coordination</h3><p>Tracks the released revision through the confirmed process route and shipment preparation.</p></article><article class="role-card"><span>06 · Shared business route</span><h3>HXLFAB Sales</h3><p>The shared mailbox keeps general enquiries and project correspondence accessible to the business team.</p><a href="mailto:${company.email}?subject=PCB%20project%20question">${company.email} →</a></article></div></div></section>
+  <section class="page-section"><div class="shell"><div class="content-split"><div class="long-copy"><p class="eyebrow dark">Locations</p><h2>Where the work is coordinated.</h2><h3>Production base</h3><p>Jinjiping Industrial Park, Xinping Town, Lipu City, Guilin, Guangxi, China.</p><h3>Service office</h3><p>Room 911, Haichuan Building, Baoyuan Road, Xixiang, Bao’an District, Shenzhen, Guangdong, China.</p><p class="small-print">For supplier registration, contracts, payments, certificates or site audits, confirm the current legal address and responsible entity in the project documents.</p></div><aside class="side-note"><p class="eyebrow">Direct contact</p><h2>${company.contactName}</h2><p>International customer enquiries and RFQ coordination.</p><p><a href="mailto:${company.contactEmail}">${company.contactEmail}</a><br><a href="mailto:${company.email}">${company.email}</a><br><a href="tel:+8613823663114">${company.phone}</a></p><a class="button" href="mailto:${company.contactEmail}?subject=PCB%20project%20introduction">Introduce your project <span>↗</span></a></aside></div></div></section>
+  <section class="cta-band"><div class="shell cta-band-inner"><h2>Start your PCB conversation with Charles Liu.</h2><a class="button" href="mailto:${company.contactEmail}?subject=PCB%20project%20introduction">Email Charles <span>↗</span></a></div></section>`,
 };
 
 const contact = {
@@ -254,16 +262,16 @@ const contact = {
   description: "Ask HXLFAB a PCB engineering question, request supplier documents or start a secure Gerber and ODB++ quotation.",
   h1: "Start with what you have.",
   status: "Lightweight inquiry",
-  intro: "Files are helpful, but they are not required for the first conversation. Share the board type, quantity and the decision you need, then choose whether to continue by email or with a secure RFQ.",
+  intro: "Charles Liu is the named contact for international customer enquiries. Files are helpful, but they are not required for the first conversation.",
   image: "/images/cnc-drilling.webp",
   imageAlt: "Company-supplied photograph of PCB drilling equipment",
   caption: "Company-supplied factory photograph · drilling equipment",
-  primaryHref: "mailto:sales@hxlfab.com?subject=PCB%20engineering%20question",
-  primaryLabel: "Email engineering",
+  primaryHref: "mailto:charles@hxlfab.com?subject=PCB%20engineering%20question",
+  primaryLabel: "Email Charles Liu",
   secondaryHref: "/#quote",
   secondaryLabel: "Start a secure RFQ",
   body: `
-  <section class="page-section"><div class="shell"><div class="page-heading"><p class="eyebrow dark">Choose the shortest useful path</p><h2>You do not need a complete fabrication package to ask a question.</h2><p>Use email for an early technical or commercial question. Use the secure RFQ when production data is ready and you want a traceable quotation record.</p></div><div class="contact-grid"><article class="contact-card"><span>Early-stage question</span><h3>Email sales engineering</h3><p>Describe the board type, layer count, quantity, material or process concern and the timing you are working toward.</p><a href="mailto:sales@hxlfab.com?subject=PCB%20engineering%20question">sales@hxlfab.com →</a></article><article class="contact-card"><span>Files ready</span><h3>Submit a secure RFQ</h3><p>Configure the board and upload Gerber, ODB++ or related fabrication files through the private RFQ route.</p><a href="/#quote">Open RFQ workspace →</a></article><article class="contact-card"><span>Supplier review</span><h3>Request qualification documents</h3><p>Ask for current certificates, scope documents and the quality records relevant to your program.</p><a href="mailto:sales@hxlfab.com?subject=Request%20HXLFAB%20supplier%20qualification%20pack">Request document pack →</a></article></div></div></section>
+  <section class="page-section"><div class="shell"><div class="page-heading"><p class="eyebrow dark">Choose the shortest useful path</p><h2>You do not need a complete fabrication package to ask a question.</h2><p>Use email for an early technical or commercial question. Use the secure RFQ when production data is ready and you want a traceable quotation record.</p></div><div class="contact-grid"><article class="contact-card"><span>Named customer contact</span><h3>Charles Liu</h3><p>International customer enquiries, RFQ coordination and project communication.</p><a href="mailto:${company.contactEmail}?subject=PCB%20engineering%20question">${company.contactEmail} →</a><br><a href="mailto:${company.email}?subject=PCB%20engineering%20question">Shared mailbox: ${company.email} →</a></article><article class="contact-card"><span>Files ready</span><h3>Submit a secure RFQ</h3><p>Configure the board and upload Gerber, ODB++ or related fabrication files through the private RFQ route.</p><a href="/#quote">Open RFQ workspace →</a></article><article class="contact-card"><span>Supplier review</span><h3>Request qualification documents</h3><p>Ask for current certificates, scope documents and the quality records relevant to your program.</p><a href="mailto:${company.contactEmail}?subject=Request%20HXLFAB%20supplier%20qualification%20pack">Request document pack →</a></article></div></div></section>
   <section class="page-section mist"><div class="shell"><div class="content-split"><div class="long-copy"><p class="eyebrow dark">Useful first-message details</p><h2>A short brief prevents an unnecessary email loop.</h2><ul><li>Board type and approximate layer count</li><li>Prototype, pilot or production quantity</li><li>Material, impedance, via or copper requirements</li><li>Target decision or delivery date</li><li>Whether Gerber / ODB++ files are ready</li><li>Any required certification, report or packaging condition</li></ul><h3>Before restricted data is uploaded</h3><p>If an NDA, export-control review, government-program restriction or customer-specific data workflow applies, contact the team first and agree the handling route in writing.</p></div><aside class="side-note"><p class="eyebrow">Direct line</p><h2>${company.phone}</h2><p>For international calling, time-zone and language availability should be confirmed by email.</p><a class="button" href="tel:+8613823663114">Call HXLFAB <span>↗</span></a></aside></div></div></section>
   <section class="cta-band"><div class="shell cta-band-inner"><h2>Have files ready for engineering review?</h2><a class="button" href="/#quote">Start the RFQ <span>↗</span></a></div></section>`,
 };

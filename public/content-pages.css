@@ -188,7 +188,8 @@
 }
 
 .document-card a,
-.contact-card a {
+.contact-card a,
+.role-card a {
   display: inline-flex;
   margin-top: 20px;
   color: var(--teal);
