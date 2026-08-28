@@ -14,8 +14,8 @@
   <meta property="og:description" content="Engineering-led custom PCB manufacturing from prototype to volume production. Upload Gerber files for an engineer-confirmed quote.">
   <meta property="og:url" content="https://hxlfab.com/">
   <meta property="og:image" content="https://hxlfab.com/images/cnc-drilling.webp">
-  <link rel="stylesheet" href="/styles.css?v=20260815f">
-  <script src="/site.js?v=20260815f" defer></script>
+  <link rel="stylesheet" href="/styles.css?v=20260829a">
+  <script src="/site.js?v=20260829a" defer></script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://hxlfab.com/#organization","name":"HXLFAB","url":"https://hxlfab.com/","email":"sales@hxlfab.com","telephone":"+86 138 2366 3114","address":[{"@type":"PostalAddress","streetAddress":"Jinjiping Industrial Park, Xinping Town","addressLocality":"Lipu City","addressRegion":"Guangxi","addressCountry":"CN"},{"@type":"PostalAddress","streetAddress":"Room 911, Haichuan Building, Baoyuan Road, Xixiang, Bao'an District","addressLocality":"Shenzhen","addressRegion":"Guangdong","addressCountry":"CN"}]},{"@type":"WebSite","@id":"https://hxlfab.com/#website","url":"https://hxlfab.com/","name":"HXLFAB","publisher":{"@id":"https://hxlfab.com/#organization"},"inLanguage":"en"},{"@type":"WebPage","@id":"https://hxlfab.com/#webpage","url":"https://hxlfab.com/","name":"Custom PCB Manufacturer | Multilayer, HDI & RF PCB | HXLFAB","description":"Engineering-led custom PCB manufacturing from prototype to volume production.","isPartOf":{"@id":"https://hxlfab.com/#website"},"about":{"@id":"https://hxlfab.com/#organization"}}]}
   </script>
@@ -39,7 +39,29 @@
         <div class="hero-actions"><a class="button" href="#quote">Start a secure RFQ <span>↗</span></a><a class="text-link" href="/contact/">Ask sales engineering <span>→</span></a></div>
         <div class="proof"><a href="/quality-certifications/">Quality documents</a><a href="/factory-process/">Factory & process</a><a href="/engineering-scenarios/">Engineering scenarios</a></div>
       </div>
-      <figure class="hero-image"><img src="/images/cnc-drilling.webp" alt="Multi-spindle CNC drilling equipment at the HXLFAB production base" width="1280" height="960"><figcaption><span>On-site production</span><strong>Multi-spindle CNC drilling</strong></figcaption></figure>
+      <aside class="market-pulse" aria-labelledby="marketPulseTitle">
+        <div class="market-pulse-head">
+          <div><span class="market-live"><i aria-hidden="true"></i>Market intelligence</span><h2 id="marketPulseTitle">PCB industry pulse</h2></div>
+          <span id="pulseUpdated">Loading latest data…</span>
+        </div>
+        <section class="copper-card" aria-labelledby="copperTitle">
+          <div class="copper-summary">
+            <span id="copperTitle">Copper benchmark</span>
+            <strong id="copperValue">—</strong>
+            <span id="copperUnit">USD / metric ton · monthly</span>
+            <b id="copperChange" class="market-change">—</b>
+          </div>
+          <div class="copper-chart-wrap">
+            <svg id="copperChart" class="copper-chart" viewBox="0 0 360 150" role="img" aria-label="Recent copper benchmark trend"></svg>
+            <div class="chart-period"><span id="chartStart">—</span><span id="chartEnd">—</span></div>
+          </div>
+        </section>
+        <section class="industry-news" aria-labelledby="industryNewsTitle">
+          <div class="industry-news-head"><h3 id="industryNewsTitle">Latest industry signals</h3><span>External sources ↗</span></div>
+          <ol id="industryNewsList"><li class="pulse-loading">Retrieving the latest PCB and electronics manufacturing updates…</li></ol>
+        </section>
+        <p class="market-disclaimer" id="marketSources">Source data is provided for general market awareness, not purchasing or financial decisions.</p>
+      </aside>
     </div></section>
 
     <section class="metrics" aria-label="Engineering review route"><div class="shell metric-grid"><div><strong>CAM + DFM</strong><span>Data completeness & risk review</span></div><div><strong>Stack-up</strong><span>Material, vias & impedance</span></div><div><strong>Test plan</strong><span>Electrical & targeted verification</span></div><div><strong>Traceable RFQ</strong><span>Private production-file route</span></div></div></section>

@@ -8,6 +8,8 @@ This branch contains the redesigned HXLFAB manufacturing website and a Cloudflar
 - `scripts/generate-seo-pages.mjs` — source data and shared template for product landing pages
 - `scripts/generate-trust-pages.mjs` — source and templates for quality, factory, commercial-process, team, contact and privacy pages
 - `functions/` — RFQ creation, streamed upload, completion email and protected download endpoints
+- `scripts/update-industry-pulse.mjs` — refreshes official industry headlines and the FRED/IMF monthly copper benchmark
+- `public/data/industry-pulse.json` — versioned, same-origin data consumed by the homepage market module
 - Cloudflare R2 binding `RFQ_FILES` — private Gerber/ODB++ archives
 - Cloudflare D1 binding `RFQ_DB` — RFQ and file metadata
 - Cloudflare Email Service API — RFQ notification using project secrets
@@ -80,3 +82,15 @@ Keep every canonical page in `public/sitemap.xml` and use the root domain `https
 - Structured operational logs without file contents or token values
 
 ODB++ folders should be compressed into ZIP or 7Z before upload. Uploaded archives remain untrusted input and should be scanned by endpoint security before engineers open them.
+
+## Automated industry pulse
+
+`.github/workflows/update-industry-pulse.yml` runs every day and can also be started manually. It reads the public RSS feeds from the Global Electronics Association and PCEA, then retrieves the IMF copper series distributed by FRED. The job validates the generated JSON and commits only when source data changes. A commit to `main` triggers the existing Cloudflare Pages Git deployment.
+
+Run the same updater locally with:
+
+```bash
+npm run update:industry-pulse
+```
+
+The homepage treats all fetched titles and links as untrusted data, renders them with DOM text nodes, accepts HTTPS article URLs only and keeps a clear source/advisory label. No API key is required or exposed to visitors.

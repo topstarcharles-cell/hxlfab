@@ -8,6 +8,7 @@
     "generate:content": "node scripts/generate-trust-pages.mjs",
     "generate:help": "node scripts/generate-help-center.mjs",
     "generate:sitemap": "node scripts/generate-sitemap.mjs",
+    "update:industry-pulse": "node scripts/update-industry-pulse.mjs",
     "validate:site": "node scripts/validate-site.mjs",
     "dev": "wrangler pages dev public --d1=RFQ_DB --r2=RFQ_FILES",
     "deploy": "wrangler pages deploy public --project-name hxlfab",

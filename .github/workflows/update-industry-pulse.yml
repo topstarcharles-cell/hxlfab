@@ -1,0 +1,47 @@
+name: Update PCB industry pulse
+
+on:
+  schedule:
+    - cron: "17 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: industry-pulse-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Refresh source data
+        run: npm run update:industry-pulse
+
+      - name: Validate generated data and site
+        run: |
+          node -e 'const d=require("./public/data/industry-pulse.json"); if(d.schemaVersion!==1 || !d.copper?.trend?.length || d.news?.length<2) process.exit(1)'
+          npm run validate:site
+
+      - name: Commit source changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data/industry-pulse.json
+          if git diff --cached --quiet; then
+            echo "Industry sources have not changed."
+            exit 0
+          fi
+          git commit -m "Update PCB industry pulse"
+          git pull --rebase origin main
+          git push origin HEAD:main
