@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-27T21:05:31.000Z",
+  "updatedAt": "2026-08-30T23:05:00.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,6 +51,12 @@
   },
   "news": [
     {
+      "title": "2026 Cable & Wire Harness Competition - Regional Qualification Estonia",
+      "url": "https://www.electronics.org/event/2026-cable-wire-harness-competition-regional-qualification-estonia",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-08-30T23:05:00.000Z"
+    },
+    {
       "title": "Three Essential Reads on Memory, Materials, and Skilled Labor",
       "url": "https://www.electronics.org/blog/three-essential-reads-memory-materials-and-skilled-labor",
       "source": "Global Electronics Association",
@@ -67,12 +73,6 @@
       "url": "https://www.electronics.org/blog/electronics-talent-gap-starts-awareness-gap",
       "source": "Global Electronics Association",
       "publishedAt": "2026-08-25T19:54:05.000Z"
-    },
-    {
-      "title": "North American PCB Demand Strengthens as July Bookings Surge 62%",
-      "url": "https://www.electronics.org/news-release/north-american-pcb-demand-strengthens-july-bookings-surge-62",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-08-25T14:37:04.000Z"
     }
   ],
   "newsSources": [
