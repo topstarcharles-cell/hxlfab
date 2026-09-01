@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-30T23:05:00.000Z",
+  "updatedAt": "2026-08-31T16:15:29.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,6 +51,18 @@
   },
   "news": [
     {
+      "title": "Celebrating One Year of the Advanced Electronic Packaging Technology Council (ADEPT): From Momentum to Measurable Impact",
+      "url": "https://www.electronics.org/blog/celebrating-one-year-advanced-electronic-packaging-technology-council-adept-momentum",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-08-31T16:15:29.000Z"
+    },
+    {
+      "title": "Radbon Electronics Achieves IPC/WHMA-A-620 QML Validation, Joins IPC Global Qualified Manufacturers List",
+      "url": "https://www.electronics.org/news-release/radbon-electronics-achieves-ipcwhma-620-qml-validation-joins-ipc-global-qualified",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-08-31T13:33:22.000Z"
+    },
+    {
       "title": "2026 Cable & Wire Harness Competition - Regional Qualification Estonia",
       "url": "https://www.electronics.org/event/2026-cable-wire-harness-competition-regional-qualification-estonia",
       "source": "Global Electronics Association",
@@ -61,18 +73,6 @@
       "url": "https://www.electronics.org/blog/three-essential-reads-memory-materials-and-skilled-labor",
       "source": "Global Electronics Association",
       "publishedAt": "2026-08-27T21:05:31.000Z"
-    },
-    {
-      "title": "PCEA Announces Free Technical Sessions for PCB West 2026",
-      "url": "https://pcea.net/2026/08/27/pcea-announces-free-technical-sessions-for-pcb-west-2026/",
-      "source": "PCEA",
-      "publishedAt": "2026-08-27T20:10:10.000Z"
-    },
-    {
-      "title": "The Electronics Talent Gap Starts with an Awareness Gap",
-      "url": "https://www.electronics.org/blog/electronics-talent-gap-starts-awareness-gap",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-08-25T19:54:05.000Z"
     }
   ],
   "newsSources": [
