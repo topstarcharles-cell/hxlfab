@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-02T14:00:27.000Z",
+  "updatedAt": "2026-09-03T23:20:04.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,6 +51,18 @@
   },
   "news": [
     {
+      "title": "The Connection Between Online Courses to IPC Standards for Successful PCB Design",
+      "url": "https://www.electronics.org/event/connection-between-online-courses-ipc-standards-successful-pcb-design",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-09-03T23:20:04.000Z"
+    },
+    {
+      "title": "PCEA Launches Webinar Series on Electronics Supply Chain Risk",
+      "url": "https://pcea.net/2026/09/03/pcea-launches-webinar-series-on-electronics-supply-chain-risk/",
+      "source": "PCEA",
+      "publishedAt": "2026-09-03T15:50:43.000Z"
+    },
+    {
       "title": "Upper Midwest (Minnesota) EMS Leadership Roundtable",
       "url": "https://www.electronics.org/event/upper-midwest-minnesota-ems-leadership-roundtable",
       "source": "Global Electronics Association",
@@ -61,18 +73,6 @@
       "url": "https://pcea.net/2026/09/02/september-2026-newsletter/",
       "source": "PCEA",
       "publishedAt": "2026-09-02T13:44:05.000Z"
-    },
-    {
-      "title": "Celebrating One Year of the Advanced Electronic Packaging Technology Council (ADEPT): From Momentum to Measurable Impact",
-      "url": "https://www.electronics.org/blog/celebrating-one-year-advanced-electronic-packaging-technology-council-adept-momentum",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-08-31T16:15:29.000Z"
-    },
-    {
-      "title": "Radbon Electronics Achieves IPC/WHMA-A-620 QML Validation, Joins IPC Global Qualified Manufacturers List",
-      "url": "https://www.electronics.org/news-release/radbon-electronics-achieves-ipcwhma-620-qml-validation-joins-ipc-global-qualified",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-08-31T13:33:22.000Z"
     }
   ],
   "newsSources": [
