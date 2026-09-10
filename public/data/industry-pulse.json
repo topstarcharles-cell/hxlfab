@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-04T15:24:56.000Z",
+  "updatedAt": "2026-09-09T16:59:08.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,6 +51,12 @@
   },
   "news": [
     {
+      "title": "Hand Soldering World Championship at electronica (Munich)",
+      "url": "https://www.electronics.org/event/hand-soldering-world-championship-electronica-munich",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-09-09T16:59:08.000Z"
+    },
+    {
       "title": "Limited Seating Left for CPCD Training at PCB West",
       "url": "https://pcea.net/2026/09/04/limited-seating-left-for-cpcd-training-at-pcb-west/",
       "source": "PCEA",
@@ -67,12 +73,6 @@
       "url": "https://www.electronics.org/blog/building-resilient-electronics-ecosystem-strategies-investments-and-policies-europe-needs",
       "source": "Global Electronics Association",
       "publishedAt": "2026-09-04T14:07:45.000Z"
-    },
-    {
-      "title": "The Connection Between Online Courses to IPC Standards for Successful PCB Design",
-      "url": "https://www.electronics.org/event/connection-between-online-courses-ipc-standards-successful-pcb-design",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-09-03T23:20:04.000Z"
     }
   ],
   "newsSources": [
