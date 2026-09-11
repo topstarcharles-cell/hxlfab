@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-09T16:59:08.000Z",
+  "updatedAt": "2026-09-10T18:33:06.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,6 +51,12 @@
   },
   "news": [
     {
+      "title": "Test Bench II: Electronics Testing and Basic Troubleshooting",
+      "url": "https://www.electronics.org/event/test-bench-ii-electronics-testing-and-basic-troubleshooting",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-09-10T18:33:06.000Z"
+    },
+    {
       "title": "Hand Soldering World Championship at electronica (Munich)",
       "url": "https://www.electronics.org/event/hand-soldering-world-championship-electronica-munich",
       "source": "Global Electronics Association",
@@ -67,12 +73,6 @@
       "url": "https://www.electronics.org/blog/ai-moving-hype-hardware-and-pilots-scale",
       "source": "Global Electronics Association",
       "publishedAt": "2026-09-04T14:30:09.000Z"
-    },
-    {
-      "title": "Building a Resilient Electronics Ecosystem: The Strategies, Investments and Policies Europe Needs",
-      "url": "https://www.electronics.org/blog/building-resilient-electronics-ecosystem-strategies-investments-and-policies-europe-needs",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-09-04T14:07:45.000Z"
     }
   ],
   "newsSources": [
