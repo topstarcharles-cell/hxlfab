@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-10T18:33:06.000Z",
+  "updatedAt": "2026-09-11T11:46:23.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,6 +51,12 @@
   },
   "news": [
     {
+      "title": "Europe Electronics Gaining Momentum: Why Paris Is the Place to Be on 17 September",
+      "url": "https://www.electronics.org/blog/europe-electronics-gaining-momentum-why-paris-place-be-17-september",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-09-11T11:46:23.000Z"
+    },
+    {
       "title": "Test Bench II: Electronics Testing and Basic Troubleshooting",
       "url": "https://www.electronics.org/event/test-bench-ii-electronics-testing-and-basic-troubleshooting",
       "source": "Global Electronics Association",
@@ -67,12 +73,6 @@
       "url": "https://pcea.net/2026/09/04/limited-seating-left-for-cpcd-training-at-pcb-west/",
       "source": "PCEA",
       "publishedAt": "2026-09-04T15:24:56.000Z"
-    },
-    {
-      "title": "AI Is Moving from Hype to Hardware — and from Pilots to Scale",
-      "url": "https://www.electronics.org/blog/ai-moving-hype-hardware-and-pilots-scale",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-09-04T14:30:09.000Z"
     }
   ],
   "newsSources": [
