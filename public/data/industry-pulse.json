@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-11T11:46:23.000Z",
+  "updatedAt": "2026-09-16T02:29:25.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,6 +51,18 @@
   },
   "news": [
     {
+      "title": "Global Electronics Association Updates Sustainability Reporting Resource for the Electronics Industry",
+      "url": "https://www.electronics.org/news-release/global-electronics-association-updates-sustainability-reporting-resource-electronics",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-09-16T02:29:25.000Z"
+    },
+    {
+      "title": "WHMA Announces 2027 Annual Global Leadership Summit for Wire Harness Industry Leaders",
+      "url": "https://www.electronics.org/news-release/whma-announces-2027-annual-global-leadership-summit-wire-harness-industry-leaders",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-09-15T16:48:01.000Z"
+    },
+    {
       "title": "Europe Electronics Gaining Momentum: Why Paris Is the Place to Be on 17 September",
       "url": "https://www.electronics.org/blog/europe-electronics-gaining-momentum-why-paris-place-be-17-september",
       "source": "Global Electronics Association",
@@ -61,18 +73,6 @@
       "url": "https://www.electronics.org/event/test-bench-ii-electronics-testing-and-basic-troubleshooting",
       "source": "Global Electronics Association",
       "publishedAt": "2026-09-10T18:33:06.000Z"
-    },
-    {
-      "title": "Hand Soldering World Championship at electronica (Munich)",
-      "url": "https://www.electronics.org/event/hand-soldering-world-championship-electronica-munich",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-09-09T16:59:08.000Z"
-    },
-    {
-      "title": "Limited Seating Left for CPCD Training at PCB West",
-      "url": "https://pcea.net/2026/09/04/limited-seating-left-for-cpcd-training-at-pcb-west/",
-      "source": "PCEA",
-      "publishedAt": "2026-09-04T15:24:56.000Z"
     }
   ],
   "newsSources": [
