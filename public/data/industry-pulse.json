@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-16T02:29:25.000Z",
+  "updatedAt": "2026-09-17T04:00:01.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,6 +51,18 @@
   },
   "news": [
     {
+      "title": "REPORT: Closing the European Gap in Data Centre, Cloud, and AI Infrastructure Manufacturing",
+      "url": "https://www.electronics.org/news-release/report-closing-european-ai-leadership-gap",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-09-17T04:00:01.000Z"
+    },
+    {
+      "title": "Europe’s EMS recovery has an asterisk. The headline only shows you one part of the story.",
+      "url": "https://www.electronics.org/blog/europes-ems-recovery-has-asterisk-headline-only-shows-you-one-part-story",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-09-16T15:05:39.000Z"
+    },
+    {
       "title": "Global Electronics Association Updates Sustainability Reporting Resource for the Electronics Industry",
       "url": "https://www.electronics.org/news-release/global-electronics-association-updates-sustainability-reporting-resource-electronics",
       "source": "Global Electronics Association",
@@ -61,18 +73,6 @@
       "url": "https://www.electronics.org/news-release/whma-announces-2027-annual-global-leadership-summit-wire-harness-industry-leaders",
       "source": "Global Electronics Association",
       "publishedAt": "2026-09-15T16:48:01.000Z"
-    },
-    {
-      "title": "Europe Electronics Gaining Momentum: Why Paris Is the Place to Be on 17 September",
-      "url": "https://www.electronics.org/blog/europe-electronics-gaining-momentum-why-paris-place-be-17-september",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-09-11T11:46:23.000Z"
-    },
-    {
-      "title": "Test Bench II: Electronics Testing and Basic Troubleshooting",
-      "url": "https://www.electronics.org/event/test-bench-ii-electronics-testing-and-basic-troubleshooting",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-09-10T18:33:06.000Z"
     }
   ],
   "newsSources": [
