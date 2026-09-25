@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-17T04:00:01.000Z",
+  "updatedAt": "2026-09-24T12:18:21.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,6 +51,12 @@
   },
   "news": [
     {
+      "title": "PCEA Publica “Fundamentos de Placas de Circuito Impreso,” 6.ª edición",
+      "url": "https://pcea.net/2026/09/24/pcea-publica-fundamentos-de-placas-de-circuito-impreso-6-a-edicion/",
+      "source": "PCEA",
+      "publishedAt": "2026-09-24T12:18:21.000Z"
+    },
+    {
       "title": "REPORT: Closing the European Gap in Data Centre, Cloud, and AI Infrastructure Manufacturing",
       "url": "https://www.electronics.org/news-release/report-closing-european-ai-leadership-gap",
       "source": "Global Electronics Association",
@@ -67,12 +73,6 @@
       "url": "https://www.electronics.org/news-release/global-electronics-association-updates-sustainability-reporting-resource-electronics",
       "source": "Global Electronics Association",
       "publishedAt": "2026-09-16T02:29:25.000Z"
-    },
-    {
-      "title": "WHMA Announces 2027 Annual Global Leadership Summit for Wire Harness Industry Leaders",
-      "url": "https://www.electronics.org/news-release/whma-announces-2027-annual-global-leadership-summit-wire-harness-industry-leaders",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-09-15T16:48:01.000Z"
     }
   ],
   "newsSources": [
