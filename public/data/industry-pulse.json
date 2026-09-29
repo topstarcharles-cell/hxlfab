@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-28T08:21:00.000Z",
+  "updatedAt": "2026-09-29T08:05:00.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,6 +51,12 @@
   },
   "news": [
     {
+      "title": "PCB West 2026 Exhibits Open Tomorrow",
+      "url": "https://pcea.net/2026/09/29/pcb-west-2026-exhibits-open-tomorrow/",
+      "source": "PCEA",
+      "publishedAt": "2026-09-29T08:05:00.000Z"
+    },
+    {
       "title": "PCB West 2026 Conference Opens Tomorrow",
       "url": "https://pcea.net/2026/09/28/pcb-west-2026-conference-opens-tomorrow/",
       "source": "PCEA",
@@ -67,12 +73,6 @@
       "url": "https://www.electronics.org/news-release/report-closing-european-ai-leadership-gap",
       "source": "Global Electronics Association",
       "publishedAt": "2026-09-17T04:00:01.000Z"
-    },
-    {
-      "title": "Europe’s EMS recovery has an asterisk. The headline only shows you one part of the story.",
-      "url": "https://www.electronics.org/blog/europes-ems-recovery-has-asterisk-headline-only-shows-you-one-part-story",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-09-16T15:05:39.000Z"
     }
   ],
   "newsSources": [
