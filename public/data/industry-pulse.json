@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-29T08:05:00.000Z",
+  "updatedAt": "2026-09-30T08:05:00.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,28 +51,28 @@
   },
   "news": [
     {
+      "title": "PCB West 2026 Exhibits Open Today",
+      "url": "https://pcea.net/2026/09/30/pcb-west-2026-exhibits-open-today/",
+      "source": "PCEA",
+      "publishedAt": "2026-09-30T08:05:00.000Z"
+    },
+    {
+      "title": "EMS Plugs in to Capitol Hill",
+      "url": "https://www.electronics.org/blog/ems-plugs-capitol-hill",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-09-29T15:07:38.000Z"
+    },
+    {
+      "title": "Global Electronics Association and Fraunhofer Group for Microelectronics Sign MoU to Support Advanced Packaging Industrial Adoption",
+      "url": "https://www.electronics.org/news-release/global-electronics-association-and-fraunhofer-group-microelectronics-sign-mou-support",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-09-29T14:17:33.000Z"
+    },
+    {
       "title": "PCB West 2026 Exhibits Open Tomorrow",
       "url": "https://pcea.net/2026/09/29/pcb-west-2026-exhibits-open-tomorrow/",
       "source": "PCEA",
       "publishedAt": "2026-09-29T08:05:00.000Z"
-    },
-    {
-      "title": "PCB West 2026 Conference Opens Tomorrow",
-      "url": "https://pcea.net/2026/09/28/pcb-west-2026-conference-opens-tomorrow/",
-      "source": "PCEA",
-      "publishedAt": "2026-09-28T08:21:00.000Z"
-    },
-    {
-      "title": "PCEA Publica “Fundamentos de Placas de Circuito Impreso,” 6.ª edición",
-      "url": "https://pcea.net/2026/09/24/pcea-publica-fundamentos-de-placas-de-circuito-impreso-6-a-edicion/",
-      "source": "PCEA",
-      "publishedAt": "2026-09-24T12:18:21.000Z"
-    },
-    {
-      "title": "REPORT: Closing the European Gap in Data Centre, Cloud, and AI Infrastructure Manufacturing",
-      "url": "https://www.electronics.org/news-release/report-closing-european-ai-leadership-gap",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-09-17T04:00:01.000Z"
     }
   ],
   "newsSources": [
