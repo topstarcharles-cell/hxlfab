@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-30T08:05:00.000Z",
+  "updatedAt": "2026-09-30T20:37:37.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,6 +51,18 @@
   },
   "news": [
     {
+      "title": "North American PCB Shipments Jump 23.5% in August, Extending Strong 2026 Growth",
+      "url": "https://www.electronics.org/news-release/north-american-pcb-shipments-jump-235-august-extending-strong-2026-growth",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-09-30T20:37:37.000Z"
+    },
+    {
+      "title": "MIT’s Yossi Sheffi to Headline Global Electronics Association APEX EXPO 2027",
+      "url": "https://www.electronics.org/news-release/mits-yossi-sheffi-headline-global-electronics-association-apex-expo-2027",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-09-30T12:35:55.000Z"
+    },
+    {
       "title": "PCB West 2026 Exhibits Open Today",
       "url": "https://pcea.net/2026/09/30/pcb-west-2026-exhibits-open-today/",
       "source": "PCEA",
@@ -61,18 +73,6 @@
       "url": "https://www.electronics.org/blog/ems-plugs-capitol-hill",
       "source": "Global Electronics Association",
       "publishedAt": "2026-09-29T15:07:38.000Z"
-    },
-    {
-      "title": "Global Electronics Association and Fraunhofer Group for Microelectronics Sign MoU to Support Advanced Packaging Industrial Adoption",
-      "url": "https://www.electronics.org/news-release/global-electronics-association-and-fraunhofer-group-microelectronics-sign-mou-support",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-09-29T14:17:33.000Z"
-    },
-    {
-      "title": "PCB West 2026 Exhibits Open Tomorrow",
-      "url": "https://pcea.net/2026/09/29/pcb-west-2026-exhibits-open-tomorrow/",
-      "source": "PCEA",
-      "publishedAt": "2026-09-29T08:05:00.000Z"
     }
   ],
   "newsSources": [
