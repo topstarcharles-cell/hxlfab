@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-30T20:37:37.000Z",
+  "updatedAt": "2026-10-01T11:49:30.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,6 +51,12 @@
   },
   "news": [
     {
+      "title": "North American EMS Orders Outpace Shipments in August as Bookings Rise 53.5% Year-Over-Year",
+      "url": "https://www.electronics.org/news-release/north-american-ems-orders-outpace-shipments-august-bookings-rise-535-year-over-year",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-10-01T11:49:30.000Z"
+    },
+    {
       "title": "North American PCB Shipments Jump 23.5% in August, Extending Strong 2026 Growth",
       "url": "https://www.electronics.org/news-release/north-american-pcb-shipments-jump-235-august-extending-strong-2026-growth",
       "source": "Global Electronics Association",
@@ -67,12 +73,6 @@
       "url": "https://pcea.net/2026/09/30/pcb-west-2026-exhibits-open-today/",
       "source": "PCEA",
       "publishedAt": "2026-09-30T08:05:00.000Z"
-    },
-    {
-      "title": "EMS Plugs in to Capitol Hill",
-      "url": "https://www.electronics.org/blog/ems-plugs-capitol-hill",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-09-29T15:07:38.000Z"
     }
   ],
   "newsSources": [
