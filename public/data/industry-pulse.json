@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-01T11:49:30.000Z",
+  "updatedAt": "2026-10-02T15:21:07.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,6 +51,12 @@
   },
   "news": [
     {
+      "title": "From System Safety Requirements to Rugged PCB Decisions: A Practical Requirements-to-Evidence Workflow",
+      "url": "https://www.electronics.org/event/system-safety-requirements-rugged-pcb-decisions-practical-requirements-evidence-workflow",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-10-02T15:21:07.000Z"
+    },
+    {
       "title": "North American EMS Orders Outpace Shipments in August as Bookings Rise 53.5% Year-Over-Year",
       "url": "https://www.electronics.org/news-release/north-american-ems-orders-outpace-shipments-august-bookings-rise-535-year-over-year",
       "source": "Global Electronics Association",
@@ -67,12 +73,6 @@
       "url": "https://www.electronics.org/news-release/mits-yossi-sheffi-headline-global-electronics-association-apex-expo-2027",
       "source": "Global Electronics Association",
       "publishedAt": "2026-09-30T12:35:55.000Z"
-    },
-    {
-      "title": "PCB West 2026 Exhibits Open Today",
-      "url": "https://pcea.net/2026/09/30/pcb-west-2026-exhibits-open-today/",
-      "source": "PCEA",
-      "publishedAt": "2026-09-30T08:05:00.000Z"
     }
   ],
   "newsSources": [
