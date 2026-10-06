@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-02T15:21:07.000Z",
+  "updatedAt": "2026-10-05T14:06:43.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,6 +51,18 @@
   },
   "news": [
     {
+      "title": "What Climate Week NYC Conversations Mean for the Electronics Industry",
+      "url": "https://www.electronics.org/blog/what-climate-week-nyc-conversations-mean-electronics-industry",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-10-05T14:06:43.000Z"
+    },
+    {
+      "title": "IPC Standards Support Professional Assessment for the Electronics Competition at WorldSkills Shanghai 2026",
+      "url": "https://www.electronics.org/news-release/ipc-standards-support-professional-assessment-electronics-competition-worldskills",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-10-05T13:02:53.000Z"
+    },
+    {
       "title": "From System Safety Requirements to Rugged PCB Decisions: A Practical Requirements-to-Evidence Workflow",
       "url": "https://www.electronics.org/event/system-safety-requirements-rugged-pcb-decisions-practical-requirements-evidence-workflow",
       "source": "Global Electronics Association",
@@ -61,18 +73,6 @@
       "url": "https://www.electronics.org/news-release/north-american-ems-orders-outpace-shipments-august-bookings-rise-535-year-over-year",
       "source": "Global Electronics Association",
       "publishedAt": "2026-10-01T11:49:30.000Z"
-    },
-    {
-      "title": "North American PCB Shipments Jump 23.5% in August, Extending Strong 2026 Growth",
-      "url": "https://www.electronics.org/news-release/north-american-pcb-shipments-jump-235-august-extending-strong-2026-growth",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-09-30T20:37:37.000Z"
-    },
-    {
-      "title": "MIT’s Yossi Sheffi to Headline Global Electronics Association APEX EXPO 2027",
-      "url": "https://www.electronics.org/news-release/mits-yossi-sheffi-headline-global-electronics-association-apex-expo-2027",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-09-30T12:35:55.000Z"
     }
   ],
   "newsSources": [
