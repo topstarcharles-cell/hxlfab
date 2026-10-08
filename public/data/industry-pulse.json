@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-06T11:32:37.000Z",
+  "updatedAt": "2026-10-07T15:09:13.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,6 +51,12 @@
   },
   "news": [
     {
+      "title": "Global Electronics Association and Purdue University Establish Strategic Partnership to Advance Electronics Innovation",
+      "url": "https://www.electronics.org/news-release/global-electronics-association-and-purdue-university-establish-strategic-partnership",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-10-07T15:09:13.000Z"
+    },
+    {
       "title": "Global Electronics Association Names Jason Palmi Chief Financial Officer",
       "url": "https://www.electronics.org/news-release/global-electronics-association-names-jason-palmi-chief-financial-officer",
       "source": "Global Electronics Association",
@@ -67,12 +73,6 @@
       "url": "https://www.electronics.org/news-release/ipc-standards-support-professional-assessment-electronics-competition-worldskills",
       "source": "Global Electronics Association",
       "publishedAt": "2026-10-05T13:02:53.000Z"
-    },
-    {
-      "title": "From System Safety Requirements to Rugged PCB Decisions: A Practical Requirements-to-Evidence Workflow",
-      "url": "https://www.electronics.org/event/system-safety-requirements-rugged-pcb-decisions-practical-requirements-evidence-workflow",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-10-02T15:21:07.000Z"
     }
   ],
   "newsSources": [
