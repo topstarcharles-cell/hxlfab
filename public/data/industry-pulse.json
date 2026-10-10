@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-08T12:56:59.000Z",
+  "updatedAt": "2026-10-09T12:09:37.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,6 +51,12 @@
   },
   "news": [
     {
+      "title": "Little Streams Make Big Rivers",
+      "url": "https://www.electronics.org/blog/little-streams-make-big-rivers",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-10-09T12:09:37.000Z"
+    },
+    {
       "title": "Global Electronics Association Releases IPC-1783-CO2E Standard for Product Carbon Footprint Data",
       "url": "https://www.electronics.org/news-release/global-electronics-association-releases-ipc-1783-co2e-standard-product-carbon",
       "source": "Global Electronics Association",
@@ -67,12 +73,6 @@
       "url": "https://www.electronics.org/event/2026-hand-soldering-competition-regional-qualification-germany",
       "source": "Global Electronics Association",
       "publishedAt": "2026-10-08T10:59:42.000Z"
-    },
-    {
-      "title": "Global Electronics Association and Purdue University Establish Strategic Partnership to Advance Electronics Innovation",
-      "url": "https://www.electronics.org/news-release/global-electronics-association-and-purdue-university-establish-strategic-partnership",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-10-07T15:09:13.000Z"
     }
   ],
   "newsSources": [
