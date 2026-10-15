@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-09T12:09:37.000Z",
+  "updatedAt": "2026-10-14T23:50:43.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,6 +51,12 @@
   },
   "news": [
     {
+      "title": "Safer Chemistry, Shifting Rules: What’s Next for Electronics Manufacturers?",
+      "url": "https://www.electronics.org/blog/safer-chemistry-shifting-rules-whats-next-electronics-manufacturers",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-10-14T23:50:43.000Z"
+    },
+    {
       "title": "Little Streams Make Big Rivers",
       "url": "https://www.electronics.org/blog/little-streams-make-big-rivers",
       "source": "Global Electronics Association",
@@ -67,12 +73,6 @@
       "url": "https://www.electronics.org/event/2026-cable-wire-harness-competition-regional-qualification-germany",
       "source": "Global Electronics Association",
       "publishedAt": "2026-10-08T12:09:05.000Z"
-    },
-    {
-      "title": "2026 Hand Soldering Competition - Regional Qualification Germany",
-      "url": "https://www.electronics.org/event/2026-hand-soldering-competition-regional-qualification-germany",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-10-08T10:59:42.000Z"
     }
   ],
   "newsSources": [
