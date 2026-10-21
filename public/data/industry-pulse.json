@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-15T16:06:53.000Z",
+  "updatedAt": "2026-10-20T13:33:30.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,6 +51,12 @@
   },
   "news": [
     {
+      "title": "Upcoming PCEA PCB Design Training Classes for 2027",
+      "url": "https://pcea.net/2026/10/20/upcoming-pcea-pcb-design-training-classes-for-2027/",
+      "source": "PCEA",
+      "publishedAt": "2026-10-20T13:33:30.000Z"
+    },
+    {
       "title": "PCB WEST 2026 Conference Registration Grows 60%",
       "url": "https://pcea.net/2026/10/15/pcb-west-2026-conference-registration-grows-60/",
       "source": "PCEA",
@@ -67,12 +73,6 @@
       "url": "https://www.electronics.org/blog/safer-chemistry-shifting-rules-whats-next-electronics-manufacturers",
       "source": "Global Electronics Association",
       "publishedAt": "2026-10-14T23:50:43.000Z"
-    },
-    {
-      "title": "Little Streams Make Big Rivers",
-      "url": "https://www.electronics.org/blog/little-streams-make-big-rivers",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-10-09T12:09:37.000Z"
     }
   ],
   "newsSources": [
