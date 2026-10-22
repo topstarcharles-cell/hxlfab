@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-20T13:33:30.000Z",
+  "updatedAt": "2026-10-21T12:43:01.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,6 +51,18 @@
   },
   "news": [
     {
+      "title": "Global Electronics Association Hosts IMPACT 2026 Session on Advanced Electronic Packaging System Integration, with Technical Perspectives from Unimicron, STATS ChipPAC and Wistron",
+      "url": "https://www.electronics.org/news-release/global-electronics-association-hosts-impact-2026-session-advanced-electronic-packaging",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-10-21T12:43:01.000Z"
+    },
+    {
+      "title": "Virtual Breakfast with Global Perspectives",
+      "url": "https://www.electronics.org/event/virtual-breakfast-global-perspectives",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-10-21T11:04:49.000Z"
+    },
+    {
       "title": "Upcoming PCEA PCB Design Training Classes for 2027",
       "url": "https://pcea.net/2026/10/20/upcoming-pcea-pcb-design-training-classes-for-2027/",
       "source": "PCEA",
@@ -61,18 +73,6 @@
       "url": "https://pcea.net/2026/10/15/pcb-west-2026-conference-registration-grows-60/",
       "source": "PCEA",
       "publishedAt": "2026-10-15T16:06:53.000Z"
-    },
-    {
-      "title": "High Density Packaging User Group and Global Electronics Association Announce New Copper Profile Test Method",
-      "url": "https://www.electronics.org/news-release/high-density-packaging-user-group-and-global-electronics-association-announce-new",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-10-15T13:01:29.000Z"
-    },
-    {
-      "title": "Safer Chemistry, Shifting Rules: What’s Next for Electronics Manufacturers?",
-      "url": "https://www.electronics.org/blog/safer-chemistry-shifting-rules-whats-next-electronics-manufacturers",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-10-14T23:50:43.000Z"
     }
   ],
   "newsSources": [
