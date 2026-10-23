@@ -1,24 +1,16 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-21T12:43:01.000Z",
+  "updatedAt": "2026-10-22T15:13:36.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
     "currency": "USD",
     "unit": "metric ton",
     "frequency": "monthly",
-    "latest": 13542.82,
-    "latestPeriod": "2026-07-01",
-    "changePct": 14.86,
+    "latest": 14473.06,
+    "latestPeriod": "2026-09-01",
+    "changePct": 11.75,
     "trend": [
-      {
-        "date": "2025-12-01",
-        "value": 11790.96
-      },
-      {
-        "date": "2026-01-01",
-        "value": 12986.61
-      },
       {
         "date": "2026-02-01",
         "value": 12951.34
@@ -42,6 +34,14 @@
       {
         "date": "2026-07-01",
         "value": 13542.82
+      },
+      {
+        "date": "2026-08-01",
+        "value": 14331.26
+      },
+      {
+        "date": "2026-09-01",
+        "value": 14473.06
       }
     ],
     "source": {
@@ -50,6 +50,18 @@
     }
   },
   "news": [
+    {
+      "title": "Chemical Risk is Business Risk: Is Your Company Prepared?",
+      "url": "https://www.electronics.org/blog/chemical-risk-business-risk-your-company-prepared",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-10-22T15:13:36.000Z"
+    },
+    {
+      "title": "Global Electronics Association's ADEPT Council Deepens Taiwan Presence as First Satellite Council Holds Inaugural In-Person Meeting",
+      "url": "https://www.electronics.org/news-release/global-electronics-associations-adept-council-deepens-taiwan-presence-first-satellite",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-10-22T11:07:35.000Z"
+    },
     {
       "title": "Global Electronics Association Hosts IMPACT 2026 Session on Advanced Electronic Packaging System Integration, with Technical Perspectives from Unimicron, STATS ChipPAC and Wistron",
       "url": "https://www.electronics.org/news-release/global-electronics-association-hosts-impact-2026-session-advanced-electronic-packaging",
@@ -61,18 +73,6 @@
       "url": "https://www.electronics.org/event/virtual-breakfast-global-perspectives",
       "source": "Global Electronics Association",
       "publishedAt": "2026-10-21T11:04:49.000Z"
-    },
-    {
-      "title": "Upcoming PCEA PCB Design Training Classes for 2027",
-      "url": "https://pcea.net/2026/10/20/upcoming-pcea-pcb-design-training-classes-for-2027/",
-      "source": "PCEA",
-      "publishedAt": "2026-10-20T13:33:30.000Z"
-    },
-    {
-      "title": "PCB WEST 2026 Conference Registration Grows 60%",
-      "url": "https://pcea.net/2026/10/15/pcb-west-2026-conference-registration-grows-60/",
-      "source": "PCEA",
-      "publishedAt": "2026-10-15T16:06:53.000Z"
     }
   ],
   "newsSources": [
