@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-22T15:13:36.000Z",
+  "updatedAt": "2026-10-26T20:48:51.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,28 +51,28 @@
   },
   "news": [
     {
+      "title": "North American PCB Orders Surge as September Shipments Fall 6.4% Year Over Year",
+      "url": "https://www.electronics.org/news-release/north-american-pcb-orders-surge-september-shipments-fall-64-year-over-year",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-10-26T20:48:51.000Z"
+    },
+    {
+      "title": "PCEA Announces 2027-28 Board of Directors",
+      "url": "https://pcea.net/2026/10/26/pcea-announces-2027-28-board-of-directors/",
+      "source": "PCEA",
+      "publishedAt": "2026-10-26T14:41:59.000Z"
+    },
+    {
+      "title": "Silicon Carbide and Gallium Nitride Play Growing Role in Electronics Design, Manufacturing and Supply-Chain Strategy",
+      "url": "https://www.electronics.org/news-release/silicon-carbide-and-gallium-nitride-play-growing-role-electronics-design-manufacturing",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-10-26T11:58:52.000Z"
+    },
+    {
       "title": "Chemical Risk is Business Risk: Is Your Company Prepared?",
       "url": "https://www.electronics.org/blog/chemical-risk-business-risk-your-company-prepared",
       "source": "Global Electronics Association",
       "publishedAt": "2026-10-22T15:13:36.000Z"
-    },
-    {
-      "title": "Global Electronics Association's ADEPT Council Deepens Taiwan Presence as First Satellite Council Holds Inaugural In-Person Meeting",
-      "url": "https://www.electronics.org/news-release/global-electronics-associations-adept-council-deepens-taiwan-presence-first-satellite",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-10-22T11:07:35.000Z"
-    },
-    {
-      "title": "Global Electronics Association Hosts IMPACT 2026 Session on Advanced Electronic Packaging System Integration, with Technical Perspectives from Unimicron, STATS ChipPAC and Wistron",
-      "url": "https://www.electronics.org/news-release/global-electronics-association-hosts-impact-2026-session-advanced-electronic-packaging",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-10-21T12:43:01.000Z"
-    },
-    {
-      "title": "Virtual Breakfast with Global Perspectives",
-      "url": "https://www.electronics.org/event/virtual-breakfast-global-perspectives",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-10-21T11:04:49.000Z"
     }
   ],
   "newsSources": [
