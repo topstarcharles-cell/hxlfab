@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T20:48:51.000Z",
+  "updatedAt": "2026-10-27T15:23:03.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,28 +51,28 @@
   },
   "news": [
     {
+      "title": "Missing Information Slows Wire Harness Quotes, WHMA Survey Finds",
+      "url": "https://www.electronics.org/news-release/missing-information-slows-wire-harness-quotes-whma-survey-finds",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-10-27T15:23:03.000Z"
+    },
+    {
+      "title": "Global Electronics Association East Asia Awards Recognize Contributions to Standards Development and Adoption",
+      "url": "https://www.electronics.org/news-release/global-electronics-association-east-asia-awards-recognize-contributions-standards",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-10-27T11:53:21.000Z"
+    },
+    {
+      "title": "Global Electronics Association East Asia Awards Recognize Industry Leadership and Talent Development",
+      "url": "https://www.electronics.org/news-release/global-electronics-association-east-asia-awards-recognize-industry-leadership-and",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-10-27T11:41:32.000Z"
+    },
+    {
       "title": "North American PCB Orders Surge as September Shipments Fall 6.4% Year Over Year",
       "url": "https://www.electronics.org/news-release/north-american-pcb-orders-surge-september-shipments-fall-64-year-over-year",
       "source": "Global Electronics Association",
       "publishedAt": "2026-10-26T20:48:51.000Z"
-    },
-    {
-      "title": "PCEA Announces 2027-28 Board of Directors",
-      "url": "https://pcea.net/2026/10/26/pcea-announces-2027-28-board-of-directors/",
-      "source": "PCEA",
-      "publishedAt": "2026-10-26T14:41:59.000Z"
-    },
-    {
-      "title": "Silicon Carbide and Gallium Nitride Play Growing Role in Electronics Design, Manufacturing and Supply-Chain Strategy",
-      "url": "https://www.electronics.org/news-release/silicon-carbide-and-gallium-nitride-play-growing-role-electronics-design-manufacturing",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-10-26T11:58:52.000Z"
-    },
-    {
-      "title": "Chemical Risk is Business Risk: Is Your Company Prepared?",
-      "url": "https://www.electronics.org/blog/chemical-risk-business-risk-your-company-prepared",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-10-22T15:13:36.000Z"
     }
   ],
   "newsSources": [
