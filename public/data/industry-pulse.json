@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-27T15:23:03.000Z",
+  "updatedAt": "2026-10-28T13:27:27.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,6 +51,12 @@
   },
   "news": [
     {
+      "title": "North American EMS Orders Climb Despite Lower September Shipments",
+      "url": "https://www.electronics.org/news-release/north-american-ems-orders-climb-despite-lower-september-shipments",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-10-28T13:27:27.000Z"
+    },
+    {
       "title": "Missing Information Slows Wire Harness Quotes, WHMA Survey Finds",
       "url": "https://www.electronics.org/news-release/missing-information-slows-wire-harness-quotes-whma-survey-finds",
       "source": "Global Electronics Association",
@@ -67,12 +73,6 @@
       "url": "https://www.electronics.org/news-release/global-electronics-association-east-asia-awards-recognize-industry-leadership-and",
       "source": "Global Electronics Association",
       "publishedAt": "2026-10-27T11:41:32.000Z"
-    },
-    {
-      "title": "North American PCB Orders Surge as September Shipments Fall 6.4% Year Over Year",
-      "url": "https://www.electronics.org/news-release/north-american-pcb-orders-surge-september-shipments-fall-64-year-over-year",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-10-26T20:48:51.000Z"
     }
   ],
   "newsSources": [
