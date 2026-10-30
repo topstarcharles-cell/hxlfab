@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-28T13:27:27.000Z",
+  "updatedAt": "2026-10-29T12:50:20.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,6 +51,12 @@
   },
   "news": [
     {
+      "title": "From PCB design to production, standards decisions are connected",
+      "url": "https://www.electronics.org/blog/pcb-design-production-standards-decisions-are-connected",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-10-29T12:50:20.000Z"
+    },
+    {
       "title": "North American EMS Orders Climb Despite Lower September Shipments",
       "url": "https://www.electronics.org/news-release/north-american-ems-orders-climb-despite-lower-september-shipments",
       "source": "Global Electronics Association",
@@ -67,12 +73,6 @@
       "url": "https://www.electronics.org/news-release/global-electronics-association-east-asia-awards-recognize-contributions-standards",
       "source": "Global Electronics Association",
       "publishedAt": "2026-10-27T11:53:21.000Z"
-    },
-    {
-      "title": "Global Electronics Association East Asia Awards Recognize Industry Leadership and Talent Development",
-      "url": "https://www.electronics.org/news-release/global-electronics-association-east-asia-awards-recognize-industry-leadership-and",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-10-27T11:41:32.000Z"
     }
   ],
   "newsSources": [
