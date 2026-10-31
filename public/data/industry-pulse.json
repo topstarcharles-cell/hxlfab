@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-29T12:50:20.000Z",
+  "updatedAt": "2026-10-30T14:18:33.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,6 +51,12 @@
   },
   "news": [
     {
+      "title": "AI Roundtable & Dinner: Productivity Gains and Risk Readiness in Electronics - with AI",
+      "url": "https://www.electronics.org/event/ai-roundtable-dinner-productivity-gains-and-risk-readiness-electronics-ai",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-10-30T14:18:33.000Z"
+    },
+    {
       "title": "From PCB design to production, standards decisions are connected",
       "url": "https://www.electronics.org/blog/pcb-design-production-standards-decisions-are-connected",
       "source": "Global Electronics Association",
@@ -67,12 +73,6 @@
       "url": "https://www.electronics.org/news-release/missing-information-slows-wire-harness-quotes-whma-survey-finds",
       "source": "Global Electronics Association",
       "publishedAt": "2026-10-27T15:23:03.000Z"
-    },
-    {
-      "title": "Global Electronics Association East Asia Awards Recognize Contributions to Standards Development and Adoption",
-      "url": "https://www.electronics.org/news-release/global-electronics-association-east-asia-awards-recognize-contributions-standards",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-10-27T11:53:21.000Z"
     }
   ],
   "newsSources": [
