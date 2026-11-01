@@ -218,12 +218,12 @@ export const helpArticles = [
   {
     slug: "what-dfm-review-covers",
     category: "files-and-dfm",
-    title: "What does HXLFAB DFM review cover?",
-    description: "See the PCB data, construction, feature, via, material, test, and documentation topics considered before an engineer-confirmed quote.",
-    summary: "DFM review checks whether the submitted construction and requirements form a coherent, manufacturable basis for quotation and release.",
-    keywords: ["dfm", "cam", "manufacturability", "engineering review", "exceptions"],
+    title: "What does the free DFM review cover?",
+    description: "The HXLFAB DFM review is free. See what an engineer checks — data, stack-up, vias, materials, impedance, testing — before you get an engineer-confirmed quote.",
+    summary: "The DFM review is free. Send your board data and an engineer checks whether the construction is manufacturable, and what has to change, before you commit to an order.",
+    keywords: ["dfm", "cam", "manufacturability", "engineering review", "exceptions", "free dfm review"],
     popular: true,
-    answer: "Review may cover file completeness, outline and drill relationships, stack-up, copper distribution, minimum features, annular rings, via structures, materials, impedance, surface finish, electrical test, inspection, and documentation needs. The depth of review depends on the submitted design and quotation stage.",
+    answer: "The review is free. It may cover file completeness, outline and drill relationships, stack-up, copper distribution, minimum features, annular rings, via structures, materials, impedance, surface finish, electrical test, inspection, and documentation needs. The depth of review depends on the submitted design and quotation stage.",
     sections: [
       {
         heading: "Typical review topics",
@@ -235,7 +235,7 @@ export const helpArticles = [
         paragraphs: ["Any proposed change that affects electrical, mechanical, thermal, or compliance intent should be reviewed by the customer's authorized technical contact. A manufacturability suggestion is not a substitute for product-level design validation."],
       },
     ],
-    resources: [{ href: "/engineering-scenarios/", label: "See representative engineering reviews" }],
+    resources: [{ href: "mailto:sales@hxlfab.com?subject=Free%20DFM%20review", label: "Request a free DFM review" }, { href: "/engineering-scenarios/", label: "See representative engineering reviews" }],
     related: ["what-to-send-for-a-pcb-quote", "controlled-impedance-data", "hdi-via-table"],
   },
 
