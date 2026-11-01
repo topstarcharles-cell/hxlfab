@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HDI PCB Stackup Design Guide for BGA Fanout | HXLFAB</title>
+  <meta name="description" content="Learn how to plan an HDI PCB stackup for BGA fanout: microvia rules, layer planning, impedance, and a pre-fabrication checklist for dense boards.">
+  <meta name="theme-color" content="#08242e">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://hxlfab.com/articles/hdi-pcb-stackup-design/">
+  <meta property="og:type" content="article"><meta property="og:site_name" content="HXLFAB"><meta property="og:title" content="HDI PCB Stackup Design Guide for BGA Fanout | HXLFAB"><meta property="og:description" content="Learn how to plan an HDI PCB stackup for BGA fanout: microvia rules, layer planning, impedance, and a pre-fabrication checklist for dense boards."><meta property="og:url" content="https://hxlfab.com/articles/hdi-pcb-stackup-design/"><meta property="og:image" content="https://hxlfab.com/images/cnc-drilling.webp">
+  <link rel="stylesheet" href="/styles.css?v=20260815f"><link rel="stylesheet" href="/product-pages.css?v=20260815f">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://hxlfab.com/#organization","name":"HXLFAB","url":"https://hxlfab.com/","email":"sales@hxlfab.com","telephone":"+86 138 2366 3114"},{"@type":"Article","@id":"https://hxlfab.com/articles/hdi-pcb-stackup-design/#article","headline":"HDI PCB Stackup Design: A Practical Guide for BGA Fanout and Dense Boards","description":"Learn how to plan an HDI PCB stackup for BGA fanout: microvia rules, layer planning, impedance, and a pre-fabrication checklist for dense boards.","url":"https://hxlfab.com/articles/hdi-pcb-stackup-design/","datePublished":"2026-10-31","author":{"@id":"https://hxlfab.com/#organization"},"publisher":{"@id":"https://hxlfab.com/#organization"},"about":"Printed circuit board manufacturing"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hxlfab.com/"},{"@type":"ListItem","position":2,"name":"Articles","item":"https://hxlfab.com/articles/"},{"@type":"ListItem","position":3,"name":"HDI PCB Stackup Design: A Practical Guide for BGA Fanout and Dense Boards","item":"https://hxlfab.com/articles/hdi-pcb-stackup-design/"}]}]}</script>
+  <script src="/site.js?v=20260815f" defer></script>
+</head>
+<body>
+  <div class="utility"><div class="shell utility-inner"><span>PCB manufacturing · Guilin production base · Shenzhen service office</span><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a></div></div>
+  <header class="header"><div class="shell nav"><a class="brand" href="/" aria-label="HXLFAB home"><span class="brand-bars"><i></i><i></i><i></i></span><span>HXL<strong>FAB</strong></span></a><nav aria-label="Main navigation"><a href="/pcb-manufacturing/">Manufacturing</a><a href="/quality-certifications/">Quality</a><a href="/factory-process/">Factory</a><a href="/engineering-scenarios/">Engineering reviews</a><a href="/help-center/">Help</a><a href="/about/">About</a></nav><a class="button small" href="/#quote">Start an RFQ <span>↗</span></a></div></header>
+  <main>
+    <section class="page-hero"><div class="shell"><p class="breadcrumbs"><a href="/">Home</a> / <a href="/articles/">Articles</a> / HDI PCB Stackup Design: A Practical Guide for BGA Fanout and Dense Boards</p><div class="page-hero-grid"><div><p class="eyebrow">HXLFAB engineering notes</p><h1>HDI PCB Stackup Design: A Practical Guide for BGA Fanout and Dense Boards</h1><p class="lede">Learn how to plan an HDI PCB stackup for BGA fanout: microvia rules, layer planning, impedance, and a pre-fabrication checklist for dense boards.</p><p class="breadcrumbs">Published October 31, 2026</p><div class="hero-actions"><a class="button" href="/help-center/articles/what-dfm-review-covers/">Get a free DFM review <span>↗</span></a><a class="text-link" href="/#quote">Start an RFQ <span>→</span></a></div></div></div></div></section>
+    <section class="section"><div class="shell content-grid"><article class="content-copy">
+<p>When a dense board stops routing, the problem is rarely a single trace. It is usually the stackup: layer count, microvia placement, power/ground pairing, and manufacturability. This guide covers the decisions that matter most.</p>
+<h2>What an HDI stackup really is</h2>
+<p>A conventional board connects layers with through vias that pass through the whole board. An HDI board adds smaller, shallower connections — typically laser-drilled microvias linking one layer to the next — so signals escape from a dense ball grid array (BGA) without consuming routing channels on every layer.</p>
+<p>Think in terms of escape, not layer count. Ask first how many rows of balls must escape from each side of the BGA, then work out how many routing layers and microvia levels that requires. Too many layers wastes money; too few forces detours, necked-down traces, and crosstalk.</p>
+<h2>Start with the BGA, not the layer count</h2>
+<p>Every HDI stackup starts with the package. At 0.8 mm BGA pitch, a dog-bone fanout with a microvia beside each pad is often workable. At tighter pitches, via-in-pad may be the only practical escape, and that choice affects plating, filling, and surface finish. Confirm the escape strategy with your fabricator early, because it sets the drill plan and minimum pad geometry.</p>
+<p>Next, map the breakout row by row. Outer rows escape on the top layer or the first buried layer; each deeper row needs another routing layer or microvia level. Keep differential pairs together — a pair that takes two different paths will not stay matched. Place a solid ground plane adjacent to the main routing layers: it gives return currents a short path and controls impedance, whereas two adjacent signal layers with no plane between them invite crosstalk.</p>
+<h2>Microvia rules that keep a board manufacturable</h2>
+<p>Three microvia rules cover most fabrication failures.</p>
+<p>First, respect the aspect ratio. Keep the depth-to-diameter ratio of a laser-drilled microvia at or below roughly 1:1: the dielectric thickness between the layers it connects should be close to the via diameter, not several times larger. HXLFAB&#x27;s published capability includes 0.10 mm laser-drilled vias, which supports fine-pitch fanout — but your dielectric thickness still has to suit that diameter.</p>
+<p>Second, be deliberate about stacked versus staggered microvias. Staggered microvias, offset from one level to the next, are generally easier to manufacture. Stacked microvias save space but demand tighter process control, including filling and planarizing the lower via before drilling the next one. Flag stacked microvias explicitly for a design-for-manufacturing (DFM) review.</p>
+<p>Third, do not forget mechanical drilling. Through connections and mounting holes still need mechanical drills: HXLFAB&#x27;s published minimum mechanical drill is 0.15 mm, and a through via too small for mechanical drilling cannot be replaced by a microvia, which only spans one or two layers.</p>
+<h2>Layer planning: symmetry, thickness, and copper</h2>
+<p>Aim for symmetry around the board center: similar copper weights, dielectric thicknesses, and a mirrored arrangement of planes and signal layers. An asymmetric stackup is a common cause of warpage.</p>
+<p>HXLFAB builds finished boards from 0.15 mm to 7.0 mm thick, across 1 to 30 layers. A very thin board with many layers leaves little room for dielectric between planes, which affects impedance; a very thick board with many layers can create drilling and plating challenges. Choose the thinnest stackup that meets your requirements, not the thinnest that fits on paper.</p>
+<p>The same discipline applies to copper. HXLFAB&#x27;s published capability covers 4 oz inner-layer and 8 oz outer-layer copper. But heavy copper and fine features do not mix easily: etching a 3/3 mil trace-and-space pattern — HXLFAB&#x27;s published minimum — on heavy copper is harder than on a light signal layer, so confirm the copper-weight and feature-size combination for your layers in a DFM review.</p>
+<h2>Impedance and materials: plan them into the stackup</h2>
+<p>Impedance is a property of the stackup — trace width, copper weight, dielectric thickness, and dielectric constant together determine it — so it cannot be added after layout. If your design includes controlled-impedance signals (USB, Ethernet, DDR memory, RF lines), define the targets before routing and build the stackup around them. A stackup yielding 50 ohm single-ended traces and 100 ohm differential pairs at manufacturable widths beats one that hits the layer count but forces extremely narrow traces.</p>
+<p>Standard FR-4 suits most digital designs, while PTFE-based materials serve RF work where dielectric loss matters more. HXLFAB lists both PTFE and FR-4, with Tg135, Tg150, and Tg170 available. Higher Tg generally means better thermal stability, but choose by the design&#x27;s requirements, not by defaulting to the highest number. Finally, check panel size: HXLFAB&#x27;s published maximum is 850 × 520 mm.</p>
+<h2>Common HDI stackup mistakes</h2>
+<p>First, do not route high-speed signals across a split in the reference plane: a signal crossing a gap in its ground plane loses its return path, showing up as noise, ringing, or failed compliance testing. Second, do not forget the return path through vias — when a signal changes layers, its return current needs nearby ground vias or decoupling capacitors, so place ground stitching vias near layer transitions as routine. Third, do not over-constrain the design: specifying the tightest trace width, smallest via, and thinnest dielectric on every layer raises cost and reduces yield. Reserve the tightest features for areas that genuinely need them, such as the BGA breakout, and relax the rules elsewhere.</p>
+<h2>Pre-fabrication checklist</h2>
+<ul>
+<li>☐ BGA escape mapped row by row; via strategy confirmed per package</li>
+<li>☐ Microvia depth-to-diameter ratio checked against dielectric thickness</li>
+<li>☐ Stacked vs. staggered microvias identified; stacked flagged for DFM</li>
+<li>☐ Ground plane adjacent to each main routing layer</li>
+<li>☐ Controlled impedances defined before routing, at achievable widths</li>
+<li>☐ Stackup symmetric about the board center, or asymmetry discussed</li>
+<li>☐ Minimum mechanical drill (0.15 mm at HXLFAB) respected</li>
+<li>☐ Minimum trace/space (3/3 mil at HXLFAB) respected; heavy copper checked</li>
+<li>☐ Material and Tg chosen for thermal/frequency requirements</li>
+<li>☐ Panel plan included, within the 850 × 520 mm maximum</li>
+<li>☐ Drill files, stackup drawing, impedance notes in one package</li>
+</ul>
+<p>Passing this checklist does not guarantee perfection — layout still matters — but it removes structural problems hardest to fix after fabrication starts.</p>
+<h2>Get a second pair of eyes before you build</h2>
+<p>HDI stackups reward early review: a DFM check can catch an unmanufacturable microvia ratio, an unworkable impedance target, or a layer plan that will warp — before material is cut. HXLFAB offers a free DFM review: send your stackup and design files for checking against the capabilities above. Contact <a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a> to start.</p>
+<h2>Related capabilities</h2>
+<ul>
+<li><a href="/pcb-manufacturing/">HXLFAB PCB manufacturing capabilities</a></li>
+<li><a href="/hdi-pcb/">HDI PCB capabilities</a></li>
+<li><a href="/multilayer-pcb/">Multilayer PCB capabilities</a></li>
+<li><a href="/high-frequency-pcb/">High-frequency and PTFE materials</a></li>
+<li><a href="/help-center/articles/what-dfm-review-covers/">Free DFM review</a></li>
+</ul>
+    </article><aside class="side-panel"><p class="eyebrow">Free DFM review</p><h2>Get a second pair of eyes before you build</h2><p>Send your stackup and design files and an engineer checks them against HXLFAB capabilities — free, before you commit to an order.</p><a class="button" href="/help-center/articles/what-dfm-review-covers/">What the review covers <span>↗</span></a><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a></aside></div></section>
+    <section class="page-cta"><div class="shell page-cta-grid"><h2>Ready to review your PCB build?</h2><a class="button" href="/#quote">Upload Gerber files <span>↗</span></a></div></section>
+  </main>
+  <footer><div class="shell footer-grid"><div><a class="brand footer-brand" href="/"><span class="brand-bars"><i></i><i></i><i></i></span><span>HXL<strong>FAB</strong></span></a><p>PCB manufacturing brand<br>Guilin production base · Shenzhen service office</p></div><div><span>Evidence</span><p><a href="/quality-certifications/">Quality & certifications</a><br><a href="/factory-process/">Factory & process</a><br><a href="/engineering-scenarios/">Engineering scenarios</a></p></div><div><span>Working together</span><p><a href="/help-center/">Help center</a><br><a href="/working-with-us/">Working with us</a><br><a href="/about/">About & team</a><br><a href="/contact/">Contact engineering</a></p></div><div><span>Contact</span><p><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a><br><a href="tel:+8613823663114">+86 138 2366 3114</a></p></div></div><div class="shell footer-bottom"><span>© 2026 HXLFAB. All rights reserved.</span><span><a href="/privacy-file-handling/">Privacy & file handling</a> · Technical data subject to engineering confirmation.</span></div></footer>
+</body>
+</html>
