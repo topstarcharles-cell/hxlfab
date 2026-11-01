@@ -20,7 +20,7 @@ function siteHeader(slug) {
   <div class="utility"><div class="shell utility-inner"><span>PCB manufacturing · Guilin production base · Shenzhen service office</span><a href="mailto:${company.email}">${company.email}</a></div></div>
   <header class="header"><div class="shell nav">
     <a class="brand" href="/" aria-label="HXLFAB home"><span class="brand-bars"><i></i><i></i><i></i></span><span>HXL<strong>FAB</strong></span></a>
-    <nav aria-label="Main navigation">${link(slug, "/pcb-manufacturing/", "Manufacturing")}${link(slug, "/quality-certifications/", "Quality")}${link(slug, "/factory-process/", "Factory")}${link(slug, "/engineering-scenarios/", "Engineering reviews")}${link(slug, "/help-center/", "Help")}${link(slug, "/about/", "About")}</nav>
+    <nav aria-label="Main navigation">${link(slug, "/pcb-manufacturing/", "Manufacturing")}${link(slug, "/quality-certifications/", "Quality")}${link(slug, "/factory-process/", "Factory")}${link(slug, "/engineering-scenarios/", "Engineering reviews")}${link(slug, "/articles/", "Articles")}${link(slug, "/help-center/", "Help")}${link(slug, "/about/", "About")}</nav>
     <a class="button small" href="/#quote">Start an RFQ <span>↗</span></a>
   </div></header>`;
 }
