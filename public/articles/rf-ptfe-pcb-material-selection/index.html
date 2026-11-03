@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RF and PTFE PCB Materials: A Practical Guide | HXLFAB</title>
+  <meta name="description" content="RF and PTFE PCB material guide: when PTFE beats FR-4, dielectric and loss trade-offs, hybrid stackups, layout rules, and a pre-fabrication checklist.">
+  <meta name="theme-color" content="#08242e">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://hxlfab.com/articles/rf-ptfe-pcb-material-selection/">
+  <meta property="og:type" content="article"><meta property="og:site_name" content="HXLFAB"><meta property="og:title" content="RF and PTFE PCB Materials: A Practical Guide | HXLFAB"><meta property="og:description" content="RF and PTFE PCB material guide: when PTFE beats FR-4, dielectric and loss trade-offs, hybrid stackups, layout rules, and a pre-fabrication checklist."><meta property="og:url" content="https://hxlfab.com/articles/rf-ptfe-pcb-material-selection/"><meta property="og:image" content="https://hxlfab.com/images/cnc-drilling.webp">
+  <link rel="stylesheet" href="/styles.css?v=20260815f"><link rel="stylesheet" href="/product-pages.css?v=20260815f">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://hxlfab.com/#organization","name":"HXLFAB","url":"https://hxlfab.com/","email":"sales@hxlfab.com","telephone":"+86 138 2366 3114"},{"@type":"Article","@id":"https://hxlfab.com/articles/rf-ptfe-pcb-material-selection/#article","headline":"RF and PTFE PCB Materials: A Practical Guide for High-Frequency Boards","description":"RF and PTFE PCB material guide: when PTFE beats FR-4, dielectric and loss trade-offs, hybrid stackups, layout rules, and a pre-fabrication checklist.","url":"https://hxlfab.com/articles/rf-ptfe-pcb-material-selection/","datePublished":"2026-11-03","author":{"@id":"https://hxlfab.com/#organization"},"publisher":{"@id":"https://hxlfab.com/#organization"},"about":"Printed circuit board manufacturing"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hxlfab.com/"},{"@type":"ListItem","position":2,"name":"Articles","item":"https://hxlfab.com/articles/"},{"@type":"ListItem","position":3,"name":"RF and PTFE PCB Materials: A Practical Guide for High-Frequency Boards","item":"https://hxlfab.com/articles/rf-ptfe-pcb-material-selection/"}]}]}</script>
+  <script src="/site.js?v=20260815f" defer></script>
+</head>
+<body>
+  <div class="utility"><div class="shell utility-inner"><span>PCB manufacturing · Guilin production base · Shenzhen service office</span><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a></div></div>
+  <header class="header"><div class="shell nav"><a class="brand" href="/" aria-label="HXLFAB home"><span class="brand-bars"><i></i><i></i><i></i></span><span>HXL<strong>FAB</strong></span></a><nav aria-label="Main navigation"><a href="/pcb-manufacturing/">Manufacturing</a><a href="/quality-certifications/">Quality</a><a href="/factory-process/">Factory</a><a href="/engineering-scenarios/">Engineering reviews</a><a href="/articles/">Articles</a><a href="/help-center/">Help</a><a href="/about/">About</a></nav><a class="button small" href="/#quote">Start an RFQ <span>↗</span></a></div></header>
+  <main>
+    <section class="page-hero"><div class="shell"><p class="breadcrumbs"><a href="/">Home</a> / <a href="/articles/">Articles</a> / RF and PTFE PCB Materials: A Practical Guide for High-Frequency Boards</p><div class="page-hero-grid"><div><p class="eyebrow">HXLFAB engineering notes</p><h1>RF and PTFE PCB Materials: A Practical Guide for High-Frequency Boards</h1><p class="lede">RF and PTFE PCB material guide: when PTFE beats FR-4, dielectric and loss trade-offs, hybrid stackups, layout rules, and a pre-fabrication checklist.</p><p class="breadcrumbs">Published November 3, 2026</p><div class="hero-actions"><a class="button" href="/help-center/articles/what-dfm-review-covers/">Get a free DFM review <span>↗</span></a><a class="text-link" href="/#quote">Start an RFQ <span>→</span></a></div></div></div></div></section>
+    <section class="section"><div class="shell content-grid"><article class="content-copy">
+<p>A board that works at a few hundred megahertz can fall apart at a few gigahertz, and the material is usually the reason. The same trace geometry behaves differently on different dielectrics: signals lose more energy and impedance drifts away from the design target. Choosing the board material is therefore one of the first design decisions on any RF board, and it is expensive to reverse after layout is done. This guide explains when PTFE earns its place, when FR-4 is still the right answer, and how to design around either choice.</p>
+<h2>Why material matters more as frequency rises</h2>
+<p>Two properties describe how a dielectric treats a passing signal. The dielectric constant, Dk, sets how fast a signal travels and, together with trace geometry, what impedance a trace has. The dissipation factor, Df, describes how much signal energy turns into heat in the material. Both matter at all frequencies, but their consequences scale with frequency: a small loss per centimetre at 100 MHz becomes a large loss over the same distance at 10 GHz.</p>
+<p>Standard FR-4 has a relatively high and somewhat variable Dk, and a dissipation factor high enough to cost real signal at gigahertz frequencies. As frequencies climb into the microwave range, or as traces get long, the same material eats the signal budget and smears fast edges.</p>
+<p>PTFE-based laminates sit at the other end of the range. They have a low Dk, typically around 2 to 3 depending on the exact product and reinforcement, and a very low dissipation factor. Signals travel faster, lose less energy, and hold impedance more stably across temperature and frequency. The trade-off is cost, mechanical softness, and a fabrication process that needs more care than FR-4.</p>
+<h2>PTFE vs FR-4: a practical comparison</h2>
+<p><strong>Signal loss.</strong> This is PTFE&#x27;s main advantage. On a long RF trace, an antenna feed, or a filter, low loss preserves signal strength and keeps the noise figure down. Where FR-4 would need shorter runs, gain stages, or both, PTFE may simply work as drawn.</p>
+<p><strong>Impedance stability.</strong> PTFE&#x27;s Dk varies less with frequency and temperature than FR-4&#x27;s. That matters for filters, couplers, and phased arrays, where a small impedance error shifts the centre frequency or degrades return loss. If the design depends on tight impedance tolerance, the material choice is part of the tolerance budget, not separate from it.</p>
+<p><strong>Mechanical behaviour.</strong> PTFE is softer than FR-4 and expands more with temperature, which affects drilling and plated-hole reliability. It is a manageable material, but it punishes sloppy fabrication: hole walls need proper preparation, and copper adhesion needs the right process steps. Confirm a fabricator&#x27;s PTFE experience before committing a design to it, rather than assuming any FR-4 process transfers unchanged.</p>
+<p><strong>Cost.</strong> PTFE laminates cost substantially more than FR-4, and the fabrication steps add further cost. Using PTFE across an entire board that only needs it on one RF section is the most common way to overspend on material.</p>
+<h2>The hybrid stackup: PTFE where it matters, FR-4 elsewhere</h2>
+<p>Most real RF boards do not need PTFE everywhere. The RF front end, the antenna feed, and the filter sections need it; the power supply, control logic, and digital interfaces usually do not. A hybrid stackup puts PTFE layers where the high-frequency signals run and FR-4 layers where they do not, bonded into a single board.</p>
+<p>HXLFAB offers PTFE together with FR-4 as a material combination, which makes this approach practical: a board can carry RF layers in PTFE and the rest of the stackup in FR-4, within a build of 1 to 30 layers and 0.15 to 7.0 mm finished thickness. State clearly which layers are PTFE and which are FR-4, because a fabricator cannot infer it from the Gerber files. Keep high-frequency traces on the PTFE layers, and route material transitions deliberately: a signal crossing from a PTFE layer to an FR-4 layer changes its impedance environment at the boundary, so plan vias and reference planes at the crossing rather than letting it happen by accident.</p>
+<h2>Layout rules for PTFE and high-frequency boards</h2>
+<p><strong>Keep RF traces short and controlled.</strong> Even on low-loss material, a shorter path loses less signal and picks up less interference. Route RF traces first, before digital and power routing fills the board, and protect their reference planes.</p>
+<p><strong>Guard the reference plane.</strong> A microstrip or stripline trace is only as good as its ground reference. Keep the ground plane continuous beneath RF traces: a split, a slot, or a dense via field in the reference plane under an RF trace changes its impedance and invites coupling.</p>
+<p><strong>Mind the transition.</strong> Every layer change, connector launch, and component pad is an impedance discontinuity. Use ground vias beside signal vias at layer transitions and avoid stubs: a via stub harmless at low frequency becomes a resonator at gigahertz frequencies. HXLFAB&#x27;s 0.10 mm laser-drilled microvia capability and 0.15 mm minimum mechanical drill give room for dense via structures and stub control — but the stub control must be in the design, not hoped for in fabrication.</p>
+<p><strong>Leave margin on tight features.</strong> HXLFAB publishes a 3/3 mil minimum trace and space as a general capability, but RF layouts should not treat that minimum as a design target. Tight features on soft PTFE etch with wider tolerance, so leave margin on critical RF geometries and confirm the tightest features with the fabricator before release.</p>
+<p><strong>Plan the panel and the finish.</strong> Board size matters for material cost, especially with PTFE: HXLFAB&#x27;s maximum panel size is 850 × 520 mm, and efficient panelisation keeps expensive material from being wasted. Surface finish also interacts with RF performance at high frequencies, since current crowds to the conductor surface; discuss the finish choice for RF sections during the DFM review.</p>
+<h2>Common mistakes</h2>
+<p><strong>Specifying PTFE by brand name alone.</strong> PTFE is a family, not a single product. Specify the dielectric properties the design needs — target Dk, acceptable tolerance, and loss — and let the fabricator confirm an available equivalent, rather than naming a product that may not be on hand.</p>
+<p><strong>Mixing materials without marking the stackup.</strong> A hybrid board whose layer materials are not labelled invites exactly one failure mode: the fabricator builds it all in one material. Label every layer in the stackup drawing.</p>
+<p><strong>Designing impedance on one material and building on another.</strong> Impedance depends on Dk and on dielectric thickness. A trace width calculated for FR-4 will not give the same impedance on PTFE. Recompute controlled-impedance widths for the actual material and thickness of each layer, and state the target impedance per net.</p>
+<p><strong>Forgetting the connectors and the test plan.</strong> An RF board is only as good as its launches and its verification. Choose connectors rated for the frequency range and plan how each RF path will be tested.</p>
+<h2>Pre-fabrication checklist</h2>
+<ul>
+<li>☐ Frequency range and loss budget defined for each RF path</li>
+<li>☐ Material choice justified per section: PTFE, FR-4, or hybrid</li>
+<li>☐ PTFE and FR-4 layers labelled in the stackup drawing</li>
+<li>☐ Target Dk and tolerance specified, not just a brand name</li>
+<li>☐ Controlled-impedance widths recomputed for the actual material per layer</li>
+<li>☐ Reference planes continuous under all RF traces</li>
+<li>☐ Via transitions planned with ground vias; stubs controlled</li>
+<li>☐ Layer count and thickness within capability (1–30 layers, 0.15–7.0 mm)</li>
+<li>☐ Tightest features kept clear of the 3/3 mil minimum where RF tolerance matters</li>
+<li>☐ Microvia and drill needs within capability (0.10 mm laser, 0.15 mm mechanical)</li>
+<li>☐ Panel size respected (850 × 520 mm maximum)</li>
+<li>☐ Tg grade chosen for FR-4 sections (Tg135/150/170); PTFE thermal behaviour checked</li>
+<li>☐ Surface finish chosen for RF sections</li>
+<li>☐ Connector launches and test plan defined</li>
+</ul>
+<h2>Get a second pair of eyes before you build</h2>
+<p>Material mistakes are the most expensive kind of board mistake, because they survive every later review that assumes the stackup is right. A DFM review can catch an unlabelled hybrid layer, an impedance width computed for the wrong dielectric, or a reference-plane break under an RF trace before material is cut. HXLFAB offers a free DFM review — send your stackup and material requirements to <a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a> to start.</p>
+<h2>Related capabilities</h2>
+<ul>
+<li><a href="/pcb-manufacturing/">HXLFAB PCB manufacturing capabilities</a></li>
+<li><a href="/high-frequency-pcb/">High-frequency and PTFE materials</a></li>
+<li><a href="/hdi-pcb/">HDI PCB capabilities</a></li>
+<li><a href="/multilayer-pcb/">Multilayer PCB capabilities</a></li>
+<li><a href="/help-center/articles/what-dfm-review-covers/">Free DFM review</a></li>
+</ul>
+    </article><aside class="side-panel"><p class="eyebrow">Free DFM review</p><h2>Get a second pair of eyes before you build</h2><p>Send your stackup and design files and an engineer checks them against HXLFAB capabilities — free, before you commit to an order.</p><a class="button" href="/help-center/articles/what-dfm-review-covers/">What the review covers <span>↗</span></a><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a></aside></div></section>
+    <section class="page-cta"><div class="shell page-cta-grid"><h2>Ready to review your PCB build?</h2><a class="button" href="/#quote">Upload Gerber files <span>↗</span></a></div></section>
+  </main>
+  <footer><div class="shell footer-grid"><div><a class="brand footer-brand" href="/"><span class="brand-bars"><i></i><i></i><i></i></span><span>HXL<strong>FAB</strong></span></a><p>PCB manufacturing brand<br>Guilin production base · Shenzhen service office</p></div><div><span>Evidence</span><p><a href="/quality-certifications/">Quality & certifications</a><br><a href="/factory-process/">Factory & process</a><br><a href="/engineering-scenarios/">Engineering scenarios</a></p></div><div><span>Working together</span><p><a href="/help-center/">Help center</a><br><a href="/working-with-us/">Working with us</a><br><a href="/about/">About & team</a><br><a href="/contact/">Contact engineering</a></p></div><div><span>Contact</span><p><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a><br><a href="tel:+8613823663114">+86 138 2366 3114</a></p></div></div><div class="shell footer-bottom"><span>© 2026 HXLFAB. All rights reserved.</span><span><a href="/privacy-file-handling/">Privacy & file handling</a> · Technical data subject to engineering confirmation.</span></div></footer>
+</body>
+</html>
