@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Heavy Copper PCB Thermal Management Guide | HXLFAB</title>
+  <meta name="description" content="Heavy copper PCB thermal guide: how thick copper spreads heat, current and temperature-rise trade-offs, layout rules, and a pre-fabrication checklist.">
+  <meta name="theme-color" content="#08242e">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://hxlfab.com/articles/heavy-copper-pcb-thermal-management/">
+  <meta property="og:type" content="article"><meta property="og:site_name" content="HXLFAB"><meta property="og:title" content="Heavy Copper PCB Thermal Management Guide | HXLFAB"><meta property="og:description" content="Heavy copper PCB thermal guide: how thick copper spreads heat, current and temperature-rise trade-offs, layout rules, and a pre-fabrication checklist."><meta property="og:url" content="https://hxlfab.com/articles/heavy-copper-pcb-thermal-management/"><meta property="og:image" content="https://hxlfab.com/images/cnc-drilling.webp">
+  <link rel="stylesheet" href="/styles.css?v=20260815f"><link rel="stylesheet" href="/product-pages.css?v=20260815f">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://hxlfab.com/#organization","name":"HXLFAB","url":"https://hxlfab.com/","email":"sales@hxlfab.com","telephone":"+86 138 2366 3114"},{"@type":"Article","@id":"https://hxlfab.com/articles/heavy-copper-pcb-thermal-management/#article","headline":"Heavy Copper PCB Thermal Management: A Practical Guide for Power Boards","description":"Heavy copper PCB thermal guide: how thick copper spreads heat, current and temperature-rise trade-offs, layout rules, and a pre-fabrication checklist.","url":"https://hxlfab.com/articles/heavy-copper-pcb-thermal-management/","datePublished":"2026-11-02","author":{"@id":"https://hxlfab.com/#organization"},"publisher":{"@id":"https://hxlfab.com/#organization"},"about":"Printed circuit board manufacturing"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hxlfab.com/"},{"@type":"ListItem","position":2,"name":"Articles","item":"https://hxlfab.com/articles/"},{"@type":"ListItem","position":3,"name":"Heavy Copper PCB Thermal Management: A Practical Guide for Power Boards","item":"https://hxlfab.com/articles/heavy-copper-pcb-thermal-management/"}]}]}</script>
+  <script src="/site.js?v=20260815f" defer></script>
+</head>
+<body>
+  <div class="utility"><div class="shell utility-inner"><span>PCB manufacturing · Guilin production base · Shenzhen service office</span><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a></div></div>
+  <header class="header"><div class="shell nav"><a class="brand" href="/" aria-label="HXLFAB home"><span class="brand-bars"><i></i><i></i><i></i></span><span>HXL<strong>FAB</strong></span></a><nav aria-label="Main navigation"><a href="/pcb-manufacturing/">Manufacturing</a><a href="/quality-certifications/">Quality</a><a href="/factory-process/">Factory</a><a href="/engineering-scenarios/">Engineering reviews</a><a href="/articles/">Articles</a><a href="/help-center/">Help</a><a href="/about/">About</a></nav><a class="button small" href="/#quote">Start an RFQ <span>↗</span></a></div></header>
+  <main>
+    <section class="page-hero"><div class="shell"><p class="breadcrumbs"><a href="/">Home</a> / <a href="/articles/">Articles</a> / Heavy Copper PCB Thermal Management: A Practical Guide for Power Boards</p><div class="page-hero-grid"><div><p class="eyebrow">HXLFAB engineering notes</p><h1>Heavy Copper PCB Thermal Management: A Practical Guide for Power Boards</h1><p class="lede">Heavy copper PCB thermal guide: how thick copper spreads heat, current and temperature-rise trade-offs, layout rules, and a pre-fabrication checklist.</p><p class="breadcrumbs">Published November 2, 2026</p><div class="hero-actions"><a class="button" href="/help-center/articles/what-dfm-review-covers/">Get a free DFM review <span>↗</span></a><a class="text-link" href="/#quote">Start an RFQ <span>→</span></a></div></div></div></div></section>
+    <section class="section"><div class="shell content-grid"><article class="content-copy">
+<p>Power boards usually fail from heat before they fail from anything else. A motor driver that works on the bench can still overheat in a closed enclosure or under a sustained load. The copper on the board is often the first and cheapest heat path available. Heavy copper, used well, turns the board itself into a heat spreader. Used badly, it just moves the hot spot somewhere else. This guide explains how thick copper manages heat, where its limits are, and how to design a power board that stays cool.</p>
+<h2>Why copper thickness matters for heat</h2>
+<p>Heat moves through a PCB mainly by conduction through copper. A copper plane or wide trace conducts heat away from a hot component toward cooler areas, where it can leave through the board surface, mounting hardware, or an attached heatsink.</p>
+<p>The heat a copper feature can carry depends on its cross-section: width multiplied by thickness. Doubling the copper thickness roughly doubles that cross-section, and therefore roughly halves the thermal resistance along that path. That is the core advantage of heavy copper.</p>
+<p>This matters most where heat is concentrated. A power MOSFET, a regulator, or a high-current connector dumps watts into a small footprint. On thin copper, the temperature drops steeply near the part, leaving a hot spot. On heavy copper, the same heat spreads over a wider area and the peak temperature falls.</p>
+<h2>Current capacity and temperature rise are the same problem</h2>
+<p>Current capacity and thermal management are two names for one trade-off. Current through copper generates heat through resistance, raising the trace temperature. A trace is rated not by the current that melts it, but by the current that raises it by an acceptable amount — commonly 10 °C or 20 °C above ambient in general design guidance. Three variables set that rise:</p>
+<p><strong>Copper weight.</strong> Thicker copper has lower resistance, so it generates less heat for the same current and conducts that heat away faster. Moving to heavy copper is often the single biggest lever on a power trace.</p>
+<p><strong>Trace width.</strong> Wider traces have more cross-section, just as thicker copper does. Width and weight multiply: a wide trace on heavy copper carries far more current at the same rise than a narrow trace on thin copper.</p>
+<p><strong>Environment.</strong> The same trace runs hotter in a sealed enclosure than on an open bench, and hotter in still air than in moving air. A design that passes on the bench can fail in the product.</p>
+<p>So current capacity cannot be quoted as a single number. It depends on copper weight, width, layer — an outer trace sheds heat to air more easily than an inner plane — and enclosure. Specify the acceptable rise and the operating environment together, and size the copper for the worst case.</p>
+<h2>What heavy copper can — and cannot — do</h2>
+<p>Heavy copper is excellent at spreading heat sideways across the board. It is less good at moving heat through the board, because the dielectric between layers is a poor thermal conductor. A hot top-layer component does not automatically cool through an inner plane unless vias provide a thermal path between them.</p>
+<p>Thermal vias — arrays of plated holes under or beside a hot part — carry heat from the outer layer into inner planes and to the opposite side. Many vias spread over the hot footprint beat a few at the edge. HXLFAB&#x27;s published minimum mechanical drill is 0.15 mm, and its laser-drilled microvia capability goes to 0.10 mm, giving room for dense via arrays under power components — but the vias must actually be drawn in the layout. A heavy copper plane with no thermal vias under the heat source is a heat spreader with no connection to the fire.</p>
+<p>Heavy copper also has manufacturing trade-offs. Etching thick copper leaves wider tolerances on fine features. HXLFAB publishes a 3/3 mil minimum trace and space as a general capability, but heavy copper layers should not be pushed to that minimum for fine-pitch work. Reserve tight features for thin-copper signal layers.</p>
+<h2>Layout rules that make heavy copper work</h2>
+<p><strong>Give heat a continuous plane, not a narrow trace.</strong> A power net routed as a thin trace between two heavy copper pours gains nothing from the copper weight. Pour it as a solid plane or a very wide shape, and keep that pour unbroken under and around the hot components.</p>
+<p><strong>Put thermal vias where the heat is.</strong> Place the via array directly under the component&#x27;s thermal pad or as close to it as the footprint allows. Vias a centimetre away contribute little; vias under the pad carry heat straight into the plane.</p>
+<p><strong>Use inner planes as heat spreaders.</strong> On a multilayer board, an inner heavy copper plane connected by thermal vias to the hot side becomes a second spreading surface. HXLFAB builds boards from 1 to 30 layers, 0.15 mm to 7.0 mm thick, so power and control can share a stackup: heavy copper layers for power and heat, thinner layers for signals. State which layers are heavy copper — a fabricator cannot guess it from the Gerber files alone.</p>
+<p><strong>Plan the thermal exit.</strong> A board that spreads heat beautifully but sits in a sealed box with no exit still overheats. Plan the exit at layout time: mounting screws into a metal chassis, a thermal interface to an enclosure wall, or airflow across the board. And mind the material: standard FR-4 suits most power designs, and HXLFAB offers Tg135, Tg150, and Tg170 materials, with higher Tg grades giving more margin where the board runs hot.</p>
+<h2>The mistakes that cause most thermal failures</h2>
+<p><strong>A bottleneck somewhere in the path.</strong> A wide pour necked down to a narrow trace at a connector, fuse, or via field creates a hot spot exactly at the bottleneck. Check the narrowest point in every high-current path.</p>
+<p><strong>An island of copper with nowhere to go.</strong> A pour not connected to a larger plane or to the board edge is a heat reservoir, not a heat path. Every hot pour needs a route out.</p>
+<p><strong>Forgetting the return path.</strong> Current flows out and back. A heavy copper supply plane with a thin, fragmented ground return still overheats on the return side. Size the return path with the same care as the supply path.</p>
+<p><strong>Designing for room temperature.</strong> A board qualified at 25 °C ambient in open air runs hotter in a product enclosure at 40 °C ambient. Size the copper for the product&#x27;s real environment, and leave margin.</p>
+<h2>Pre-fabrication checklist</h2>
+<ul>
+<li>☐ High-current nets listed, with current and acceptable rise per net</li>
+<li>☐ Copper weight specified per layer (HXLFAB: 4 oz inner, 8 oz outer)</li>
+<li>☐ Power nets poured as solid planes or wide shapes</li>
+<li>☐ No neck-downs at connectors, fuses, or via fields</li>
+<li>☐ Thermal via array under each hot component&#x27;s thermal pad</li>
+<li>☐ Return path sized to match the supply path</li>
+<li>☐ Heavy copper layers named in the stackup</li>
+<li>☐ Layer count and thickness within capability (1–30 layers, 0.15–7.0 mm)</li>
+<li>☐ Material and Tg chosen for operating temperature (FR-4; Tg135/150/170)</li>
+<li>☐ Panel size respected (850 × 520 mm maximum)</li>
+<li>☐ Thermal exit planned: chassis, enclosure wall, or airflow</li>
+<li>☐ Worst-case ambient used for sizing, not bench conditions</li>
+</ul>
+<h2>Get a second pair of eyes before you build</h2>
+<p>Thermal problems are cheap to fix in layout — a wider pour, a via array, a thicker copper layer — and expensive to fix after fabrication, when the only options are a bolted-on heatsink or a board respin. A DFM review can catch a bottleneck or a missing thermal path before material is cut. HXLFAB offers a free DFM review — send your stackup and power requirements to <a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a> to start.</p>
+<h2>Related capabilities</h2>
+<ul>
+<li><a href="/pcb-manufacturing/">HXLFAB PCB manufacturing capabilities</a></li>
+<li><a href="/multilayer-pcb/">Multilayer PCB capabilities</a></li>
+<li><a href="/high-frequency-pcb/">High-frequency and PTFE materials</a></li>
+<li><a href="/help-center/articles/what-dfm-review-covers/">Free DFM review</a></li>
+</ul>
+    </article><aside class="side-panel"><p class="eyebrow">Free DFM review</p><h2>Get a second pair of eyes before you build</h2><p>Send your stackup and design files and an engineer checks them against HXLFAB capabilities — free, before you commit to an order.</p><a class="button" href="/help-center/articles/what-dfm-review-covers/">What the review covers <span>↗</span></a><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a></aside></div></section>
+    <section class="page-cta"><div class="shell page-cta-grid"><h2>Ready to review your PCB build?</h2><a class="button" href="/#quote">Upload Gerber files <span>↗</span></a></div></section>
+  </main>
+  <footer><div class="shell footer-grid"><div><a class="brand footer-brand" href="/"><span class="brand-bars"><i></i><i></i><i></i></span><span>HXL<strong>FAB</strong></span></a><p>PCB manufacturing brand<br>Guilin production base · Shenzhen service office</p></div><div><span>Evidence</span><p><a href="/quality-certifications/">Quality & certifications</a><br><a href="/factory-process/">Factory & process</a><br><a href="/engineering-scenarios/">Engineering scenarios</a></p></div><div><span>Working together</span><p><a href="/help-center/">Help center</a><br><a href="/working-with-us/">Working with us</a><br><a href="/about/">About & team</a><br><a href="/contact/">Contact engineering</a></p></div><div><span>Contact</span><p><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a><br><a href="tel:+8613823663114">+86 138 2366 3114</a></p></div></div><div class="shell footer-bottom"><span>© 2026 HXLFAB. All rights reserved.</span><span><a href="/privacy-file-handling/">Privacy & file handling</a> · Technical data subject to engineering confirmation.</span></div></footer>
+</body>
+</html>
