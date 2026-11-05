@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Multilayer PCB Manufacturing: A Practical Guide | HXLFAB</title>
+  <meta name="description" content="How multilayer PCBs are made: stackup planning, inner-layer imaging, lamination, drilling, plating and testing — plus the defects to watch for before you order.">
+  <meta name="theme-color" content="#08242e">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://hxlfab.com/articles/multilayer-pcb-manufacturing/">
+  <meta property="og:type" content="article"><meta property="og:site_name" content="HXLFAB"><meta property="og:title" content="Multilayer PCB Manufacturing: A Practical Guide | HXLFAB"><meta property="og:description" content="How multilayer PCBs are made: stackup planning, inner-layer imaging, lamination, drilling, plating and testing — plus the defects to watch for before you order."><meta property="og:url" content="https://hxlfab.com/articles/multilayer-pcb-manufacturing/"><meta property="og:image" content="https://hxlfab.com/images/cnc-drilling.webp">
+  <link rel="stylesheet" href="/styles.css?v=20260815f"><link rel="stylesheet" href="/product-pages.css?v=20260815f">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://hxlfab.com/#organization","name":"HXLFAB","url":"https://hxlfab.com/","email":"sales@hxlfab.com","telephone":"+86 138 2366 3114"},{"@type":"Article","@id":"https://hxlfab.com/articles/multilayer-pcb-manufacturing/#article","headline":"Multilayer PCB Manufacturing: A Practical Guide from Stackup to Finished Board","description":"How multilayer PCBs are made: stackup planning, inner-layer imaging, lamination, drilling, plating and testing — plus the defects to watch for before you order.","url":"https://hxlfab.com/articles/multilayer-pcb-manufacturing/","datePublished":"2026-11-05","author":{"@id":"https://hxlfab.com/#organization"},"publisher":{"@id":"https://hxlfab.com/#organization"},"about":"Printed circuit board manufacturing"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hxlfab.com/"},{"@type":"ListItem","position":2,"name":"Articles","item":"https://hxlfab.com/articles/"},{"@type":"ListItem","position":3,"name":"Multilayer PCB Manufacturing: A Practical Guide from Stackup to Finished Board","item":"https://hxlfab.com/articles/multilayer-pcb-manufacturing/"}]}]}</script>
+  <script src="/site.js?v=20260815f" defer></script>
+</head>
+<body>
+  <div class="utility"><div class="shell utility-inner"><span>PCB manufacturing · Guilin production base · Shenzhen service office</span><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a></div></div>
+  <header class="header"><div class="shell nav"><a class="brand" href="/" aria-label="HXLFAB home"><span class="brand-bars"><i></i><i></i><i></i></span><span>HXL<strong>FAB</strong></span></a><nav aria-label="Main navigation"><a href="/pcb-manufacturing/">Manufacturing</a><a href="/quality-certifications/">Quality</a><a href="/factory-process/">Factory</a><a href="/engineering-scenarios/">Engineering reviews</a><a href="/articles/">Articles</a><a href="/help-center/">Help</a><a href="/about/">About</a></nav><a class="button small" href="/#quote">Start an RFQ <span>↗</span></a></div></header>
+  <main>
+    <section class="page-hero"><div class="shell"><p class="breadcrumbs"><a href="/">Home</a> / <a href="/articles/">Articles</a> / Multilayer PCB Manufacturing: A Practical Guide from Stackup to Finished Board</p><div class="page-hero-grid"><div><p class="eyebrow">HXLFAB engineering notes</p><h1>Multilayer PCB Manufacturing: A Practical Guide from Stackup to Finished Board</h1><p class="lede">How multilayer PCBs are made: stackup planning, inner-layer imaging, lamination, drilling, plating and testing — plus the defects to watch for before you order.</p><p class="breadcrumbs">Published November 5, 2026</p><div class="hero-actions"><a class="button" href="/help-center/articles/what-dfm-review-covers/">Get a free DFM review <span>↗</span></a><a class="text-link" href="/#quote">Start an RFQ <span>→</span></a></div></div></div></div></section>
+    <section class="section"><div class="shell content-grid"><article class="content-copy">
+<p>A two-layer board is a sheet of laminate with copper on both sides. A multilayer board is a sandwich: several such cores, plus sheets of prepreg, pressed together under heat and pressure into a single rigid board. That sandwich is what makes modern electronics possible — dense BGA fanout, controlled-impedance routing, dedicated power and ground planes — but every extra layer adds a process step where something can go wrong. Understanding how a multilayer board is actually built helps a designer draw a stackup the fabricator can build reliably.</p>
+<h2>The stackup comes first</h2>
+<p>Every multilayer build starts with the stackup: the order of copper layers, cores, and prepreg sheets, and the finished thickness. The stackup is not just a layer count. It decides impedance, crosstalk, power delivery, and how the board behaves when it is heated during assembly.</p>
+<p>A few stackup rules that experienced designers follow:</p>
+<p><strong>Balance copper on both sides of the centre.</strong> A stackup that is heavy on one side and light on the other will bow after lamination. Symmetric construction — the same copper weight and dielectric thickness mirrored around the centre — keeps the board flat and reduces warp during reflow.</p>
+<p><strong>Pair signal layers with a reference plane.</strong> High-speed signals need a continuous ground or power plane next to them. A signal layer routed against another signal layer has no stable reference, and its impedance becomes unpredictable. Keep power and ground planes adjacent to each other too, so they form a distributed capacitance that steadies the supply.</p>
+<p>HXLFAB builds boards from 1 to 30 layers, at 0.15 to 7.0 mm finished thickness, with 4 oz inner-layer and 8 oz outer-layer copper available, in FR-4 and PTFE materials with Tg135/150/170 grades. A 30-layer board and a 4-layer board go through the same process steps; what changes is the number of lamination cycles and the tolerance budget.</p>
+<h2>How a multilayer board is built, step by step</h2>
+<p><strong>1. Inner-layer imaging and etching.</strong> Each inner core starts as copper-clad laminate. The circuit pattern is transferred onto the copper with photoresist, exposed, developed, and etched, leaving the inner-layer traces behind.</p>
+<p><strong>2. Oxide treatment and inspection.</strong> The etched inner layers are roughened so the prepreg bonds to them during lamination. Automated optical inspection (AOI) checks each inner layer for shorts, opens, and under-etching while it can still be fixed — after lamination, an inner-layer defect is scrap.</p>
+<p><strong>3. Lay-up and lamination.</strong> The inner cores and prepreg sheets are stacked in the planned order, aligned with tooling pins, and pressed at high temperature and pressure. The prepreg resin flows, fills the gaps between inner-layer traces, and cures into a solid bond. This is the defining step: a good lamination gives a flat, void-free board; a bad one gives delamination, resin starvation, or a board that warps in the reflow oven.</p>
+<p><strong>4. Drilling.</strong> Through holes and vias are drilled through the whole board. HXLFAB&#x27;s minimum mechanical drill is 0.15 mm, and laser drilling reaches 0.10 mm for microvias. Hole position accuracy matters more on multilayer boards than on two-layer boards, because a drilled hole must land on its pad on every layer it passes through.</p>
+<p><strong>5. Plating.</strong> The drilled holes are plated with copper to connect the layers, then the outer-layer circuit pattern is formed. Plating must be uniform along the whole barrel of the hole; a hole that plates thin in the middle is a reliability risk under thermal cycling.</p>
+<p><strong>6. Solder mask, silkscreen, finish, and routing.</strong> Solder mask protects the outer copper and defines the solderable pads, and silkscreen prints the component outlines and reference designators. Mask registration matters: a mask opening that is off-centre can expose the wrong area and cause solder bridging. The exposed pads then receive their surface finish, and the board is routed or scored out of its panel. HXLFAB&#x27;s maximum panel size is 850 × 520 mm, which sets the practical limit for how many boards fit in one panel.</p>
+<p><strong>7. Electrical test and final inspection.</strong> Every net is tested for continuity and isolation, and the finished board is inspected for dimensional accuracy, mask coverage, and finish quality before it ships.</p>
+<h2>Lamination: where multilayer boards most often fail</h2>
+<p>Lamination is the step with the least room for correction, so it deserves the most attention at design time.<strong>Delamination</strong> is separation between layers, usually caused by contamination, moisture, or insufficient resin flow. It shows up as a blister or a layer that peels. The designer&#x27;s contribution is keeping the board dry in storage and avoiding large copper-free areas that starve the prepreg of resin.</p>
+<p><strong>Resin starvation and voids</strong> happen when thick inner-layer copper leaves deep gaps that the prepreg cannot fill, trapping air. Keeping copper distribution reasonably even across a layer, and avoiding abrupt jumps in copper density, gives the resin somewhere to go.</p>
+<p><strong>Warp and twist</strong> come from an asymmetric stackup or uneven copper distribution. If one side of the board is mostly solid copper and the other is mostly empty, the two sides expand differently when heated and the board bends. Balanced stackups and copper thieving on sparse layers are the standard countermeasures.</p>
+<p><strong>Misregistration</strong> is the layers shifting relative to each other during lamination, showing up as drilled holes missing their inner-layer pads. It is controlled by tooling and by the fabricator&#x27;s process, but the designer can help by keeping annular rings generous and by not relying on minimum clearances on the densest inner layers.</p>
+<h2>Design choices that make or break a multilayer build</h2>
+<p><strong>Choose the layer count from the routing problem, not from habit.</strong> Each added layer adds a lamination cycle, a chance of misregistration, and cost. Before adding two layers, check whether better component placement or a via strategy would free the same routing channels.</p>
+<p><strong>Keep trace and space inside capability with margin.</strong> HXLFAB&#x27;s minimum trace and space is 3/3 mil, but a design that sits exactly on the minimum everywhere leaves no margin for etching variation. Reserve minimum geometry for the spots that genuinely need it, such as BGA fanout.</p>
+<p><strong>Mind the aspect ratio on drilled holes.</strong> A hole&#x27;s depth-to-diameter ratio decides how reliably it plates. A thick board with small holes is the hardest combination: the plating chemistry has to reach the bottom of a deep, narrow barrel. When the board is thick, prefer larger drill diameters, and confirm the exact hole plan during the DFM review.</p>
+<h2>Common mistakes</h2>
+<p><strong>An asymmetric stackup that warps in reflow.</strong> The board passes electrical test flat on the bench, then bows in the assembly oven. Balance the stackup around the centre line.</p>
+<p><strong>Copper pours that trap resin flow.</strong> A huge solid pour on one inner layer with no relief can block prepreg flow and leave voids. Use hatched pours or relief patterns where a solid pour is not electrically required.</p>
+<p><strong>Minimum annular rings on inner layers.</strong> A drilled hole that lands slightly off-centre can break out of its pad. Inner-layer pads need more margin than outer-layer pads, because they cannot be inspected or reworked after lamination.</p>
+<p><strong>Ignoring the panel and thickness budget.</strong> A board that fits the layer count but ignores the finished thickness tolerance, or that is drawn larger than the 850 × 520 mm panel, forces a redesign late in the process. Check both early.</p>
+<p><strong>Sending Gerbers without a stackup drawing.</strong> Layer order, copper weights, and material grades are design decisions. If they are not in the fabrication notes, the fabricator will choose defaults that may not match the design intent.</p>
+<h2>Pre-fabrication checklist</h2>
+<ul>
+<li>☐ Stackup symmetric around the centre; copper balanced on both sides</li>
+<li>☐ Every signal layer paired with a reference plane</li>
+<li>☐ Layer count justified by routing, not chosen by habit</li>
+<li>☐ Copper weights stated per layer (inner up to 4 oz, outer up to 8 oz)</li>
+<li>☐ Material grade chosen (FR-4 or PTFE; Tg135/150/170)</li>
+<li>☐ Trace and space within capability (3/3 mil minimum) with margin on dense areas</li>
+<li>☐ Drill sizes within capability (0.15 mm mechanical minimum, 0.10 mm laser microvia)</li>
+<li>☐ Hole aspect ratio workable for the finished thickness (0.15–7.0 mm)</li>
+<li>☐ Annular rings generous on inner layers, where breakout cannot be reworked</li>
+<li>☐ Copper distribution even enough for resin flow; no large starved areas</li>
+<li>☐ Panel layout fits within 850 × 520 mm</li>
+<li>☐ Surface finish and solder mask requirements stated</li>
+<li>☐ Electrical test coverage agreed, including blind and buried vias</li>
+<li>☐ Stackup drawing complete: layer order, thicknesses, materials, tolerances</li>
+</ul>
+<h2>Get a second pair of eyes before you build</h2>
+<p>A multilayer board commits a dozen process steps the moment lamination starts, and an inner-layer mistake discovered after lamination is scrap, not rework. A DFM review can catch an asymmetric stackup, a starved resin area, or a hole plan that will not plate reliably — all before the press closes. HXLFAB offers a free DFM review — send your stackup and Gerber files to <a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a> to start.---</p>
+<h2>Related capabilities</h2>
+<ul>
+<li><a href="/pcb-manufacturing/">HXLFAB PCB manufacturing capabilities</a></li>
+<li><a href="/hdi-pcb/">HDI PCB capabilities</a></li>
+<li><a href="/multilayer-pcb/">Multilayer PCB capabilities</a></li>
+<li><a href="/help-center/articles/what-dfm-review-covers/">Free DFM review</a></li>
+</ul>
+    </article><aside class="side-panel"><p class="eyebrow">Free DFM review</p><h2>Get a second pair of eyes before you build</h2><p>Send your stackup and design files and an engineer checks them against HXLFAB capabilities — free, before you commit to an order.</p><a class="button" href="/help-center/articles/what-dfm-review-covers/">What the review covers <span>↗</span></a><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a></aside></div></section>
+    <section class="page-cta"><div class="shell page-cta-grid"><h2>Ready to review your PCB build?</h2><a class="button" href="/#quote">Upload Gerber files <span>↗</span></a></div></section>
+  </main>
+  <footer><div class="shell footer-grid"><div><a class="brand footer-brand" href="/"><span class="brand-bars"><i></i><i></i><i></i></span><span>HXL<strong>FAB</strong></span></a><p>PCB manufacturing brand<br>Guilin production base · Shenzhen service office</p></div><div><span>Evidence</span><p><a href="/quality-certifications/">Quality & certifications</a><br><a href="/factory-process/">Factory & process</a><br><a href="/engineering-scenarios/">Engineering scenarios</a></p></div><div><span>Working together</span><p><a href="/help-center/">Help center</a><br><a href="/working-with-us/">Working with us</a><br><a href="/about/">About & team</a><br><a href="/contact/">Contact engineering</a></p></div><div><span>Contact</span><p><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a><br><a href="tel:+8613823663114">+86 138 2366 3114</a></p></div></div><div class="shell footer-bottom"><span>© 2026 HXLFAB. All rights reserved.</span><span><a href="/privacy-file-handling/">Privacy & file handling</a> · Technical data subject to engineering confirmation.</span></div></footer>
+</body>
+</html>
