@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blind and Buried Vias: A Practical Guide | HXLFAB</title>
+  <meta name="description" content="Blind, buried and microvias explained: when to use each type, aspect-ratio and stacking rules, cost trade-offs, and a pre-fabrication checklist.">
+  <meta name="theme-color" content="#08242e">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://hxlfab.com/articles/blind-buried-vias-microvias/">
+  <meta property="og:type" content="article"><meta property="og:site_name" content="HXLFAB"><meta property="og:title" content="Blind and Buried Vias: A Practical Guide | HXLFAB"><meta property="og:description" content="Blind, buried and microvias explained: when to use each type, aspect-ratio and stacking rules, cost trade-offs, and a pre-fabrication checklist."><meta property="og:url" content="https://hxlfab.com/articles/blind-buried-vias-microvias/"><meta property="og:image" content="https://hxlfab.com/images/cnc-drilling.webp">
+  <link rel="stylesheet" href="/styles.css?v=20260815f"><link rel="stylesheet" href="/product-pages.css?v=20260815f">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://hxlfab.com/#organization","name":"HXLFAB","url":"https://hxlfab.com/","email":"sales@hxlfab.com","telephone":"+86 138 2366 3114"},{"@type":"Article","@id":"https://hxlfab.com/articles/blind-buried-vias-microvias/#article","headline":"Blind, Buried Vias and Microvias: A Practical Guide for Dense PCB Layout","description":"Blind, buried and microvias explained: when to use each type, aspect-ratio and stacking rules, cost trade-offs, and a pre-fabrication checklist.","url":"https://hxlfab.com/articles/blind-buried-vias-microvias/","datePublished":"2026-11-04","author":{"@id":"https://hxlfab.com/#organization"},"publisher":{"@id":"https://hxlfab.com/#organization"},"about":"Printed circuit board manufacturing"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hxlfab.com/"},{"@type":"ListItem","position":2,"name":"Articles","item":"https://hxlfab.com/articles/"},{"@type":"ListItem","position":3,"name":"Blind, Buried Vias and Microvias: A Practical Guide for Dense PCB Layout","item":"https://hxlfab.com/articles/blind-buried-vias-microvias/"}]}]}</script>
+  <script src="/site.js?v=20260815f" defer></script>
+</head>
+<body>
+  <div class="utility"><div class="shell utility-inner"><span>PCB manufacturing · Guilin production base · Shenzhen service office</span><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a></div></div>
+  <header class="header"><div class="shell nav"><a class="brand" href="/" aria-label="HXLFAB home"><span class="brand-bars"><i></i><i></i><i></i></span><span>HXL<strong>FAB</strong></span></a><nav aria-label="Main navigation"><a href="/pcb-manufacturing/">Manufacturing</a><a href="/quality-certifications/">Quality</a><a href="/factory-process/">Factory</a><a href="/engineering-scenarios/">Engineering reviews</a><a href="/articles/">Articles</a><a href="/help-center/">Help</a><a href="/about/">About</a></nav><a class="button small" href="/#quote">Start an RFQ <span>↗</span></a></div></header>
+  <main>
+    <section class="page-hero"><div class="shell"><p class="breadcrumbs"><a href="/">Home</a> / <a href="/articles/">Articles</a> / Blind, Buried Vias and Microvias: A Practical Guide for Dense PCB Layout</p><div class="page-hero-grid"><div><p class="eyebrow">HXLFAB engineering notes</p><h1>Blind, Buried Vias and Microvias: A Practical Guide for Dense PCB Layout</h1><p class="lede">Blind, buried and microvias explained: when to use each type, aspect-ratio and stacking rules, cost trade-offs, and a pre-fabrication checklist.</p><p class="breadcrumbs">Published November 4, 2026</p><div class="hero-actions"><a class="button" href="/help-center/articles/what-dfm-review-covers/">Get a free DFM review <span>↗</span></a><a class="text-link" href="/#quote">Start an RFQ <span>→</span></a></div></div></div></div></section>
+    <section class="section"><div class="shell content-grid"><article class="content-copy">
+<p>A through-hole via connects every layer it passes through, whether the signal needs those layers or not. On a dense board that waste adds up: unused via barrels block routing channels on layers the signal never visits, and the leftover stub of a through via can behave like an unwanted antenna at high frequencies. Blind, buried, and microvias exist to stop that waste. Each one connects only the layers it needs to, freeing the rest of the board for routing. Used well, they make dense layouts possible; used carelessly, they add cost and fabrication risk for no benefit.</p>
+<h2>The three via types, and what each one connects</h2>
+<p><strong>Through vias</strong> run from the top surface to the bottom surface, through every layer in between. They are the simplest and cheapest via, and the right default for most boards.</p>
+<p><strong>Blind vias</strong> start on an outer surface and stop at an inner layer. A blind via from the top layer to layer 3 leaves layers 4 and below untouched.</p>
+<p><strong>Buried vias</strong> connect two or more inner layers and never reach either outer surface. They are formed during inner-layer lamination, before the outer layers are added, so they can connect any pair of inner layers — but each buried-via pair that spans different layer ranges needs its own lamination step.</p>
+<p><strong>Microvias</strong> are a size class, not a separate connection type: a small via, typically laser-drilled, connecting an outer layer to the layer immediately beneath it. HXLFAB&#x27;s published laser-drilling capability is 0.10 mm, and its minimum mechanical drill is 0.15 mm. Microvias are most often blind vias, and they are the workhorse of high-density interconnect (HDI) boards, where they fan out fine-pitch BGAs that through vias cannot reach.</p>
+<p>In short: blind and buried describe where a via starts and stops; microvia describes how small it is and how it is made. State each via&#x27;s start and end layers in the stackup drawing, since a fabricator cannot infer them from drill files alone.</p>
+<h2>Why designers reach for blind and buried vias</h2>
+<p><strong>Routing density.</strong> On a board with a fine-pitch BGA, through vias consume routing channels on every layer. A signal that only needs to travel from layer 1 to layer 2 should not occupy layers 3 through 12. Blind vias and microvias free those inner layers, which is often the difference between a board that routes and one that needs two more layers.</p>
+<p><strong>Signal integrity.</strong> A through via&#x27;s unused barrel below the signal layer is a stub. At gigahertz frequencies it reflects signal and degrades the eye. Blind vias and microvias have little or no stub, which is one reason high-speed designs prefer them for critical nets.</p>
+<p>None of these benefits is free. Every blind or buried via adds a drilling or lamination step, and the cost rises with the number of distinct via structures, not just the number of vias.</p>
+<h2>Aspect ratio: the rule that decides what builds</h2>
+<p>Aspect ratio is the ratio of a via&#x27;s depth to its diameter. Deep, narrow holes are harder to plate reliably: plating chemistry must reach the bottom of the hole and deposit copper evenly along its walls, and a hole too deep for its diameter plates thin at the centre and can fail under thermal stress.</p>
+<p>The design rule that follows is simple: keep each via as shallow and as wide as the layout allows. For microvias, the standard practice is one layer deep — layer 1 to layer 2 — with an aspect ratio near 1:1. Deeper blind vias are possible but need larger diameters. When a design pushes a via toward the fabricator&#x27;s published limits — for HXLFAB, a 0.10 mm laser hole or a 0.15 mm mechanical drill — confirm the exact stackup and drill plan during the DFM review, rather than assuming the minimum applies to every layer span.</p>
+<h2>Stacked vs staggered microvias</h2>
+<p>When a signal must drop several layers in an HDI stackup, microvias can be arranged in two ways.</p>
+<p><strong>Staggered microvias</strong> offset each layer&#x27;s via so that the via from layer 2 to 3 sits beside, not on top of, the via from layer 1 to 2. Each via is plated and filled independently, so a small misalignment between layers does not break the connection. The cost is routing space, since each staggered via occupies its own footprint.</p>
+<p><strong>Stacked microvias</strong> place each via directly on top of the previous one, forming a continuous vertical column. Stacked vias save space and give the cleanest vertical path, but they are harder to build: each via in the stack must be filled solid and planarised before the next is drilled, and any void in a lower via weakens the whole column. Reserve stacked vias for the nets that genuinely need the density, and confirm the fabricator&#x27;s filled-via process before using them.</p>
+<p>Stagger where space allows and stack only under the densest BGAs, and state the choice in the fabrication notes.</p>
+<h2>Buried vias and lamination: where the cost hides</h2>
+<p>Buried vias are the most expensive via type per connection, because of how they are made. A buried via between layers 3 and 6 must be drilled and plated while layers 3 through 6 are still an exposed sub-assembly, before the outer layers are laminated on top. If a design also needs a buried via between layers 4 and 5, that is a second sub-assembly and a second lamination step.</p>
+<p>Use as few distinct buried-via spans as possible — ideally one, shared by all the nets that need buried vias — and ask whether each buried via is really needed: many nets could use a blind via from the nearest surface instead. Buried vias earn their cost on genuinely dense inner-layer routing; on a simpler board they are usually an expensive habit.</p>
+<h2>Common mistakes</h2>
+<p><strong>Drilling microvias through more than one layer.</strong> A laser microvia is a one-layer-deep structure. A &quot;microvia&quot; drawn through two dielectric layers is a deep blind via that needs a different drill process and a larger diameter. Redraw it as two stacked or staggered microvias, or as a mechanical blind via.</p>
+<p><strong>Putting vias in pads without a fill plan.</strong> Via-in-pad saves space, but an unfilled via under a BGA ball traps solder and creates a void. If a design uses via-in-pad, specify filled and capped vias and confirm the fill process with the fabricator.</p>
+<p><strong>Ignoring the board thickness budget.</strong> A design with blind vias from both surfaces and buried vias in the middle is really three boards laminated together. HXLFAB builds 1 to 30 layers at 0.15 to 7.0 mm finished thickness, but a complex via structure consumes lamination cycles; confirm the full stackup, not just the layer count, before release.</p>
+<p><strong>Using blind and buried vias on a board that does not need them.</strong> If the board routes comfortably with through vias, adding blind and buried vias buys nothing and adds cost, lead-time risk, and test complexity. Via structures should follow from a routing problem, not from a desire to look advanced.</p>
+<h2>Pre-fabrication checklist</h2>
+<ul>
+<li>☐ Every via structure labelled with start and end layers in the stackup drawing</li>
+<li>☐ Microvias limited to one layer deep unless stacked/staggered rules are specified</li>
+<li>☐ Stacked vs staggered microvia choice stated, and fill process confirmed for stacked vias</li>
+<li>☐ Aspect ratio of each via within the fabricator&#x27;s plating capability</li>
+<li>☐ Via diameters within capability (0.10 mm laser microvia, 0.15 mm minimum mechanical drill)</li>
+<li>☐ Number of distinct buried-via spans minimised; each one justified</li>
+<li>☐ Via-in-pad vias specified as filled and capped where used</li>
+<li>☐ Stub-sensitive high-speed nets routed on blind/microvia paths, not through vias</li>
+<li>☐ Layer count and thickness within capability (1–30 layers, 0.15–7.0 mm)</li>
+<li>☐ Trace and space within capability (3/3 mil minimum) with margin on dense fanout</li>
+<li>☐ Panel size respected (850 × 520 mm maximum)</li>
+<li>☐ Tg grade chosen for the stackup (Tg135/150/170); copper weight confirmed (4/8 oz inner/outer)</li>
+<li>☐ Test plan covers blind and buried vias, which cannot be inspected from the surface alone</li>
+</ul>
+<h2>Get a second pair of eyes before you build</h2>
+<p>Via structures are easy to draw and hard to un-build. A DFM review can catch an unlabelled via span, a microvia drawn through two layers, or a via-in-pad without a fill plan — all before drilling starts. HXLFAB offers a free DFM review — send your stackup and via plan to <a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a> to start.</p>
+<h2>Related capabilities</h2>
+<ul>
+<li><a href="/pcb-manufacturing/">HXLFAB PCB manufacturing capabilities</a></li>
+<li><a href="/hdi-pcb/">HDI PCB capabilities</a></li>
+<li><a href="/multilayer-pcb/">Multilayer PCB capabilities</a></li>
+<li><a href="/help-center/articles/what-dfm-review-covers/">Free DFM review</a></li>
+</ul>
+    </article><aside class="side-panel"><p class="eyebrow">Free DFM review</p><h2>Get a second pair of eyes before you build</h2><p>Send your stackup and design files and an engineer checks them against HXLFAB capabilities — free, before you commit to an order.</p><a class="button" href="/help-center/articles/what-dfm-review-covers/">What the review covers <span>↗</span></a><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a></aside></div></section>
+    <section class="page-cta"><div class="shell page-cta-grid"><h2>Ready to review your PCB build?</h2><a class="button" href="/#quote">Upload Gerber files <span>↗</span></a></div></section>
+  </main>
+  <footer><div class="shell footer-grid"><div><a class="brand footer-brand" href="/"><span class="brand-bars"><i></i><i></i><i></i></span><span>HXL<strong>FAB</strong></span></a><p>PCB manufacturing brand<br>Guilin production base · Shenzhen service office</p></div><div><span>Evidence</span><p><a href="/quality-certifications/">Quality & certifications</a><br><a href="/factory-process/">Factory & process</a><br><a href="/engineering-scenarios/">Engineering scenarios</a></p></div><div><span>Working together</span><p><a href="/help-center/">Help center</a><br><a href="/working-with-us/">Working with us</a><br><a href="/about/">About & team</a><br><a href="/contact/">Contact engineering</a></p></div><div><span>Contact</span><p><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a><br><a href="tel:+8613823663114">+86 138 2366 3114</a></p></div></div><div class="shell footer-bottom"><span>© 2026 HXLFAB. All rights reserved.</span><span><a href="/privacy-file-handling/">Privacy & file handling</a> · Technical data subject to engineering confirmation.</span></div></footer>
+</body>
+</html>
