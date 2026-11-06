@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-03T18:08:45.000Z",
+  "updatedAt": "2026-11-05T13:57:48.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,6 +51,12 @@
   },
   "news": [
     {
+      "title": "IPC K-FEST 2026 Brings AI, Manufacturing and Standards into Focus",
+      "url": "https://www.electronics.org/news-release/ipc-k-fest-2026-brings-ai-manufacturing-and-standards-focus",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-11-05T13:57:48.000Z"
+    },
+    {
       "title": "Bringing standards-based thinking earlier into rigid-flex design",
       "url": "https://www.electronics.org/blog/bringing-standards-based-thinking-earlier-rigid-flex-design",
       "source": "Global Electronics Association",
@@ -67,12 +73,6 @@
       "url": "https://www.electronics.org/blog/pcb-design-production-standards-decisions-are-connected",
       "source": "Global Electronics Association",
       "publishedAt": "2026-10-29T12:50:20.000Z"
-    },
-    {
-      "title": "North American EMS Orders Climb Despite Lower September Shipments",
-      "url": "https://www.electronics.org/news-release/north-american-ems-orders-climb-despite-lower-september-shipments",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-10-28T13:27:27.000Z"
     }
   ],
   "newsSources": [
