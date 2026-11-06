@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PCB Prototyping: A Practical Guide | HXLFAB</title>
+  <meta name="description" content="How PCB prototyping works: what to send, how to choose specs, prototype vs production differences, common failures, and a pre-order checklist.">
+  <meta name="theme-color" content="#08242e">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://hxlfab.com/articles/pcb-prototyping/">
+  <meta property="og:type" content="article"><meta property="og:site_name" content="HXLFAB"><meta property="og:title" content="PCB Prototyping: A Practical Guide | HXLFAB"><meta property="og:description" content="How PCB prototyping works: what to send, how to choose specs, prototype vs production differences, common failures, and a pre-order checklist."><meta property="og:url" content="https://hxlfab.com/articles/pcb-prototyping/"><meta property="og:image" content="https://hxlfab.com/images/cnc-drilling.webp">
+  <link rel="stylesheet" href="/styles.css?v=20260815f"><link rel="stylesheet" href="/product-pages.css?v=20260815f">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://hxlfab.com/#organization","name":"HXLFAB","url":"https://hxlfab.com/","email":"sales@hxlfab.com","telephone":"+86 138 2366 3114"},{"@type":"Article","@id":"https://hxlfab.com/articles/pcb-prototyping/#article","headline":"PCB Prototyping: A Practical Guide from First Board to Production-Ready Design","description":"How PCB prototyping works: what to send, how to choose specs, prototype vs production differences, common failures, and a pre-order checklist.","url":"https://hxlfab.com/articles/pcb-prototyping/","datePublished":"2026-11-06","author":{"@id":"https://hxlfab.com/#organization"},"publisher":{"@id":"https://hxlfab.com/#organization"},"about":"Printed circuit board manufacturing"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hxlfab.com/"},{"@type":"ListItem","position":2,"name":"Articles","item":"https://hxlfab.com/articles/"},{"@type":"ListItem","position":3,"name":"PCB Prototyping: A Practical Guide from First Board to Production-Ready Design","item":"https://hxlfab.com/articles/pcb-prototyping/"}]}]}</script>
+  <script src="/site.js?v=20260815f" defer></script>
+</head>
+<body>
+  <div class="utility"><div class="shell utility-inner"><span>PCB manufacturing · Guilin production base · Shenzhen service office</span><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a></div></div>
+  <header class="header"><div class="shell nav"><a class="brand" href="/" aria-label="HXLFAB home"><span class="brand-bars"><i></i><i></i><i></i></span><span>HXL<strong>FAB</strong></span></a><nav aria-label="Main navigation"><a href="/pcb-manufacturing/">Manufacturing</a><a href="/quality-certifications/">Quality</a><a href="/factory-process/">Factory</a><a href="/engineering-scenarios/">Engineering reviews</a><a href="/articles/">Articles</a><a href="/help-center/">Help</a><a href="/about/">About</a></nav><a class="button small" href="/#quote">Start an RFQ <span>↗</span></a></div></header>
+  <main>
+    <section class="page-hero"><div class="shell"><p class="breadcrumbs"><a href="/">Home</a> / <a href="/articles/">Articles</a> / PCB Prototyping: A Practical Guide from First Board to Production-Ready Design</p><div class="page-hero-grid"><div><p class="eyebrow">HXLFAB engineering notes</p><h1>PCB Prototyping: A Practical Guide from First Board to Production-Ready Design</h1><p class="lede">How PCB prototyping works: what to send, how to choose specs, prototype vs production differences, common failures, and a pre-order checklist.</p><p class="breadcrumbs">Published November 6, 2026</p><div class="hero-actions"><a class="button" href="/help-center/articles/what-dfm-review-covers/">Get a free DFM review <span>↗</span></a><a class="text-link" href="/#quote">Start an RFQ <span>→</span></a></div></div></div></div></section>
+    <section class="section"><div class="shell content-grid"><article class="content-copy">
+<p>A prototype PCB is a working board built to answer a question. Does the circuit work? Does the connector fit? Does the board survive reflow without warping? A prototype is not a smaller production run — it is a test, and it should be planned like one.</p>
+<h2>What a prototype is for — and what it is not</h2>
+<p>A prototype exists to find problems while they are still cheap to fix. If the goal is to verify a circuit, the prototype should match the production design as closely as possible: same layer count, same materials, same copper weights, same surface finish. A prototype built with different materials or a different stackup can pass a test that the production board then fails.</p>
+<p>A prototype is not a place to save money by cutting corners that change the result. Using thinner copper than production to save cost, for example, changes thermal behaviour and current capacity — the test then tells you nothing reliable about the real board. Keep costs down by ordering fewer boards, not different boards.</p>
+<h2>Prototype vs production: same process, different priorities</h2>
+<p>A prototype goes through the same manufacturing steps as a production board: imaging, etching, lamination, drilling, plating, solder mask, surface finish, routing, and electrical test. The difference is in the priorities. In production, the goal is repeatability across hundreds or thousands of boards. In prototyping, the goal is speed of learning: get a working board in hand, test it, and feed what you learn into the next revision.</p>
+<p>It also shows up in the tolerance budget. A prototype should still be built to the production tolerances, because a prototype that passes only because it was built loosely proves nothing. HXLFAB&#x27;s minimum trace and space is 3/3 mil, with a 0.15 mm minimum mechanical drill and 0.10 mm laser-drilled microvias — the prototype can be built to the same capability limits as the production run, so the test is honest.</p>
+<h2>What to send: the prototype design package</h2>
+<p>A fabricator cannot build from a schematic alone. The minimum package is the same as for production, and sending it complete avoids a round of clarification emails:</p>
+<p><strong>Gerber files (or ODB++).</strong> One file per copper layer, solder mask, and silkscreen, plus the board outline and drill files. Check that the Gerbers match the drill file — a drill file from an older revision is one of the most common prototype mistakes.</p>
+<p><strong>A fabrication drawing or notes file.</strong> Layer count, finished thickness, copper weight per layer, material grade, solder mask colour, silkscreen requirements, and surface finish. State the stackup explicitly. HXLFAB builds boards from 1 to 30 layers, at 0.15 to 7.0 mm finished thickness, with 4 oz inner-layer and 8 oz outer-layer copper available, in FR-4 and PTFE materials with Tg135/150/170 grades — but the fabricator still needs to know which combination your design uses.</p>
+<p><strong>A drill table.</strong> Hole sizes, plated vs non-plated, and tolerances.</p>
+<p><strong>Any special requirements.</strong> Controlled impedance values and the layers they apply to, blind or buried vias, edge plating, countersinks, or press-fit holes. Anything not in the notes will be built to the fabricator&#x27;s default, and the default may not match your intent.</p>
+<h2>Choosing prototype specifications</h2>
+<p><strong>Layer count.</strong> Build the prototype at the production layer count, even if a simpler board would let you test part of the circuit. A two-layer stand-in for a four-layer design changes the impedance environment, the ground return paths, and the thermal behaviour.</p>
+<p><strong>Material.</strong> For most digital and low-frequency analogue designs, standard FR-4 is the right prototype material, and the right production material too. For RF and high-speed designs, the material is part of the circuit: a prototype on FR-4 cannot validate a design that will ship on PTFE. State the Tg grade (Tg135, Tg150, or Tg170) in the fabrication notes.</p>
+<p><strong>Surface finish.</strong> The finish affects solderability and shelf life, so the prototype should use the production finish. A finish that solders well in the prototype but is not the production finish leaves the assembly question unanswered.</p>
+<p><strong>Copper weight.</strong> Heavy copper changes etching, plating, and thermal behaviour, so a prototype with lighter copper than production will not show the same thermal results. State the copper weight per layer and keep it the same as production.</p>
+<h2>Common prototype failures</h2>
+<p><strong>The design was never checked against fabrication capability.</strong> A design that uses minimum geometry everywhere, with no margin, is fragile. Reserve minimum geometry for the spots that genuinely need it, such as BGA fanout, and give the rest of the board margin.</p>
+<p><strong>The drill plan does not match the thickness.</strong> A thick board with small holes is hard to plate reliably, because the plating chemistry must reach the bottom of a deep, narrow barrel. Check the hole aspect ratio against the finished thickness before ordering.</p>
+<p><strong>The stackup was not stated.</strong> Without a stackup drawing, the fabricator chooses defaults for layer order, dielectric thickness, and copper weight. Those defaults may produce a board that looks right and behaves wrong — especially for impedance-controlled designs.</p>
+<p><strong>The outline or hole positions came from the wrong revision.</strong> Mechanical fit is the easiest thing to get wrong and the easiest to check. Before sending Gerbers, confirm that the outline, mounting holes, and connector positions match the current mechanical drawing.</p>
+<p><strong>The prototype was ordered before the schematic was frozen.</strong> A prototype ordered against a schematic that changes the next day is wasted. Freeze the schematic, run the design-rule check, and then order.</p>
+<h2>How many boards to order</h2>
+<p>Five boards is the usual starting point for a first prototype: enough to assemble two or three, keep one bare for inspection, and have a spare for a mistake during assembly. If the board is expensive or the assembly is delicate, ten boards give more room for assembly errors. Ordering one board is a false economy — a single assembly mistake leaves you with nothing to test.</p>
+<h2>Pre-order checklist</h2>
+<ul>
+<li>☐ Schematic frozen; design-rule check clean</li>
+<li>☐ Gerber files and drill files from the same revision</li>
+<li>☐ Fabrication notes complete: layer count, thickness, copper weights, material grade</li>
+<li>☐ Stackup drawing included, with impedance requirements per layer where applicable</li>
+<li>☐ Drill table complete: sizes, plated vs non-plated, tolerances</li>
+<li>☐ Trace and space within capability (3/3 mil minimum) with margin outside dense areas</li>
+<li>☐ Drill sizes within capability (0.15 mm mechanical minimum, 0.10 mm laser microvia)</li>
+<li>☐ Hole aspect ratio workable for the finished thickness (0.15–7.0 mm)</li>
+<li>☐ Outline and mounting holes match the current mechanical drawing</li>
+<li>☐ Surface finish and solder mask colour stated</li>
+<li>☐ Panel fit checked against the 850 × 520 mm maximum panel size</li>
+<li>☐ Special requirements stated: blind/buried vias, impedance, edge plating, press-fit</li>
+</ul>
+<h2>Get a second pair of eyes before you build</h2>
+<p>The cheapest lesson is the one a reviewer catches before the board is made. A DFM review can catch a drill plan that will not plate, a stackup that was never stated, or a tolerance the design cannot hold — all before the first board is etched. HXLFAB offers a free DFM review — send your Gerber files and fabrication notes to <a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a> to start.</p>
+<h2>Related capabilities</h2>
+<ul>
+<li><a href="/pcb-manufacturing/">HXLFAB PCB manufacturing capabilities</a></li>
+<li><a href="/hdi-pcb/">HDI PCB capabilities</a></li>
+<li><a href="/multilayer-pcb/">Multilayer PCB capabilities</a></li>
+<li><a href="/help-center/articles/what-dfm-review-covers/">Free DFM review</a></li>
+</ul>
+    </article><aside class="side-panel"><p class="eyebrow">Free DFM review</p><h2>Get a second pair of eyes before you build</h2><p>Send your stackup and design files and an engineer checks them against HXLFAB capabilities — free, before you commit to an order.</p><a class="button" href="/help-center/articles/what-dfm-review-covers/">What the review covers <span>↗</span></a><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a></aside></div></section>
+    <section class="page-cta"><div class="shell page-cta-grid"><h2>Ready to review your PCB build?</h2><a class="button" href="/#quote">Upload Gerber files <span>↗</span></a></div></section>
+  </main>
+  <footer><div class="shell footer-grid"><div><a class="brand footer-brand" href="/"><span class="brand-bars"><i></i><i></i><i></i></span><span>HXL<strong>FAB</strong></span></a><p>PCB manufacturing brand<br>Guilin production base · Shenzhen service office</p></div><div><span>Evidence</span><p><a href="/quality-certifications/">Quality & certifications</a><br><a href="/factory-process/">Factory & process</a><br><a href="/engineering-scenarios/">Engineering scenarios</a></p></div><div><span>Working together</span><p><a href="/help-center/">Help center</a><br><a href="/working-with-us/">Working with us</a><br><a href="/about/">About & team</a><br><a href="/contact/">Contact engineering</a></p></div><div><span>Contact</span><p><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a><br><a href="tel:+8613823663114">+86 138 2366 3114</a></p></div></div><div class="shell footer-bottom"><span>© 2026 HXLFAB. All rights reserved.</span><span><a href="/privacy-file-handling/">Privacy & file handling</a> · Technical data subject to engineering confirmation.</span></div></footer>
+</body>
+</html>
