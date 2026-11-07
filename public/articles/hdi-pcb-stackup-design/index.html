@@ -42,17 +42,17 @@
 <p>First, do not route high-speed signals across a split in the reference plane: a signal crossing a gap in its ground plane loses its return path, showing up as noise, ringing, or failed compliance testing. Second, do not forget the return path through vias — when a signal changes layers, its return current needs nearby ground vias or decoupling capacitors, so place ground stitching vias near layer transitions as routine. Third, do not over-constrain the design: specifying the tightest trace width, smallest via, and thinnest dielectric on every layer raises cost and reduces yield. Reserve the tightest features for areas that genuinely need them, such as the BGA breakout, and relax the rules elsewhere.</p>
 <h2>Pre-fabrication checklist</h2>
 <ul>
-<li>☐ BGA escape mapped row by row; via strategy confirmed per package</li>
-<li>☐ Microvia depth-to-diameter ratio checked against dielectric thickness</li>
-<li>☐ Stacked vs. staggered microvias identified; stacked flagged for DFM</li>
-<li>☐ Ground plane adjacent to each main routing layer</li>
-<li>☐ Controlled impedances defined before routing, at achievable widths</li>
-<li>☐ Stackup symmetric about the board center, or asymmetry discussed</li>
-<li>☐ Minimum mechanical drill (0.15 mm at HXLFAB) respected</li>
-<li>☐ Minimum trace/space (3/3 mil at HXLFAB) respected; heavy copper checked</li>
-<li>☐ Material and Tg chosen for thermal/frequency requirements</li>
-<li>☐ Panel plan included, within the 850 × 520 mm maximum</li>
-<li>☐ Drill files, stackup drawing, impedance notes in one package</li>
+<li>[ ] BGA escape mapped row by row; via strategy confirmed per package</li>
+<li>[ ] Microvia depth-to-diameter ratio checked against dielectric thickness</li>
+<li>[ ] Stacked vs. staggered microvias identified; stacked flagged for DFM</li>
+<li>[ ] Ground plane adjacent to each main routing layer</li>
+<li>[ ] Controlled impedances defined before routing, at achievable widths</li>
+<li>[ ] Stackup symmetric about the board center, or asymmetry discussed</li>
+<li>[ ] Minimum mechanical drill (0.15 mm at HXLFAB) respected</li>
+<li>[ ] Minimum trace/space (3/3 mil at HXLFAB) respected; heavy copper checked</li>
+<li>[ ] Material and Tg chosen for thermal/frequency requirements</li>
+<li>[ ] Panel plan included, within the 850 × 520 mm maximum</li>
+<li>[ ] Drill files, stackup drawing, impedance notes in one package</li>
 </ul>
 <p>Passing this checklist does not guarantee perfection — layout still matters — but it removes structural problems hardest to fix after fabrication starts.</p>
 <h2>Get a second pair of eyes before you build</h2>
