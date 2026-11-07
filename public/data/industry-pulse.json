@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-05T13:57:48.000Z",
+  "updatedAt": "2026-11-06T12:46:06.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,6 +51,12 @@
   },
   "news": [
     {
+      "title": "SiC and GaN are reshaping power electronics. What does the parts data show?",
+      "url": "https://www.electronics.org/blog/sic-and-gan-are-reshaping-power-electronics-what-does-parts-data-show",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-11-06T12:46:06.000Z"
+    },
+    {
       "title": "IPC K-FEST 2026 Brings AI, Manufacturing and Standards into Focus",
       "url": "https://www.electronics.org/news-release/ipc-k-fest-2026-brings-ai-manufacturing-and-standards-focus",
       "source": "Global Electronics Association",
@@ -67,12 +73,6 @@
       "url": "https://www.electronics.org/event/ai-roundtable-dinner-productivity-gains-and-risk-readiness-electronics-ai",
       "source": "Global Electronics Association",
       "publishedAt": "2026-10-30T14:18:33.000Z"
-    },
-    {
-      "title": "From PCB design to production, standards decisions are connected",
-      "url": "https://www.electronics.org/blog/pcb-design-production-standards-decisions-are-connected",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-10-29T12:50:20.000Z"
     }
   ],
   "newsSources": [
