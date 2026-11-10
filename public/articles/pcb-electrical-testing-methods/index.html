@@ -42,6 +42,7 @@
 <p>Finally, include a test coupon when the design needs more than continuity. Impedance-controlled boards are verified by measuring a test coupon with a time-domain reflectometer rather than by probing the board itself. State the coupon requirement and the target impedance in the fabrication notes, and agree the acceptance limits before the run starts.</p>
 <h2>Common mistakes</h2>
 <p>The most common mistake is assuming a board was tested because it was inspected. Automated optical inspection checks the surface; it cannot check inner-layer connections, and on a multilayer board — HXLFAB builds up to 30 layers — most of the copper is invisible to a camera. Always ask for the electrical test report, not just an inspection result.</p>
+<p>A second mistake is specifying &quot;100% electrical test&quot; without defining coverage. A test that touches 85% of nets and passes the rest untested is not a 100% test. Ask for the coverage figure and the list of untested nets, then decide whether the untested nets are acceptable — a power plane with many parallel vias may be fine untested, a single signal net is not.</p>
 <p>A third is designing test points after the layout is finished. Plan test access when the layout starts, alongside component placement, not as an afterthought.</p>
 <h2>Pre-order checklist</h2>
 <ul>
