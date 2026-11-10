@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-06T12:46:06.000Z",
+  "updatedAt": "2026-11-09T23:47:24.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,6 +51,18 @@
   },
   "news": [
     {
+      "title": "PCB East 2027 Conference Registration Now Open",
+      "url": "https://pcea.net/2026/11/09/pcb-east-2027-conference-registration-now-open/",
+      "source": "PCEA",
+      "publishedAt": "2026-11-09T23:47:24.000Z"
+    },
+    {
+      "title": "Unveiling IPC-1783-CO2E: A Common Language for Product Carbon Footprints in Electronics",
+      "url": "https://www.electronics.org/event/unveiling-ipc-1783-co2e-common-language-product-carbon-footprints-electronics",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-11-09T19:59:07.000Z"
+    },
+    {
       "title": "SiC and GaN are reshaping power electronics. What does the parts data show?",
       "url": "https://www.electronics.org/blog/sic-and-gan-are-reshaping-power-electronics-what-does-parts-data-show",
       "source": "Global Electronics Association",
@@ -61,18 +73,6 @@
       "url": "https://www.electronics.org/news-release/ipc-k-fest-2026-brings-ai-manufacturing-and-standards-focus",
       "source": "Global Electronics Association",
       "publishedAt": "2026-11-05T13:57:48.000Z"
-    },
-    {
-      "title": "Bringing standards-based thinking earlier into rigid-flex design",
-      "url": "https://www.electronics.org/blog/bringing-standards-based-thinking-earlier-rigid-flex-design",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-11-03T18:08:45.000Z"
-    },
-    {
-      "title": "AI Roundtable & Dinner: Productivity Gains and Risk Readiness in Electronics - with AI",
-      "url": "https://www.electronics.org/event/ai-roundtable-dinner-productivity-gains-and-risk-readiness-electronics-ai",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-10-30T14:18:33.000Z"
     }
   ],
   "newsSources": [
