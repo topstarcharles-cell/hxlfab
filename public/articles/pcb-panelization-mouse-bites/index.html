@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PCB Panelization and Mouse Bites Explained | HXLFAB</title>
+  <meta name="description" content="PCB panelization explained: mouse bites, V-scoring and routing compared, with tab placement, clearance and break-out rules for clean, damage-free boards.">
+  <meta name="theme-color" content="#08242e">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://hxlfab.com/articles/pcb-panelization-mouse-bites/">
+  <meta property="og:type" content="article"><meta property="og:site_name" content="HXLFAB"><meta property="og:title" content="PCB Panelization and Mouse Bites Explained | HXLFAB"><meta property="og:description" content="PCB panelization explained: mouse bites, V-scoring and routing compared, with tab placement, clearance and break-out rules for clean, damage-free boards."><meta property="og:url" content="https://hxlfab.com/articles/pcb-panelization-mouse-bites/"><meta property="og:image" content="https://hxlfab.com/images/cnc-drilling.webp">
+  <link rel="stylesheet" href="/styles.css?v=20260815f"><link rel="stylesheet" href="/product-pages.css?v=20260815f">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://hxlfab.com/#organization","name":"HXLFAB","url":"https://hxlfab.com/","email":"sales@hxlfab.com","telephone":"+86 138 2366 3114"},{"@type":"Article","@id":"https://hxlfab.com/articles/pcb-panelization-mouse-bites/#article","headline":"PCB Panelization and Mouse Bites: A Practical Guide to Breaking Out Boards Cleanly","description":"PCB panelization explained: mouse bites, V-scoring and routing compared, with tab placement, clearance and break-out rules for clean, damage-free boards.","url":"https://hxlfab.com/articles/pcb-panelization-mouse-bites/","datePublished":"2026-11-10","author":{"@id":"https://hxlfab.com/#organization"},"publisher":{"@id":"https://hxlfab.com/#organization"},"about":"Printed circuit board manufacturing"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hxlfab.com/"},{"@type":"ListItem","position":2,"name":"Articles","item":"https://hxlfab.com/articles/"},{"@type":"ListItem","position":3,"name":"PCB Panelization and Mouse Bites: A Practical Guide to Breaking Out Boards Cleanly","item":"https://hxlfab.com/articles/pcb-panelization-mouse-bites/"}]}]}</script>
+  <script src="/site.js?v=20260815f" defer></script>
+</head>
+<body>
+  <div class="utility"><div class="shell utility-inner"><span>PCB manufacturing · Guilin production base · Shenzhen service office</span><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a></div></div>
+  <header class="header"><div class="shell nav"><a class="brand" href="/" aria-label="HXLFAB home"><span class="brand-bars"><i></i><i></i><i></i></span><span>HXL<strong>FAB</strong></span></a><nav aria-label="Main navigation"><a href="/pcb-manufacturing/">Manufacturing</a><a href="/quality-certifications/">Quality</a><a href="/factory-process/">Factory</a><a href="/engineering-scenarios/">Engineering reviews</a><a href="/articles/">Articles</a><a href="/help-center/">Help</a><a href="/about/">About</a></nav><a class="button small" href="/#quote">Start an RFQ <span>↗</span></a></div></header>
+  <main>
+    <section class="page-hero"><div class="shell"><p class="breadcrumbs"><a href="/">Home</a> / <a href="/articles/">Articles</a> / PCB Panelization and Mouse Bites: A Practical Guide to Breaking Out Boards Cleanly</p><div class="page-hero-grid"><div><p class="eyebrow">HXLFAB engineering notes</p><h1>PCB Panelization and Mouse Bites: A Practical Guide to Breaking Out Boards Cleanly</h1><p class="lede">PCB panelization explained: mouse bites, V-scoring and routing compared, with tab placement, clearance and break-out rules for clean, damage-free boards.</p><p class="breadcrumbs">Published November 10, 2026</p><div class="hero-actions"><a class="button" href="/help-center/articles/what-dfm-review-covers/">Get a free DFM review <span>↗</span></a><a class="text-link" href="/#quote">Start an RFQ <span>→</span></a></div></div></div></div></section>
+    <section class="section"><div class="shell content-grid"><article class="content-copy">
+<p>A printed circuit board is almost never manufactured as a single board. It is built as part of a panel — a larger sheet carrying several copies of the same design, or several different designs — and separated only after fabrication and assembly. Panelization is what makes that possible, and the way the boards are joined together decides whether they come apart cleanly or arrive with cracked edges, torn copper and damaged components.</p>
+<p>This guide explains how panelization works, when to use mouse bites, V-scoring or routed slots, and how to design the break lines so the finished boards separate without damage.</p>
+<h2>Why boards are built in panels</h2>
+<p>Fabrication equipment works on sheets, not on individual boards. Etching, drilling, plating, solder-mask application and surface finishing all run on standard panel sizes, and HXLFAB builds panels up to 850 x 520 mm. Fitting several boards onto one panel spreads the setup and handling across more product, which is why panelization is standard practice for any quantity above a handful of boards.</p>
+<p>Panels also protect the boards during assembly. A single small board is hard to handle on a pick-and-place line; a panel with tooling rails gives the machine something to grip, and fiducials on the rails give the vision system a reliable reference. The boards are separated — depanelized — only after assembly and inspection are complete.</p>
+<h2>The three ways to join boards in a panel</h2>
+<p>There are three standard ways to hold boards together in a panel, and each suits different outlines and assembly requirements.</p>
+<p>V-scoring cuts a shallow V-shaped groove into the top and bottom of the panel along a straight line, leaving a thin web of material that snaps apart by hand or with a simple breaker. It is cheap, fast, and produces a straight, reasonably clean edge. Its limitation is geometry: a V-score can only run in a straight line across the full panel, so it suits rectangular boards arranged in a grid. Curved outlines and boards with components close to the edge do not suit V-scoring.</p>
+<p>Routing, also called tab-routing, cuts the board outline with a milling bit and leaves the board attached to the panel by small bridges of material called breakaway tabs. The outline can be any shape, which makes routing the only option for round, notched or irregular boards. The edge left by the router is smooth and accurate, but the tabs themselves need to be broken out, and that is where mouse bites come in.</p>
+<p>Mouse bites are a row of small drilled holes — typically five or six holes of about 0.5 mm — punched through a breakaway tab, leaving thin webs of material between the holes. The board is snapped out along the perforated line, and the remaining nubs are sanded or trimmed flush. Mouse bites are the standard way to make a routed tab breakable by hand.</p>
+<p>In practice, most panels combine methods: V-scoring where straight edges allow it, routed tabs with mouse bites where the outline demands it.</p>
+<h2>Designing mouse bites that break cleanly</h2>
+<p>A mouse bite that is too strong damages the board when it is broken out; one that is too weak lets the board fall out during assembly. Getting the balance right comes down to a handful of design rules.</p>
+<p>First, place enough tabs. A small board needs at least two tabs, and a larger or heavier board needs three or four, spaced so the board cannot flex when it is handled. Tabs clustered on one side let the opposite edge vibrate during assembly, which stresses solder joints.</p>
+<p>Second, keep the tabs away from components and copper. The break-out force travels through the tab into the board, so a component or a trace sitting within a few millimetres of a tab can crack or lift when the board is snapped out. Keep components, and especially ceramic capacitors and connectors, clear of the break line. Traces should not run through a tab at all: a trace crossing a mouse-bite line is almost certain to be damaged, and a ground plane that extends into the tab can make the break tear unpredictably.</p>
+<p>Third, size the holes and spacing for the board thickness. HXLFAB builds finished boards from 0.15 to 7.0 mm thick, and a tab that breaks cleanly on a 1.6 mm board may be far too strong on a 3.2 mm board. Thicker boards need more holes per tab, or wider spacing between them, so the remaining webs are thin enough to snap. Agree the hole count and spacing with the fabricator for boards at the thick end of the range.</p>
+<p>Fourth, decide how the nubs will be finished. A snapped mouse bite always leaves small protrusions. If the board edge must be flush — because it slides into a slot or a housing — specify that the nubs are trimmed or sanded after break-out, and leave enough edge clearance in the enclosure for the remaining nub height.</p>
+<h2>V-scoring: rules and limits</h2>
+<p>V-scoring looks simple, but it has its own failure modes. The score depth is set as a fraction of the board thickness, and on very thin boards the remaining web is fragile enough to crack during handling, while on thick boards the web can be so strong that breaking it bends the board. Boards at the thick end of the range may need a proper depaneling tool rather than a hand break.</p>
+<p>V-score lines must also stay clear of copper. A trace or plane that crosses a score line will be cut by the scoring blade, and a copper pour that runs up to the score can peel when the board is snapped. Keep copper back from score lines by the same margin you would keep it from a board edge, and never place a component straddling a score line.</p>
+<h2>Routing and depanelization methods</h2>
+<p>Routing gives the most freedom, but the depanelization step needs planning too. Boards can be separated by hand, with a pizza-cutter style depanelizer, or on a dedicated routing depanelizer that mills the tabs away. Hand breaking is the cheapest and the roughest: it flexes the board and risks cracking ceramic components near the edge.</p>
+<p>A depanelizer that cuts the tabs with a blade or a milling bit applies no bending force to the board, which is the safer choice for boards carrying large ceramic capacitors, BGAs near the edge, or thin substrates. If the assembly house will depanelize the boards, ask which method they use before finalizing the tab design.</p>
+<h2>Common mistakes</h2>
+<p>The most common mistake is placing a mouse-bite tab next to a component. The break-out force is concentrated at the tab, and a ceramic capacitor a millimetre away can develop a hairline crack that passes inspection and fails in the field. Keep a clear zone around every tab.</p>
+<p>A second mistake is routing a board with no tabs at all, or with a single tab, and expecting it to survive assembly. The board will flex, vibrate or fall out. A panel needs enough attachment points to hold each board rigid through the whole process.</p>
+<p>A third is mixing board designs in one panel without checking the outline rules. Different boards in one panel are possible, but each needs its own tab layout, and the fabricator needs to know which board is which.</p>
+<p>A fourth is forgetting the tooling rails. The panel needs rails for handling and fiducials for the assembly machines, and those rails are removed at depanelization. A panel designed with boards running to the very edge of the sheet leaves nowhere for the rails to go.</p>
+<h2>Pre-order checklist</h2>
+<ul>
+<li>[ ] Panel layout agreed with the fabricator, including tooling rails and fiducials</li>
+<li>[ ] Break method chosen per edge: V-score for straight lines, routed tabs with mouse bites for irregular outlines</li>
+<li>[ ] At least two tabs per board, three or four for larger or heavier boards</li>
+<li>[ ] No traces or copper pours crossing tabs, mouse-bite lines or V-score lines</li>
+<li>[ ] Components, especially ceramic capacitors and connectors, kept clear of break lines</li>
+<li>[ ] Mouse-bite hole count and spacing suited to the board thickness</li>
+<li>[ ] Nub finishing specified where the board edge must be flush</li>
+<li>[ ] Depanelization method confirmed with the assembly house before finalizing tab design</li>
+<li>[ ] Panel dimensions within the fabricator&#x27;s maximum panel size</li>
+<li>[ ] Each board design in a mixed panel clearly identified</li>
+</ul>
+<h2>Get a second pair of eyes before you build</h2>
+<p>Panelization is one of the cheapest places to get a board wrong and one of the most expensive to fix after the fact, because a bad break line can damage an otherwise perfect assembly. HXLFAB offers a free DFM review — send your Gerber files and panel drawings to <a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a> to start.</p>
+<h2>Related capabilities</h2>
+<ul>
+<li><a href="/pcb-manufacturing/">HXLFAB PCB manufacturing capabilities</a></li>
+<li><a href="/multilayer-pcb/">Multilayer PCB capabilities</a></li>
+<li><a href="/hdi-pcb/">HDI PCB capabilities</a></li>
+<li><a href="/help-center/articles/what-dfm-review-covers/">Free DFM review</a></li>
+</ul>
+    </article><aside class="side-panel"><p class="eyebrow">Free DFM review</p><h2>Get a second pair of eyes before you build</h2><p>Send your stackup and design files and an engineer checks them against HXLFAB capabilities — free, before you commit to an order.</p><a class="button" href="/help-center/articles/what-dfm-review-covers/">What the review covers <span>↗</span></a><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a></aside></div></section>
+    <section class="page-cta"><div class="shell page-cta-grid"><h2>Ready to review your PCB build?</h2><a class="button" href="/#quote">Upload Gerber files <span>↗</span></a></div></section>
+  </main>
+  <footer><div class="shell footer-grid"><div><a class="brand footer-brand" href="/"><span class="brand-bars"><i></i><i></i><i></i></span><span>HXL<strong>FAB</strong></span></a><p>PCB manufacturing brand<br>Guilin production base · Shenzhen service office</p></div><div><span>Evidence</span><p><a href="/quality-certifications/">Quality & certifications</a><br><a href="/factory-process/">Factory & process</a><br><a href="/engineering-scenarios/">Engineering scenarios</a></p></div><div><span>Working together</span><p><a href="/help-center/">Help center</a><br><a href="/working-with-us/">Working with us</a><br><a href="/about/">About & team</a><br><a href="/contact/">Contact engineering</a></p></div><div><span>Contact</span><p><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a><br><a href="tel:+8613823663114">+86 138 2366 3114</a></p></div></div><div class="shell footer-bottom"><span>© 2026 HXLFAB. All rights reserved.</span><span><a href="/privacy-file-handling/">Privacy & file handling</a> · Technical data subject to engineering confirmation.</span></div></footer>
+</body>
+</html>
