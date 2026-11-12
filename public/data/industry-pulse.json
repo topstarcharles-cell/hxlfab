@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-10T14:03:27.000Z",
+  "updatedAt": "2026-11-11T19:19:38.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,28 +51,28 @@
   },
   "news": [
     {
+      "title": "9711 Series Adoption Webinar",
+      "url": "https://www.electronics.org/event/9711-series-adoption-webinar",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-11-11T19:19:38.000Z"
+    },
+    {
+      "title": "COP31 Puts Circularity in Focus. What Does It Mean for Electronics?",
+      "url": "https://www.electronics.org/blog/cop31-puts-circularity-focus-what-does-it-mean-electronics",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-11-11T17:22:52.000Z"
+    },
+    {
+      "title": "Global Electronics Association and Catena-X Partner to Advance Data Exchange Across the Electronics Industry",
+      "url": "https://www.electronics.org/news-release/global-electronics-association-and-catena-x-partner-advance-data-exchange-across",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-11-11T14:21:19.000Z"
+    },
+    {
       "title": "PCEA Issues Call for Abstracts for PCB West 2027",
       "url": "https://pcea.net/2026/11/10/pcea-issues-call-for-abstracts-for-pcb-west-2027/",
       "source": "PCEA",
       "publishedAt": "2026-11-10T14:03:27.000Z"
-    },
-    {
-      "title": "Global Electronics Assembly Report: One segment will drive market to nearly double by 2030",
-      "url": "https://www.electronics.org/blog/global-electronics-assembly-report-one-segment-will-drive-market-nearly-double-2030",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-11-10T06:00:01.000Z"
-    },
-    {
-      "title": "PCB East 2027 Conference Registration Now Open",
-      "url": "https://pcea.net/2026/11/09/pcb-east-2027-conference-registration-now-open/",
-      "source": "PCEA",
-      "publishedAt": "2026-11-09T23:47:24.000Z"
-    },
-    {
-      "title": "Unveiling IPC-1783-CO2E: A Common Language for Product Carbon Footprints in Electronics",
-      "url": "https://www.electronics.org/event/unveiling-ipc-1783-co2e-common-language-product-carbon-footprints-electronics",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-11-09T19:59:07.000Z"
     }
   ],
   "newsSources": [
