@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PCB Impedance Tolerance &amp; Coupon Testing | HXLFAB</title>
+  <meta name="description" content="Impedance tolerance decides whether controlled impedance works in practice. How tolerances are set, what shifts them, and how test coupons verify them.">
+  <meta name="theme-color" content="#08242e">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://hxlfab.com/articles/pcb-impedance-tolerance-coupon-testing/">
+  <meta property="og:type" content="article"><meta property="og:site_name" content="HXLFAB"><meta property="og:title" content="PCB Impedance Tolerance &amp; Coupon Testing | HXLFAB"><meta property="og:description" content="Impedance tolerance decides whether controlled impedance works in practice. How tolerances are set, what shifts them, and how test coupons verify them."><meta property="og:url" content="https://hxlfab.com/articles/pcb-impedance-tolerance-coupon-testing/"><meta property="og:image" content="https://hxlfab.com/images/cnc-drilling.webp">
+  <link rel="stylesheet" href="/styles.css?v=20260815f"><link rel="stylesheet" href="/product-pages.css?v=20260815f">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://hxlfab.com/#organization","name":"HXLFAB","url":"https://hxlfab.com/","email":"sales@hxlfab.com","telephone":"+86 138 2366 3114"},{"@type":"Article","@id":"https://hxlfab.com/articles/pcb-impedance-tolerance-coupon-testing/#article","headline":"PCB Impedance Tolerance and Coupon Testing: How Controlled Impedance Is Actually Verified","description":"Impedance tolerance decides whether controlled impedance works in practice. How tolerances are set, what shifts them, and how test coupons verify them.","url":"https://hxlfab.com/articles/pcb-impedance-tolerance-coupon-testing/","datePublished":"2026-11-13","author":{"@id":"https://hxlfab.com/#organization"},"publisher":{"@id":"https://hxlfab.com/#organization"},"about":"Printed circuit board manufacturing"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hxlfab.com/"},{"@type":"ListItem","position":2,"name":"Articles","item":"https://hxlfab.com/articles/"},{"@type":"ListItem","position":3,"name":"PCB Impedance Tolerance and Coupon Testing: How Controlled Impedance Is Actually Verified","item":"https://hxlfab.com/articles/pcb-impedance-tolerance-coupon-testing/"}]}]}</script>
+  <script src="/site.js?v=20260815f" defer></script>
+</head>
+<body>
+  <div class="utility"><div class="shell utility-inner"><span>PCB manufacturing · Guilin production base · Shenzhen service office</span><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a></div></div>
+  <header class="header"><div class="shell nav"><a class="brand" href="/" aria-label="HXLFAB home"><span class="brand-bars"><i></i><i></i><i></i></span><span>HXL<strong>FAB</strong></span></a><nav aria-label="Main navigation"><a href="/pcb-manufacturing/">Manufacturing</a><a href="/quality-certifications/">Quality</a><a href="/factory-process/">Factory</a><a href="/engineering-scenarios/">Engineering reviews</a><a href="/articles/">Articles</a><a href="/help-center/">Help</a><a href="/about/">About</a></nav><a class="button small" href="/#quote">Start an RFQ <span>↗</span></a></div></header>
+  <main>
+    <section class="page-hero"><div class="shell"><p class="breadcrumbs"><a href="/">Home</a> / <a href="/articles/">Articles</a> / PCB Impedance Tolerance and Coupon Testing: How Controlled Impedance Is Actually Verified</p><div class="page-hero-grid"><div><p class="eyebrow">HXLFAB engineering notes</p><h1>PCB Impedance Tolerance and Coupon Testing: How Controlled Impedance Is Actually Verified</h1><p class="lede">Impedance tolerance decides whether controlled impedance works in practice. How tolerances are set, what shifts them, and how test coupons verify them.</p><p class="breadcrumbs">Published November 13, 2026</p><div class="hero-actions"><a class="button" href="/help-center/articles/what-dfm-review-covers/">Get a free DFM review <span>↗</span></a><a class="text-link" href="/#quote">Start an RFQ <span>→</span></a></div></div></div></div></section>
+    <section class="section"><div class="shell content-grid"><article class="content-copy">
+<p>Asking for &quot;50 ohm controlled impedance&quot; is only half a specification — the tolerance around it decides whether your board works. A board designed to one tolerance and built to another can fail in ways that look nothing like a factory defect.</p>
+<p>This article explains how tolerance works, what moves impedance off target, and how test coupons prove — before shipment — that the boards meet the drawing&#x27;s number.</p>
+<h2>What impedance tolerance really means</h2>
+<p>A controlled-impedance trace is a transmission line, and its impedance is set by the trace width, copper thickness, distance to the nearest reference plane, and the dielectric constant between them. Change any one and the impedance moves.</p>
+<p>No factory holds all four perfectly: etching narrows traces, laminate thickness varies, plating is never uniform, and pressing compresses the prepreg. Each is small, but they stack up — and the tolerance states how much total movement to expect.</p>
+<p>The industry&#x27;s common default is ±10% on single-ended traces and differential pairs: 50 Ω ±5 Ω single-ended, or 100 Ω ±10 Ω differential. That is what most fabricators hold on a standard build. Tighter tolerances, typically ±5%, are possible on some designs, but they cost more and demand tighter process control. The right question is &quot;how tight does this interface need&quot; — USB 2.0 or Ethernet is usually fine at ±10%, while a multi-gigabit link may need better. Put the tolerance on the drawing next to the nominal value — a drawing that says &quot;50 Ω&quot; without one leaves the fabricator guessing.</p>
+<h2>What shifts impedance in production</h2>
+<p>Trace width is the most direct lever. Etching removes copper from the sides of a trace as well as the top, so a trace always comes out slightly narrower than drawn, and the effect is proportionally larger on fine traces. At 3/3 mil trace and space — the finest HXLFAB supports — there is little room for etch variation, so draw impedance-critical traces wider than the minimum wherever space allows.</p>
+<p>Dielectric thickness is the second factor: the distance between a trace and its reference plane is set by the prepreg and core thickness, and those materials have their own tolerance. Thinner dielectrics make impedance more sensitive to small changes, so very thin stackups are harder to hold to a tight tolerance.</p>
+<p>Copper thickness matters too: HXLFAB supports up to 4 oz inner-layer and 8 oz outer-layer copper, and thick copper changes the trace cross-section and etch profile, shifting impedance relative to the drawn width. Agree the stackup and copper weights before layout.</p>
+<p>Finally, solder mask changes the effective dielectric constant around the trace: mask over a microstrip adds capacitance and lowers impedance by a few percent, an effect the calculation must include. Material matters too — standard FR-4 grades with TG135, TG150 or TG170 cover most work, while PTFE laminates suit high frequencies where the dielectric constant must stay stable — and that choice belongs in the stackup agreement.</p>
+<h2>Test coupons: the proof, not the promise</h2>
+<p>A test coupon is a small pattern of traces built into the production panel alongside your boards, using the exact same stackup, materials and process. Measuring the coupon measures the process that built your boards.</p>
+<p>A typical impedance coupon is a straight, uniform trace (or differential pair) of known length, on the same layers as the controlled-impedance traces in your design. If your board has controlled impedance on three layers, it needs coupons for each of them.</p>
+<p>Coupons sit in the panel border or rails, so they use no board area, and a panel up to 850 × 520 mm — the largest HXLFAB builds — normally has room for a full set. Never trim the rails off before the coupon has been measured: once the coupon is gone, the evidence is gone with it.</p>
+<h2>Measuring coupons and reading the report</h2>
+<p>Coupons are measured with a time-domain reflectometer (TDR), which sends a fast step signal down the coupon trace and records the reflections: a flat line at the target value is a pass, while bumps and dips reveal where the impedance drifts. The report gives the average impedance over a stable section.</p>
+<p>A single coupon is a sample, not a census: coupons are measured at more than one spot on a panel, because impedance varies with plating and etching. Expect the report to list measured values against the target and tolerance, not just a blanket &quot;pass.&quot; A coupon stands in for your board only when it matches it — same layer, width, spacing, copper weight and stackup.</p>
+<p>When the report arrives, check four things: every controlled-impedance layer has a result; values sit inside tolerance with margin — passing by a fraction of an ohm means the process is near its edge; the spread between coupons on one panel is small; and the nominal target matches your drawing.</p>
+<p>If a coupon fails, look for a stackup assumption that did not survive production — a dielectric pressed thinner than modelled, or a trace etched narrower than drawn — fix it with a small adjustment, and run a new coupon. Boards built to a failed coupon should not ship against a controlled-impedance requirement.</p>
+<h2>Common mistakes</h2>
+<p>The most common mistake is specifying a tolerance the design does not need: asking for ±5% on every trace, including a low-speed interface happy at ±10%, raises cost and risk for no benefit. Reserve tight tolerances for the interfaces that genuinely need them.</p>
+<p>The second is forgetting the coupon entirely — ordering controlled impedance with no coupon provision, and having no evidence at all when a high-speed link misbehaves. If impedance matters enough to specify, it matters enough to measure.</p>
+<p>The third is designing impedance-critical traces at the finest geometry the factory supports: a 3/3 mil trace can be built, but its impedance is the most sensitive to etch variation. Give controlled-impedance traces breathing room wherever the layout allows, and simulate at the tolerance corners — a design that only works at exactly nominal impedance is already failing.</p>
+<h2>Pre-order checklist</h2>
+<ul>
+<li>[ ] Impedance and tolerance on the drawing for every controlled-impedance net class</li>
+<li>[ ] Tolerance matched to the interface: ±10% unless the link budget demands tighter</li>
+<li>[ ] Stackup, laminate grade (TG135/150/170), copper weights agreed before layout</li>
+<li>[ ] Impedance-critical traces wider than minimum where space allows</li>
+<li>[ ] Solder mask effect included in the calculation</li>
+<li>[ ] Coupons for every controlled-impedance layer, with TDR report</li>
+<li>[ ] Coupons in the panel border or rails; panel size confirmed (up to 850 × 520 mm)</li>
+<li>[ ] Simulated at the tolerance corners, not only at nominal</li>
+</ul>
+<h2>Get a second pair of eyes before you build</h2>
+<p>An impedance failure rarely announces itself at the factory: the board powers up, low-speed functions work, and only the high-speed link is unreliable — intermittent errors that look like firmware bugs. A review of the stackup, tolerance call and coupon plan catches these problems while they are still cheap to fix. HXLFAB offers a free DFM review — send your Gerber files and stackup plan to <a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a> to start.</p>
+<h2>Related capabilities</h2>
+<ul>
+<li><a href="/impedance-controlled-pcb/">Impedance-controlled PCB capabilities</a></li>
+<li><a href="/multilayer-pcb/">Multilayer PCB capabilities</a></li>
+<li><a href="/hdi-pcb/">HDI PCB stackup and microvia capabilities</a></li>
+<li><a href="/pcb-manufacturing/">PCB manufacturing capabilities</a></li>
+<li><a href="/help-center/articles/what-dfm-review-covers/">Free DFM review</a></li>
+</ul>
+    </article><aside class="side-panel"><p class="eyebrow">Free DFM review</p><h2>Get a second pair of eyes before you build</h2><p>Send your stackup and design files and an engineer checks them against HXLFAB capabilities — free, before you commit to an order.</p><a class="button" href="/help-center/articles/what-dfm-review-covers/">What the review covers <span>↗</span></a><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a></aside></div></section>
+    <section class="page-cta"><div class="shell page-cta-grid"><h2>Ready to review your PCB build?</h2><a class="button" href="/#quote">Upload Gerber files <span>↗</span></a></div></section>
+  </main>
+  <footer><div class="shell footer-grid"><div><a class="brand footer-brand" href="/"><span class="brand-bars"><i></i><i></i><i></i></span><span>HXL<strong>FAB</strong></span></a><p>PCB manufacturing brand<br>Guilin production base · Shenzhen service office</p></div><div><span>Evidence</span><p><a href="/quality-certifications/">Quality & certifications</a><br><a href="/factory-process/">Factory & process</a><br><a href="/engineering-scenarios/">Engineering scenarios</a></p></div><div><span>Working together</span><p><a href="/help-center/">Help center</a><br><a href="/working-with-us/">Working with us</a><br><a href="/about/">About & team</a><br><a href="/contact/">Contact engineering</a></p></div><div><span>Contact</span><p><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a><br><a href="tel:+8613823663114">+86 138 2366 3114</a></p></div></div><div class="shell footer-bottom"><span>© 2026 HXLFAB. All rights reserved.</span><span><a href="/privacy-file-handling/">Privacy & file handling</a> · Technical data subject to engineering confirmation.</span></div></footer>
+</body>
+</html>
