@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-11T19:19:38.000Z",
+  "updatedAt": "2026-11-11T20:46:54.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,6 +51,12 @@
   },
   "news": [
     {
+      "title": "How Advanced Electronic Packaging Enables Modern Electronics",
+      "url": "https://www.electronics.org/news-release/how-advanced-electronic-packaging-enables-modern-electronics",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-11-11T20:46:54.000Z"
+    },
+    {
       "title": "9711 Series Adoption Webinar",
       "url": "https://www.electronics.org/event/9711-series-adoption-webinar",
       "source": "Global Electronics Association",
@@ -67,12 +73,6 @@
       "url": "https://www.electronics.org/news-release/global-electronics-association-and-catena-x-partner-advance-data-exchange-across",
       "source": "Global Electronics Association",
       "publishedAt": "2026-11-11T14:21:19.000Z"
-    },
-    {
-      "title": "PCEA Issues Call for Abstracts for PCB West 2027",
-      "url": "https://pcea.net/2026/11/10/pcea-issues-call-for-abstracts-for-pcb-west-2027/",
-      "source": "PCEA",
-      "publishedAt": "2026-11-10T14:03:27.000Z"
     }
   ],
   "newsSources": [
