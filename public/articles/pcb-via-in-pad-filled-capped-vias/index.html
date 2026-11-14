@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Via-in-Pad PCB: Filled &amp; Capped Vias | HXLFAB</title>
+  <meta name="description" content="Via-in-pad puts the via inside the BGA pad for tighter fan-out. How filled and capped vias work, when to use them, and what to specify on your drawing.">
+  <meta name="theme-color" content="#08242e">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://hxlfab.com/articles/pcb-via-in-pad-filled-capped-vias/">
+  <meta property="og:type" content="article"><meta property="og:site_name" content="HXLFAB"><meta property="og:title" content="Via-in-Pad PCB: Filled &amp; Capped Vias | HXLFAB"><meta property="og:description" content="Via-in-pad puts the via inside the BGA pad for tighter fan-out. How filled and capped vias work, when to use them, and what to specify on your drawing."><meta property="og:url" content="https://hxlfab.com/articles/pcb-via-in-pad-filled-capped-vias/"><meta property="og:image" content="https://hxlfab.com/images/cnc-drilling.webp">
+  <link rel="stylesheet" href="/styles.css?v=20260815f"><link rel="stylesheet" href="/product-pages.css?v=20260815f">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://hxlfab.com/#organization","name":"HXLFAB","url":"https://hxlfab.com/","email":"sales@hxlfab.com","telephone":"+86 138 2366 3114"},{"@type":"Article","@id":"https://hxlfab.com/articles/pcb-via-in-pad-filled-capped-vias/#article","headline":"Via-in-Pad PCB: Filled and Capped Vias for Dense BGA Fan-Out","description":"Via-in-pad puts the via inside the BGA pad for tighter fan-out. How filled and capped vias work, when to use them, and what to specify on your drawing.","url":"https://hxlfab.com/articles/pcb-via-in-pad-filled-capped-vias/","datePublished":"2026-11-14","author":{"@id":"https://hxlfab.com/#organization"},"publisher":{"@id":"https://hxlfab.com/#organization"},"about":"Printed circuit board manufacturing"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hxlfab.com/"},{"@type":"ListItem","position":2,"name":"Articles","item":"https://hxlfab.com/articles/"},{"@type":"ListItem","position":3,"name":"Via-in-Pad PCB: Filled and Capped Vias for Dense BGA Fan-Out","item":"https://hxlfab.com/articles/pcb-via-in-pad-filled-capped-vias/"}]}]}</script>
+  <script src="/site.js?v=20260815f" defer></script>
+</head>
+<body>
+  <div class="utility"><div class="shell utility-inner"><span>PCB manufacturing · Guilin production base · Shenzhen service office</span><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a></div></div>
+  <header class="header"><div class="shell nav"><a class="brand" href="/" aria-label="HXLFAB home"><span class="brand-bars"><i></i><i></i><i></i></span><span>HXL<strong>FAB</strong></span></a><nav aria-label="Main navigation"><a href="/pcb-manufacturing/">Manufacturing</a><a href="/quality-certifications/">Quality</a><a href="/factory-process/">Factory</a><a href="/engineering-scenarios/">Engineering reviews</a><a href="/articles/">Articles</a><a href="/help-center/">Help</a><a href="/about/">About</a></nav><a class="button small" href="/#quote">Start an RFQ <span>↗</span></a></div></header>
+  <main>
+    <section class="page-hero"><div class="shell"><p class="breadcrumbs"><a href="/">Home</a> / <a href="/articles/">Articles</a> / Via-in-Pad PCB: Filled and Capped Vias for Dense BGA Fan-Out</p><div class="page-hero-grid"><div><p class="eyebrow">HXLFAB engineering notes</p><h1>Via-in-Pad PCB: Filled and Capped Vias for Dense BGA Fan-Out</h1><p class="lede">Via-in-pad puts the via inside the BGA pad for tighter fan-out. How filled and capped vias work, when to use them, and what to specify on your drawing.</p><p class="breadcrumbs">Published November 14, 2026</p><div class="hero-actions"><a class="button" href="/help-center/articles/what-dfm-review-covers/">Get a free DFM review <span>↗</span></a><a class="text-link" href="/#quote">Start an RFQ <span>→</span></a></div></div></div></div></section>
+    <section class="section"><div class="shell content-grid"><article class="content-copy">
+<p>A ball grid array with a 0.5 mm pitch leaves almost no room between pads. Traditional dog-bone fan-out — a short trace from the pad to a via sitting beside it — simply does not fit. Via-in-pad solves this by putting the via inside the pad itself, so every ball gets a direct route to the inner layers.</p>
+<p>The technique is standard in HDI work, but it only works when the via is filled and capped properly. An unfilled via-in-pad is a solder thief: paste and molten solder drain into the hole during reflow, leaving a starved joint.</p>
+<h2>What via-in-pad actually is</h2>
+<p>In via-in-pad, the via is drilled through the centre of the surface-mount pad — most often a BGA pad, but the same idea applies to QFN thermal pads.</p>
+<p>The via is normally a microvia: a laser-drilled hole, typically 0.10 mm in diameter, connecting the outer layer to the next layer down. On a board with 1–30 layers, a microvia-in-pad on the outer layer is the first step of an HDI escape, with stacked or staggered microvias carrying the signal deeper when needed.</p>
+<p>Putting the via in the pad removes the escape trace entirely, saving routing space and shortening the signal stub. The trade-off is process: every via-in-pad needs filling, planarising and capping.</p>
+<h2>Filled, capped, and plated over: the three steps that matter</h2>
+<p><strong>Filling.</strong> After drilling and plating, the via hole is filled — usually with a non-conductive epoxy, sometimes with a conductive paste for thermal or high-current paths. The fill supports the pad above it and stops solder from wicking down the barrel during reflow. A via filled with air is not a via-in-pad; it is a defect waiting for the oven.</p>
+<p><strong>Planarising.</strong> The cured fill is sanded flat so the pad surface is level with the surrounding copper. Any bump or dip shows up later as uneven solder paste, a tilted component, or a void under the ball. Flatness is the whole point of the step, and it is verified by cross-section, not by eye.</p>
+<p><strong>Capping (plated over).</strong> A thin copper cap is plated over the filled, planarised via, sealing it and giving the pad a continuous copper surface to solder to — the &quot;VIPPO&quot; construction (via-in-pad plated over). A filled via without a cap can still outgas or absorb moisture through the exposed fill; the cap closes that path.</p>
+<p>Note the order: fill first, then planarise, then plate over. Skipping the cap is the most common shortcut, and it shows up as voids under BGA balls at X-ray inspection.</p>
+<h2>When via-in-pad earns its cost</h2>
+<p>Via-in-pad is not a default choice — it is a tool for layouts where nothing else fits:</p>
+<ul>
+<li><strong>Fine-pitch BGA (0.5 mm and below).</strong> At 0.5 mm pitch there is no room for a dog-bone escape; the via must go in the pad or the part cannot be routed.</li>
+<li><strong>High pin-count BGAs.</strong> Via-in-pad roughly doubles the number of escape channels per layer compared with dog-bone routing, because no pad-to-via trace consumes space.</li>
+<li><strong>QFN and power-pad thermal vias.</strong> A thermal pad over a grid of vias carries heat to inner planes or the opposite side. These vias are usually filled too — unfilled thermal vias under a QFN wick solder the same way BGA vias do.</li>
+<li><strong>High-speed signals.</strong> The shorter path from ball to via means a smaller stub and lower inductance — a measurable difference on multi-gigabit interfaces.</li>
+</ul>
+<p>Do not use via-in-pad where a dog-bone fits comfortably. On a 1.0 mm or 0.8 mm pitch BGA with room to escape, a conventional via is cheaper and easier to inspect.</p>
+<h2>Design rules that keep it buildable</h2>
+<p><strong>Hole size.</strong> Microvias for via-in-pad are laser-drilled, with 0.10 mm as a common minimum diameter. Larger holes are harder to fill and planarise cleanly, so keep via-in-pad holes at the small end of the range.</p>
+<p><strong>Pad size.</strong> The pad must be large enough to contain the via plus its annular ring with margin. Shrinking the pad to fit the via leaves a pad that cannot hold its solder ball.</p>
+<p><strong>Fill material.</strong> Non-conductive epoxy is the default and suits signal vias. Conductive fill costs more and is chosen for thermal vias or where the via carries significant current. State the fill type on the drawing; leaving it open invites the cheapest option.</p>
+<p><strong>Copper weight.</strong> Heavy copper complicates via-in-pad: thick outer copper (up to 8 oz is supported on outer layers) makes planarising harder and the cap plating less uniform. If the board mixes heavy copper power sections with fine-pitch BGA areas, flag the combination early.</p>
+<h2>Specifying via-in-pad on the drawing</h2>
+<p>A Gerber file alone does not tell the fabricator which vias are in pads, what they should be filled with, or whether they need a cap. Put this on the fabrication drawing:</p>
+<ul>
+<li>Which vias are via-in-pad (&quot;all vias inside SMD pads&quot; suffices).</li>
+<li>Fill material: non-conductive epoxy, or conductive fill where required.</li>
+<li>&quot;Filled, planarised and copper-capped (plated over)&quot; — all three words, not just &quot;filled&quot;.</li>
+<li>Flatness expectation: pad surface flush after planarising, no dimple or protrusion.</li>
+<li>Inspection: X-ray or cross-section sampling for voiding under BGA pads.</li>
+<li>Material grade where relevant: standard FR-4 grades TG135, TG150 or TG170 cover most via-in-pad work; PTFE laminates suit high-frequency designs.</li>
+</ul>
+<p>A drawing that says only &quot;via in pad&quot; will be built to the fabricator&#x27;s default — which may be fill without cap, or a fill material that does not match the thermal design.## Common mistakes</p>
+<p>The most common mistake is leaving the via unfilled. It looks fine on the Gerber, and then solder drains into the hole at reflow, the joint is starved, and the board fails intermittently. Every via under a soldered pad must be filled and capped.</p>
+<p>The second is specifying via-in-pad everywhere out of habit. On a coarse-pitch part it adds cost and inspection burden for no routing benefit — reserve it for the footprints that genuinely need it.</p>
+<p>The third is forgetting the thermal vias under a QFN. Designers remember to fill the BGA vias and forget the grid under the power pad — same wicking problem, same starved joints, hidden under a part that cannot be inspected visually.</p>
+<h2>Pre-order checklist</h2>
+<ul>
+<li>[ ] Via-in-pad used only where pitch or pin count demands it</li>
+<li>[ ] Via holes at laser-microvia size (0.10 mm typical); no oversized holes in pads</li>
+<li>[ ] Pads large enough to contain via plus annular ring (check footprint geometry before layout)</li>
+<li>[ ] Fill type specified: non-conductive epoxy (default) or conductive (thermal/current)</li>
+<li>[ ] &quot;Filled, planarised and copper-capped&quot; written on the fabrication drawing</li>
+<li>[ ] QFN thermal vias included in the fill requirement</li>
+<li>[ ] Stackup and copper weights agreed before layout (1–30 layers; up to 4 oz inner / 8 oz outer)</li>
+<li>[ ] Material grade chosen (TG135/150/170 FR-4, or PTFE for high frequency)</li>
+<li>[ ] X-ray or cross-section inspection planned for BGA voiding</li>
+</ul>
+<h2>Get a second pair of eyes before you build</h2>
+<p>Via-in-pad fails quietly: the board assembles, the part sits flat, and only X-ray — or a field failure months later — reveals the voids. A review of the footprint, fill specification and stackup catches these problems while they are still cheap to fix. HXLFAB offers a free DFM review — send your Gerber files and fabrication drawing to <a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a> to start.</p>
+<h2>Related capabilities</h2>
+<ul>
+<li><a href="/hdi-pcb/">HDI PCB stackup and microvia capabilities</a></li>
+<li><a href="/multilayer-pcb/">Multilayer PCB capabilities</a></li>
+<li><a href="/impedance-controlled-pcb/">Impedance-controlled PCB capabilities</a></li>
+<li><a href="/pcb-manufacturing/">PCB manufacturing capabilities</a></li>
+<li><a href="/help-center/articles/what-dfm-review-covers/">Free DFM review</a></li>
+</ul>
+    </article><aside class="side-panel"><p class="eyebrow">Free DFM review</p><h2>Get a second pair of eyes before you build</h2><p>Send your stackup and design files and an engineer checks them against HXLFAB capabilities — free, before you commit to an order.</p><a class="button" href="/help-center/articles/what-dfm-review-covers/">What the review covers <span>↗</span></a><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a></aside></div></section>
+    <section class="page-cta"><div class="shell page-cta-grid"><h2>Ready to review your PCB build?</h2><a class="button" href="/#quote">Upload Gerber files <span>↗</span></a></div></section>
+  </main>
+  <footer><div class="shell footer-grid"><div><a class="brand footer-brand" href="/"><span class="brand-bars"><i></i><i></i><i></i></span><span>HXL<strong>FAB</strong></span></a><p>PCB manufacturing brand<br>Guilin production base · Shenzhen service office</p></div><div><span>Evidence</span><p><a href="/quality-certifications/">Quality & certifications</a><br><a href="/factory-process/">Factory & process</a><br><a href="/engineering-scenarios/">Engineering scenarios</a></p></div><div><span>Working together</span><p><a href="/help-center/">Help center</a><br><a href="/working-with-us/">Working with us</a><br><a href="/about/">About & team</a><br><a href="/contact/">Contact engineering</a></p></div><div><span>Contact</span><p><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a><br><a href="tel:+8613823663114">+86 138 2366 3114</a></p></div></div><div class="shell footer-bottom"><span>© 2026 HXLFAB. All rights reserved.</span><span><a href="/privacy-file-handling/">Privacy & file handling</a> · Technical data subject to engineering confirmation.</span></div></footer>
+</body>
+</html>
