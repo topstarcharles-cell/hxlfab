@@ -54,7 +54,8 @@
 <li>Inspection: X-ray or cross-section sampling for voiding under BGA pads.</li>
 <li>Material grade where relevant: standard FR-4 grades TG135, TG150 or TG170 cover most via-in-pad work; PTFE laminates suit high-frequency designs.</li>
 </ul>
-<p>A drawing that says only &quot;via in pad&quot; will be built to the fabricator&#x27;s default — which may be fill without cap, or a fill material that does not match the thermal design.## Common mistakes</p>
+<p>A drawing that says only &quot;via in pad&quot; will be built to the fabricator&#x27;s default — which may be fill without cap, or a fill material that does not match the thermal design.</p>
+<h2>Common mistakes</h2>
 <p>The most common mistake is leaving the via unfilled. It looks fine on the Gerber, and then solder drains into the hole at reflow, the joint is starved, and the board fails intermittently. Every via under a soldered pad must be filled and capped.</p>
 <p>The second is specifying via-in-pad everywhere out of habit. On a coarse-pitch part it adds cost and inspection burden for no routing benefit — reserve it for the footprints that genuinely need it.</p>
 <p>The third is forgetting the thermal vias under a QFN. Designers remember to fill the BGA vias and forget the grid under the power pad — same wicking problem, same starved joints, hidden under a part that cannot be inspected visually.</p>
