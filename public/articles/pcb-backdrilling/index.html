@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PCB Backdrilling: Remove Via Stubs | HXLFAB</title>
+  <meta name="description" content="Backdrilling removes the unused stub of a plated via to clean up high-speed signals. How it works, when to specify it, and the rules that keep it buildable.">
+  <meta name="theme-color" content="#08242e">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://hxlfab.com/articles/pcb-backdrilling/">
+  <meta property="og:type" content="article"><meta property="og:site_name" content="HXLFAB"><meta property="og:title" content="PCB Backdrilling: Remove Via Stubs | HXLFAB"><meta property="og:description" content="Backdrilling removes the unused stub of a plated via to clean up high-speed signals. How it works, when to specify it, and the rules that keep it buildable."><meta property="og:url" content="https://hxlfab.com/articles/pcb-backdrilling/"><meta property="og:image" content="https://hxlfab.com/images/cnc-drilling.webp">
+  <link rel="stylesheet" href="/styles.css?v=20260815f"><link rel="stylesheet" href="/product-pages.css?v=20260815f">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://hxlfab.com/#organization","name":"HXLFAB","url":"https://hxlfab.com/","email":"sales@hxlfab.com","telephone":"+86 138 2366 3114"},{"@type":"Article","@id":"https://hxlfab.com/articles/pcb-backdrilling/#article","headline":"PCB Backdrilling: How Removing Via Stubs Improves High-Speed Signal Integrity","description":"Backdrilling removes the unused stub of a plated via to clean up high-speed signals. How it works, when to specify it, and the rules that keep it buildable.","url":"https://hxlfab.com/articles/pcb-backdrilling/","datePublished":"2026-11-15","author":{"@id":"https://hxlfab.com/#organization"},"publisher":{"@id":"https://hxlfab.com/#organization"},"about":"Printed circuit board manufacturing"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hxlfab.com/"},{"@type":"ListItem","position":2,"name":"Articles","item":"https://hxlfab.com/articles/"},{"@type":"ListItem","position":3,"name":"PCB Backdrilling: How Removing Via Stubs Improves High-Speed Signal Integrity","item":"https://hxlfab.com/articles/pcb-backdrilling/"}]}]}</script>
+  <script src="/site.js?v=20260815f" defer></script>
+</head>
+<body>
+  <div class="utility"><div class="shell utility-inner"><span>PCB manufacturing · Guilin production base · Shenzhen service office</span><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a></div></div>
+  <header class="header"><div class="shell nav"><a class="brand" href="/" aria-label="HXLFAB home"><span class="brand-bars"><i></i><i></i><i></i></span><span>HXL<strong>FAB</strong></span></a><nav aria-label="Main navigation"><a href="/pcb-manufacturing/">Manufacturing</a><a href="/quality-certifications/">Quality</a><a href="/factory-process/">Factory</a><a href="/engineering-scenarios/">Engineering reviews</a><a href="/articles/">Articles</a><a href="/help-center/">Help</a><a href="/about/">About</a></nav><a class="button small" href="/#quote">Start an RFQ <span>↗</span></a></div></header>
+  <main>
+    <section class="page-hero"><div class="shell"><p class="breadcrumbs"><a href="/">Home</a> / <a href="/articles/">Articles</a> / PCB Backdrilling: How Removing Via Stubs Improves High-Speed Signal Integrity</p><div class="page-hero-grid"><div><p class="eyebrow">HXLFAB engineering notes</p><h1>PCB Backdrilling: How Removing Via Stubs Improves High-Speed Signal Integrity</h1><p class="lede">Backdrilling removes the unused stub of a plated via to clean up high-speed signals. How it works, when to specify it, and the rules that keep it buildable.</p><p class="breadcrumbs">Published November 15, 2026</p><div class="hero-actions"><a class="button" href="/help-center/articles/what-dfm-review-covers/">Get a free DFM review <span>↗</span></a><a class="text-link" href="/#quote">Start an RFQ <span>→</span></a></div></div></div></div></section>
+    <section class="section"><div class="shell content-grid"><article class="content-copy">
+<p>A through-hole via rarely connects all the layers it passes through. A signal might use only the top four layers, but the plated barrel continues to layer 12 — a dead length of copper that goes nowhere. That leftover section is the via stub, and on high-speed boards it is far from harmless.</p>
+<p>Backdrilling removes the stub: a slightly larger drill re-enters the hole from the back side and cuts away the unused barrel.</p>
+<h2>Why stubs hurt high-speed signals</h2>
+<p>A stub is an unterminated transmission line hanging off the signal path: a fast edge hits the end of the stub, reflects, and comes back to interfere with the signal.</p>
+<p>The damage peaks at the stub&#x27;s quarter-wave resonance, set by stub length and the laminate&#x27;s dielectric constant: f = c / (4 × L × √εr). For FR-4 (dielectric constant near 4), a 2.5 mm stub resonates around 15 GHz; a 1.0 mm stub pushes that to roughly 37 GHz. The stub also adds capacitive loading and degrades return loss below resonance — on a multi-gigabit link, that means a notch in insertion loss and a closed eye.</p>
+<p>The longer the stub, the lower the frequency at which the damage starts — which is why the problem grows with board thickness. A finished thickness of 0.15–7.0 mm covers a wide range, and the stub problem is worst at the thick end.</p>
+<h2>What backdrilling actually is</h2>
+<p>Backdrilling is a controlled-depth drilling step done after the via is plated. A slightly larger bit re-enters the via from the side opposite the signal layers and removes the unused barrel, stopping just past the signal layer.</p>
+<p>The key word is controlled depth: the drill must stop close to — but never through — the layer carrying the signal. The barrel left behind is the remaining stub. Industry practice commonly targets a remaining stub of 0.5 mm or less, with tighter targets on the fastest links. The exact number depends on data rate, laminate, and link-budget margin.</p>
+<p>Because the backdrill bit is larger than the original hole, it also removes the annular ring and plating on the layers it passes through — expected, since those layers are not connected to the via. What matters is that the drill does not cut into a plane or trace on a layer the via is meant to connect to.</p>
+<h2>When backdrilling earns its place</h2>
+<p>Backdrilling is not a default step for every board. It earns its place where stubs are long and signals are fast:</p>
+<ul>
+<li><strong>Multi-gigabit serial links.</strong> PCIe, Ethernet, USB and SerDes at several gigabits per second are the classic case — at these rates a millimetre-scale stub sits squarely in the signal bandwidth.</li>
+<li><strong>Thick boards with shallow signals.</strong> On a 12-layer or thicker board, high-speed signals on the outer layers leave long stubs behind every through via.</li>
+<li><strong>Dense BGA fan-out.</strong> Fine-pitch BGAs force signals through vias spanning the full stackup. Backdrilling lets the designer keep cheaper through vias while controlling the stub.</li>
+<li><strong>High-frequency RF boards.</strong> PTFE laminates are chosen for low loss at high frequencies, and a stub degrades the same low-loss path the material was bought for.</li>
+</ul>
+<p>Do not specify backdrilling where the signals are slow. Below a few hundred megahertz, stubs are electrically short and harmless — backdrilling would add cost for no measurable benefit.</p>
+<h2>Design rules that keep it buildable</h2>
+<p><strong>Specify the remaining stub, not just &quot;backdrill&quot;.</strong> The drawing should state the maximum remaining stub allowed and which vias it applies to. &quot;Backdrill all high-speed vias to within 0.5 mm of the signal layer&quot; is a specification; &quot;backdrill&quot; alone is a suggestion every shop will interpret differently.</p>
+<p><strong>Say which vias get backdrilled.</strong> Mark them in the design data — usually the vias on high-speed nets. Backdrilling every via wastes time and adds risk on vias that do not need it, such as power and ground stitching vias.</p>
+<p><strong>Mind the drill sizes.</strong> The backdrill bit is larger than the original hole, so the clearance around the via must accommodate it. With a 0.15 mm minimum mechanical drill and 3/3 mil trace and space as the baseline, the layout still needs keep-out around each backdrilled via for the larger bit plus tolerance.</p>
+<p><strong>Watch the layer the drill stops at.</strong> The drill stops just past the deepest connected layer — in a 1–30 layer stackup with a deep signal layer, the backdrill passes through many layers of copper, each one a chance to nick a plane if depth control is off.</p>
+<p><strong>Mind the copper weight.</strong> Heavy copper complicates backdrilling: thick copper (up to 8 oz outer, 4 oz inner) is harder to drill cleanly and leaves more burr.</p>
+<p><strong>Material grade matters.</strong> Standard FR-4 grades TG135, TG150 and TG170 cover most backdrilling work. PTFE laminates drill differently — softer, more prone to smear — so parameters must match the material.</p>
+<h2>Alternatives when backdrilling is not enough</h2>
+<p>Backdrilling is one tool for stub control, not the only one:</p>
+<ul>
+<li><strong>Blind and buried vias.</strong> A blind via spanning only the layers it connects has no stub at all. They cost more and add lamination steps, but they eliminate the problem at the source.</li>
+<li><strong>Microvias.</strong> Laser-drilled microvias, typically 0.10 mm in diameter, connect only adjacent layers. A stack of microvias replaces a through via entirely on dense HDI boards — no stub, no backdrill.</li>
+<li><strong>Routing on the right layers.</strong> Sometimes the cheapest fix is layout: route the high-speed signal on a layer close to the side the via enters, so the stub is short even without backdrilling.</li>
+</ul>
+<p>The right choice depends on layer count, data rate and budget — settle it in a DFM review before fabrication, because changing via structures after the stackup is frozen is expensive.</p>
+<h2>Common mistakes</h2>
+<p>The most common mistake is specifying backdrilling without a remaining-stub number: the shop picks its own default, which may be looser than the link budget allows.</p>
+<p>The second is backdrilling through the signal layer: a depth error that cuts into the signal layer severs the connection and the board fails open. The drawing must show exactly which layer each backdrilled via connects to.</p>
+<p>The third is forgetting that backdrilling is a mechanical step with tolerances of its own. Drill wander, depth variation and registration error all eat into the remaining-stub budget — leave margin for the process, not just for the signal.</p>
+<p>The fourth is specifying backdrilling on vias that do not need it. Every backdrilled via is an extra drilling operation and an extra inspection — reserve it for the nets whose signal integrity actually depends on it.</p>
+<h2>Pre-order checklist</h2>
+<ul>
+<li>[ ] High-speed nets identified; backdrilled vias marked</li>
+<li>[ ] Maximum remaining stub specified (e.g. ≤ 0.5 mm)</li>
+<li>[ ] Signal layer for each backdrilled via documented</li>
+<li>[ ] Clearance around backdrilled vias sized for the larger bit</li>
+<li>[ ] Thickness and layers confirmed (1–30 layers; 0.15–7.0 mm)</li>
+<li>[ ] Copper weights agreed (up to 4 oz inner / 8 oz outer)</li>
+<li>[ ] Material grade chosen (TG135/150/170 FR-4, or PTFE)</li>
+<li>[ ] Alternatives considered: blind/buried vias, microvias, re-routing</li>
+<li>[ ] Depth-control margin included in the stub budget</li>
+<li>[ ] Backdrill excluded from low-speed and power/ground nets</li>
+</ul>
+<h2>Get a second pair of eyes before you build</h2>
+<p>A stub problem is invisible on a continuity test and only shows up when the link runs at speed — by which time the board is already assembled. A review of the stackup and backdrill specification catches it while it is still a drawing. HXLFAB offers a free DFM review — send your Gerbers and fabrication drawing to <a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a> to start.</p>
+<h2>Related capabilities</h2>
+<ul>
+<li><a href="/high-frequency-pcb/">High-frequency PCB capabilities</a></li>
+<li><a href="/hdi-pcb/">HDI PCB stackup and microvia capabilities</a></li>
+<li><a href="/multilayer-pcb/">Multilayer PCB capabilities</a></li>
+<li><a href="/impedance-controlled-pcb/">Impedance-controlled PCB capabilities</a></li>
+<li><a href="/pcb-manufacturing/">PCB manufacturing capabilities</a></li>
+<li><a href="/help-center/articles/what-dfm-review-covers/">Free DFM review</a></li>
+</ul>
+    </article><aside class="side-panel"><p class="eyebrow">Free DFM review</p><h2>Get a second pair of eyes before you build</h2><p>Send your stackup and design files and an engineer checks them against HXLFAB capabilities — free, before you commit to an order.</p><a class="button" href="/help-center/articles/what-dfm-review-covers/">What the review covers <span>↗</span></a><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a></aside></div></section>
+    <section class="page-cta"><div class="shell page-cta-grid"><h2>Ready to review your PCB build?</h2><a class="button" href="/#quote">Upload Gerber files <span>↗</span></a></div></section>
+  </main>
+  <footer><div class="shell footer-grid"><div><a class="brand footer-brand" href="/"><span class="brand-bars"><i></i><i></i><i></i></span><span>HXL<strong>FAB</strong></span></a><p>PCB manufacturing brand<br>Guilin production base · Shenzhen service office</p></div><div><span>Evidence</span><p><a href="/quality-certifications/">Quality & certifications</a><br><a href="/factory-process/">Factory & process</a><br><a href="/engineering-scenarios/">Engineering scenarios</a></p></div><div><span>Working together</span><p><a href="/help-center/">Help center</a><br><a href="/working-with-us/">Working with us</a><br><a href="/about/">About & team</a><br><a href="/contact/">Contact engineering</a></p></div><div><span>Contact</span><p><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a><br><a href="tel:+8613823663114">+86 138 2366 3114</a></p></div></div><div class="shell footer-bottom"><span>© 2026 HXLFAB. All rights reserved.</span><span><a href="/privacy-file-handling/">Privacy & file handling</a> · Technical data subject to engineering confirmation.</span></div></footer>
+</body>
+</html>
