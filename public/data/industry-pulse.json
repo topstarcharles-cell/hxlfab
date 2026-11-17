@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-11T20:46:54.000Z",
+  "updatedAt": "2026-11-16T20:59:24.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,6 +51,12 @@
   },
   "news": [
     {
+      "title": "PCEA Releases On-Demand Training Module on Electromagnetic Applications in Printed Circuit Engineering",
+      "url": "https://pcea.net/2026/11/16/pcea-releases-on-demand-training-module-on-electromagnetic-applications-in-printed-circuit-engineering/",
+      "source": "PCEA",
+      "publishedAt": "2026-11-16T20:59:24.000Z"
+    },
+    {
       "title": "How Advanced Electronic Packaging Enables Modern Electronics",
       "url": "https://www.electronics.org/news-release/how-advanced-electronic-packaging-enables-modern-electronics",
       "source": "Global Electronics Association",
@@ -67,12 +73,6 @@
       "url": "https://www.electronics.org/blog/cop31-puts-circularity-focus-what-does-it-mean-electronics",
       "source": "Global Electronics Association",
       "publishedAt": "2026-11-11T17:22:52.000Z"
-    },
-    {
-      "title": "Global Electronics Association and Catena-X Partner to Advance Data Exchange Across the Electronics Industry",
-      "url": "https://www.electronics.org/news-release/global-electronics-association-and-catena-x-partner-advance-data-exchange-across",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-11-11T14:21:19.000Z"
     }
   ],
   "newsSources": [
