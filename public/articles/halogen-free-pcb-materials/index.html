@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Halogen-Free PCB Materials: What to Specify | HXLFAB</title>
+  <meta name="description" content="What halogen-free means for a PCB: the 900/900/1500 ppm limits, phosphorus flame retardants, trade-offs vs standard FR-4, and how to specify it correctly.">
+  <meta name="theme-color" content="#08242e">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://hxlfab.com/articles/halogen-free-pcb-materials/">
+  <meta property="og:type" content="article"><meta property="og:site_name" content="HXLFAB"><meta property="og:title" content="Halogen-Free PCB Materials: What to Specify | HXLFAB"><meta property="og:description" content="What halogen-free means for a PCB: the 900/900/1500 ppm limits, phosphorus flame retardants, trade-offs vs standard FR-4, and how to specify it correctly."><meta property="og:url" content="https://hxlfab.com/articles/halogen-free-pcb-materials/"><meta property="og:image" content="https://hxlfab.com/images/cnc-drilling.webp">
+  <link rel="stylesheet" href="/styles.css?v=20260815f"><link rel="stylesheet" href="/product-pages.css?v=20260815f">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://hxlfab.com/#organization","name":"HXLFAB","url":"https://hxlfab.com/","email":"sales@hxlfab.com","telephone":"+86 138 2366 3114"},{"@type":"Article","@id":"https://hxlfab.com/articles/halogen-free-pcb-materials/#article","headline":"Halogen-Free PCB Materials: What the Claim Means and How to Specify It","description":"What halogen-free means for a PCB: the 900/900/1500 ppm limits, phosphorus flame retardants, trade-offs vs standard FR-4, and how to specify it correctly.","url":"https://hxlfab.com/articles/halogen-free-pcb-materials/","datePublished":"2026-11-17","author":{"@id":"https://hxlfab.com/#organization"},"publisher":{"@id":"https://hxlfab.com/#organization"},"about":"Printed circuit board manufacturing"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hxlfab.com/"},{"@type":"ListItem","position":2,"name":"Articles","item":"https://hxlfab.com/articles/"},{"@type":"ListItem","position":3,"name":"Halogen-Free PCB Materials: What the Claim Means and How to Specify It","item":"https://hxlfab.com/articles/halogen-free-pcb-materials/"}]}]}</script>
+  <script src="/site.js?v=20260815f" defer></script>
+</head>
+<body>
+  <div class="utility"><div class="shell utility-inner"><span>PCB manufacturing · Guilin production base · Shenzhen service office</span><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a></div></div>
+  <header class="header"><div class="shell nav"><a class="brand" href="/" aria-label="HXLFAB home"><span class="brand-bars"><i></i><i></i><i></i></span><span>HXL<strong>FAB</strong></span></a><nav aria-label="Main navigation"><a href="/pcb-manufacturing/">Manufacturing</a><a href="/quality-certifications/">Quality</a><a href="/factory-process/">Factory</a><a href="/engineering-scenarios/">Engineering reviews</a><a href="/articles/">Articles</a><a href="/help-center/">Help</a><a href="/about/">About</a></nav><a class="button small" href="/#quote">Start an RFQ <span>↗</span></a></div></header>
+  <main>
+    <section class="page-hero"><div class="shell"><p class="breadcrumbs"><a href="/">Home</a> / <a href="/articles/">Articles</a> / Halogen-Free PCB Materials: What the Claim Means and How to Specify It</p><div class="page-hero-grid"><div><p class="eyebrow">HXLFAB engineering notes</p><h1>Halogen-Free PCB Materials: What the Claim Means and How to Specify It</h1><p class="lede">What halogen-free means for a PCB: the 900/900/1500 ppm limits, phosphorus flame retardants, trade-offs vs standard FR-4, and how to specify it correctly.</p><p class="breadcrumbs">Published November 17, 2026</p><div class="hero-actions"><a class="button" href="/help-center/articles/what-dfm-review-covers/">Get a free DFM review <span>↗</span></a><a class="text-link" href="/#quote">Start an RFQ <span>→</span></a></div></div></div></div></section>
+    <section class="section"><div class="shell content-grid"><article class="content-copy">
+<p>&quot;Halogen-free&quot; appears on more and more fabrication drawings — driven by environmental regulations, corporate sustainability policies, and customers who ask for it by name. Yet it is one of the most misunderstood requirements in PCB design. It is not a material family, it is not the same as RoHS compliance, and a drawing that says &quot;halogen-free&quot; and stops there has not specified anything a fabricator can be held to.</p>
+<h2>What &quot;halogen-free&quot; actually means</h2>
+<p>Halogens are a group of chemical elements — fluorine, chlorine, bromine, iodine and astatine. In PCB laminates, the two that matter are bromine and chlorine, because they are the elements used in the flame retardants and process chemistry of conventional FR-4.</p>
+<p>&quot;Halogen-free&quot; does not mean halogens are absent. It means their concentration is below limits set by a named standard. The limits most often quoted come from IEC 61249-2-21, which applies to the base material — the laminate and prepreg the board is built from: bromine 900 ppm or less, chlorine 900 ppm or less, and total halogens 1,500 ppm or less. The same 900/900/1,500 numbers appear in the JPCA-ES-01 framework, applied at the material and component level. The numbers match, but the scope does not — a certificate for the laminate says nothing about the solder mask, the marking ink, or the components soldered onto the board.</p>
+<p>Two related confusions are worth clearing up early. First, RoHS is not halogen-free: the RoHS directive restricts ten listed substances, including certain brominated flame retardants (PBB and PBDE), but it does not define halogen-free, and a RoHS-compliant board can still contain brominated epoxy. Second, a halide-free flux classification says nothing about the halogen content of the laminate.</p>
+<h2>Why standard FR-4 contains halogens</h2>
+<p>Standard FR-4 gets its flame retardancy from tetrabromobisphenol A, known as TBBPA — a brominated compound built into the epoxy resin. It works well: it is cheap, effective, and the reason FR-4 reliably achieves a UL 94 V-0 flammability rating. A conventional FR-4 laminate typically carries roughly 18,000–22,000 ppm of bromine, an order of magnitude above the halogen-free limit.</p>
+<p>The concern is not the board in normal use. It is what happens at end of life: when brominated material is incinerated or recycled at high temperature, it can release corrosive and toxic gases, including dioxins under uncontrolled burning.</p>
+<h2>How halogen-free laminates achieve flame retardancy</h2>
+<p>Halogen-free laminates replace the brominated flame retardant with a different chemistry. The most common systems are phosphorus-based and phosphorus-nitrogen-based resins, sometimes combined with inorganic fillers such as aluminium hydroxide or magnesium hydroxide. The phosphorus compounds act in the condensed phase, promoting char formation that insulates the material from the flame, rather than releasing halogen radicals into the gas phase the way brominated systems do.</p>
+<p>These laminates still achieve UL 94 V-0 — the flammability rating is a performance requirement, not a chemistry requirement. What changes is the resin system behind the rating, and that change ripples through the material&#x27;s other properties.</p>
+<h2>The performance trade-offs</h2>
+<p>Halogen-free is not a free upgrade. The resin change affects the laminate in several ways a designer should know about before specifying it:</p>
+<p><strong>Dielectric properties.</strong> The Dk and Df of a halogen-free grade are close to those of the standard grade from the same supplier, but not identical. For most digital boards the difference is negligible; for impedance-controlled designs, pull the Dk/Df table for the specific grade and re-run the impedance calculation.</p>
+<p><strong>Thermal behaviour.</strong> Halogen-free resins are often formulated at mid to high Tg, many grades in the TG150–TG170 range — generally good news for lead-free assembly, which peaks around 245–260 °C. Check Td and T260/T288 on the full datasheet, as with any grade choice.</p>
+<p><strong>Moisture absorption.</strong> Phosphorus-based resins absorb slightly more moisture than brominated epoxy. For boards stored unsealed for long periods, that raises the importance of baking before reflow and of dry storage for finished boards.</p>
+<p><strong>Processing and cost.</strong> Halogen-free laminates can be harder on drill bits and may need adjusted drill parameters, particularly on thick multilayer boards — flag the material early in a DFM review rather than discovering it at quoting. The laminate also costs more per panel than standard FR-4: small on a simple board, material on a large panel or high-volume run.</p>
+<h2>Where halogen-free matters most</h2>
+<p>The requirement usually comes from outside the design itself — a customer specification, a market regulation, or a company policy. It appears most often in consumer electronics sold into the EU, medical devices, automotive electronics, and any product whose brand owner publishes a restricted-substance list.</p>
+<p>If nobody in the chain requires it, standard FR-4 remains the pragmatic default. Electrically, the two are near-equivalents, and the environmental benefit only materialises if the board&#x27;s end-of-life stream actually treats it differently.</p>
+<h2>How to specify halogen-free correctly</h2>
+<p>A bare note saying &quot;halogen-free&quot; on the drawing is not a specification. A fabricator receiving it cannot know which standard, which scope, or which evidence you expect. Write it properly:</p>
+<ul>
+<li><strong>Name the standard and its scope.</strong> For example: &quot;Laminate and prepreg to IEC 61249-2-21: Br ≤ 900 ppm, Cl ≤ 900 ppm, total halogens ≤ 1,500 ppm.&quot; If the requirement covers the finished board rather than just the base material, say so explicitly — that is a much broader claim, and it needs solder mask, ink and finish data too.</li>
+<li><strong>Name the laminate grade.</strong> Halogen-free is a property of a specific grade from a specific supplier, not a generic material. Put the grade designation on the fabrication drawing so incoming inspection can check it.</li>
+<li><strong>Ask for the evidence.</strong> A material datasheet and a halogen-content certificate (or a declaration referencing the test method) are the normal evidence. A supplier&#x27;s marketing line saying &quot;halogen-free&quot; is not.</li>
+<li><strong>Keep it on the drawing, not in an email.</strong> The requirement belongs in the fabrication notes where the fabricator, the inspector and the next engineer to touch the design can all see it.</li>
+</ul>
+<p>A halogen-free requirement does not change the stackup rules. The same 1–30 layer range, 0.15–7.0 mm finished thickness, and TG135/150/170 grade choices apply — the material grade is one more line on the drawing, not a different design flow. If the board mixes halogen-free FR-4 with PTFE layers in a hybrid stackup, or the requirement itself is unclear, raise it in a DFM review before the design is frozen; confirming the laminate grade early is far cheaper than re-qualifying a board after it is built.</p>
+<h2>Common mistakes</h2>
+<p><strong>Writing &quot;halogen-free&quot; without a standard.</strong> Without IEC 61249-2-21 or an equivalent named document, the note is unenforceable.</p>
+<p><strong>Assuming RoHS means halogen-free.</strong> A RoHS-compliant board built on standard brominated FR-4 is common.</p>
+<p><strong>Extending a laminate certificate to the whole board.</strong> A certificate for the laminate says nothing about the solder mask, silkscreen ink, surface finish or components.</p>
+<p><strong>Assuming the electricals are unchanged.</strong> Dk and Df shift slightly between grades. On impedance-controlled designs, re-check the numbers for the actual halogen-free grade.</p>
+<p><strong>Specifying halogen-free &quot;to be safe&quot;.</strong> The premium buys nothing if no customer or regulation requires the claim.</p>
+<p><strong>Forgetting storage and baking.</strong> Higher moisture absorption makes dry storage and pre-reflow baking more important for boards that sit in stock before assembly.</p>
+<h2>Pre-order checklist</h2>
+<ul>
+<li>[ ] Halogen-free requirement confirmed: customer, regulation or policy — not assumed</li>
+<li>[ ] Standard named on the drawing (IEC 61249-2-21 or equivalent): Br ≤ 900 ppm, Cl ≤ 900 ppm, total ≤ 1,500 ppm</li>
+<li>[ ] Scope stated: laminate/prepreg only, or the finished board</li>
+<li>[ ] Laminate grade designated by supplier and grade name</li>
+<li>[ ] Dk/Df re-checked for the actual grade on impedance-controlled designs</li>
+<li>[ ] Tg grade confirmed (TG135 / TG150 / TG170) with Td and T260/T288 on the datasheet</li>
+<li>[ ] Layer count and thickness confirmed (1–30 layers; 0.15–7.0 mm)</li>
+<li>[ ] Material datasheet and halogen-content certificate requested</li>
+<li>[ ] Storage and pre-reflow baking plan noted, if the board will sit before assembly</li>
+<li>[ ] Requirement reviewed with the fabricator in a DFM review before the stackup is frozen</li>
+</ul>
+<h2>Get a second pair of eyes before you build</h2>
+<p>Halogen-free is a paperwork requirement as much as a material choice — the claim is only as strong as the standard, the scope and the certificate behind it. Getting those three lines right on the drawing costs nothing; getting them wrong means a board that cannot prove what the customer asked for. HXLFAB offers a free DFM review — send your Gerbers and fabrication drawing to <a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a>, and note the halogen-free requirement and the standard you need to meet.</p>
+<h2>Related capabilities</h2>
+<ul>
+<li><a href="/pcb-manufacturing/">PCB manufacturing capabilities</a></li>
+<li><a href="/multilayer-pcb/">Multilayer PCB capabilities</a></li>
+<li><a href="/high-frequency-pcb/">High-frequency PCB capabilities</a></li>
+<li><a href="/hdi-pcb/">HDI PCB stackup and microvia capabilities</a></li>
+<li><a href="/articles/pcb-fr4-tg-grade-comparison/">FR-4 Tg grades compared</a></li>
+<li><a href="/help-center/articles/what-dfm-review-covers/">Free DFM review</a></li>
+</ul>
+    </article><aside class="side-panel"><p class="eyebrow">Free DFM review</p><h2>Get a second pair of eyes before you build</h2><p>Send your stackup and design files and an engineer checks them against HXLFAB capabilities — free, before you commit to an order.</p><a class="button" href="/help-center/articles/what-dfm-review-covers/">What the review covers <span>↗</span></a><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a></aside></div></section>
+    <section class="page-cta"><div class="shell page-cta-grid"><h2>Ready to review your PCB build?</h2><a class="button" href="/#quote">Upload Gerber files <span>↗</span></a></div></section>
+  </main>
+  <footer><div class="shell footer-grid"><div><a class="brand footer-brand" href="/"><span class="brand-bars"><i></i><i></i><i></i></span><span>HXL<strong>FAB</strong></span></a><p>PCB manufacturing brand<br>Guilin production base · Shenzhen service office</p></div><div><span>Evidence</span><p><a href="/quality-certifications/">Quality & certifications</a><br><a href="/factory-process/">Factory & process</a><br><a href="/engineering-scenarios/">Engineering scenarios</a></p></div><div><span>Working together</span><p><a href="/help-center/">Help center</a><br><a href="/working-with-us/">Working with us</a><br><a href="/about/">About & team</a><br><a href="/contact/">Contact engineering</a></p></div><div><span>Contact</span><p><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a><br><a href="tel:+8613823663114">+86 138 2366 3114</a></p></div></div><div class="shell footer-bottom"><span>© 2026 HXLFAB. All rights reserved.</span><span><a href="/privacy-file-handling/">Privacy & file handling</a> · Technical data subject to engineering confirmation.</span></div></footer>
+</body>
+</html>
