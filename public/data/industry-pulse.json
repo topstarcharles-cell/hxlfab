@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-16T20:59:24.000Z",
+  "updatedAt": "2026-11-17T20:54:49.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,28 +51,28 @@
   },
   "news": [
     {
+      "title": "2027 NPI Awards Nominations Due Dec. 4",
+      "url": "https://pcea.net/2026/11/17/2027-npi-awards-nominations-due-dec-4/",
+      "source": "PCEA",
+      "publishedAt": "2026-11-17T20:54:49.000Z"
+    },
+    {
+      "title": "REPORT: Cloud and AI Demand to Drive Electronics Assembly Market Past $4 Trillion by 2030",
+      "url": "https://www.electronics.org/news-release/2026-global-electronics-assembly-report",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-11-17T15:00:00.000Z"
+    },
+    {
       "title": "PCEA Releases On-Demand Training Module on Electromagnetic Applications in Printed Circuit Engineering",
       "url": "https://pcea.net/2026/11/16/pcea-releases-on-demand-training-module-on-electromagnetic-applications-in-printed-circuit-engineering/",
       "source": "PCEA",
       "publishedAt": "2026-11-16T20:59:24.000Z"
     },
     {
-      "title": "How Advanced Electronic Packaging Enables Modern Electronics",
-      "url": "https://www.electronics.org/news-release/how-advanced-electronic-packaging-enables-modern-electronics",
+      "title": "From Quote to Build: Why Wire Harness Manufacturing Needs a Minimum Data Set",
+      "url": "https://www.electronics.org/event/quote-build-why-wire-harness-manufacturing-needs-minimum-data-set",
       "source": "Global Electronics Association",
-      "publishedAt": "2026-11-11T20:46:54.000Z"
-    },
-    {
-      "title": "9711 Series Adoption Webinar",
-      "url": "https://www.electronics.org/event/9711-series-adoption-webinar",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-11-11T19:19:38.000Z"
-    },
-    {
-      "title": "COP31 Puts Circularity in Focus. What Does It Mean for Electronics?",
-      "url": "https://www.electronics.org/blog/cop31-puts-circularity-focus-what-does-it-mean-electronics",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-11-11T17:22:52.000Z"
+      "publishedAt": "2026-11-16T19:13:21.000Z"
     }
   ],
   "newsSources": [
