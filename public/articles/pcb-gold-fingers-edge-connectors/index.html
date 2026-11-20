@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PCB Gold Fingers &amp; Edge Connectors Guide | HXLFAB</title>
+  <meta name="description" content="PCB gold fingers and edge connectors: hard gold vs ENIG, bevel angles, finger layout rules, and the checks that keep mating reliable over thousands of cycles.">
+  <meta name="theme-color" content="#08242e">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://hxlfab.com/articles/pcb-gold-fingers-edge-connectors/">
+  <meta property="og:type" content="article"><meta property="og:site_name" content="HXLFAB"><meta property="og:title" content="PCB Gold Fingers &amp; Edge Connectors Guide | HXLFAB"><meta property="og:description" content="PCB gold fingers and edge connectors: hard gold vs ENIG, bevel angles, finger layout rules, and the checks that keep mating reliable over thousands of cycles."><meta property="og:url" content="https://hxlfab.com/articles/pcb-gold-fingers-edge-connectors/"><meta property="og:image" content="https://hxlfab.com/images/cnc-drilling.webp">
+  <link rel="stylesheet" href="/styles.css?v=20260815f"><link rel="stylesheet" href="/product-pages.css?v=20260815f">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://hxlfab.com/#organization","name":"HXLFAB","url":"https://hxlfab.com/","email":"sales@hxlfab.com","telephone":"+86 138 2366 3114"},{"@type":"Article","@id":"https://hxlfab.com/articles/pcb-gold-fingers-edge-connectors/#article","headline":"PCB Gold Fingers and Edge Connectors: Design Rules for Reliable Mating","description":"PCB gold fingers and edge connectors: hard gold vs ENIG, bevel angles, finger layout rules, and the checks that keep mating reliable over thousands of cycles.","url":"https://hxlfab.com/articles/pcb-gold-fingers-edge-connectors/","datePublished":"2026-11-19","author":{"@id":"https://hxlfab.com/#organization"},"publisher":{"@id":"https://hxlfab.com/#organization"},"about":"Printed circuit board manufacturing"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hxlfab.com/"},{"@type":"ListItem","position":2,"name":"Articles","item":"https://hxlfab.com/articles/"},{"@type":"ListItem","position":3,"name":"PCB Gold Fingers and Edge Connectors: Design Rules for Reliable Mating","item":"https://hxlfab.com/articles/pcb-gold-fingers-edge-connectors/"}]}]}</script>
+  <script src="/site.js?v=20260815f" defer></script>
+</head>
+<body>
+  <div class="utility"><div class="shell utility-inner"><span>PCB manufacturing · Guilin production base · Shenzhen service office</span><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a></div></div>
+  <header class="header"><div class="shell nav"><a class="brand" href="/" aria-label="HXLFAB home"><span class="brand-bars"><i></i><i></i><i></i></span><span>HXL<strong>FAB</strong></span></a><nav aria-label="Main navigation"><a href="/pcb-manufacturing/">Manufacturing</a><a href="/quality-certifications/">Quality</a><a href="/factory-process/">Factory</a><a href="/engineering-scenarios/">Engineering reviews</a><a href="/articles/">Articles</a><a href="/help-center/">Help</a><a href="/about/">About</a></nav><a class="button small" href="/#quote">Start an RFQ <span>↗</span></a></div></header>
+  <main>
+    <section class="page-hero"><div class="shell"><p class="breadcrumbs"><a href="/">Home</a> / <a href="/articles/">Articles</a> / PCB Gold Fingers and Edge Connectors: Design Rules for Reliable Mating</p><div class="page-hero-grid"><div><p class="eyebrow">HXLFAB engineering notes</p><h1>PCB Gold Fingers and Edge Connectors: Design Rules for Reliable Mating</h1><p class="lede">PCB gold fingers and edge connectors: hard gold vs ENIG, bevel angles, finger layout rules, and the checks that keep mating reliable over thousands of cycles.</p><p class="breadcrumbs">Published November 19, 2026</p><div class="hero-actions"><a class="button" href="/help-center/articles/what-dfm-review-covers/">Get a free DFM review <span>↗</span></a><a class="text-link" href="/#quote">Start an RFQ <span>→</span></a></div></div></div></div></section>
+    <section class="section"><div class="shell content-grid"><article class="content-copy">
+<p>An edge connector is the one part of a PCB that is also a mechanical component. The gold fingers at the board edge slide into a mating connector hundreds or thousands of times, carrying signals and power while being scraped, compressed and re-seated. A finger that is too thin, too short, poorly bevelled or plated with the wrong gold will fail as a contact long before the circuit around it fails.</p>
+<p>Gold fingers are not a decoration. They are a plated contact system, and they have their own design rules — different from the rules that govern the rest of the board.</p>
+<h2>What a gold finger actually is</h2>
+<p>A gold finger is a row of exposed copper pads at the edge of a PCB, plated with hard gold over nickel, designed to mate with a card-edge connector. The connector&#x27;s spring contacts press against the fingers; the gold provides a low-resistance, corrosion-free contact surface that survives repeated insertion.</p>
+<p>The stackup is simple but specific: copper, then a nickel barrier layer (typically around 100–200 µin), then a hard gold layer (typically 30–50 µin). The nickel stops copper migrating into the gold and gives the plating its hardness; the gold is the contact surface.</p>
+<h2>Bevel: the detail that makes insertion work</h2>
+<p>A square board edge does not slide smoothly into a connector. The leading edge catches on the spring contacts, and the contacts drag across the finger surface on every insertion. The fix is a bevel — the board edge is chamfered, typically at 20° to 45°, so the edge ramps into the connector and lifts the contacts gently onto the fingers.</p>
+<p>A shallow bevel (around 20°) gives the smoothest insertion and the least contact wear, but removes more material and needs a longer bevel zone. A steeper bevel (up to 45°) is cheaper to produce and preserves more finger length, at the cost of a harder insertion. For most card-edge applications, 30° is a workable middle ground; agree the angle with the fabricator before the layout is frozen, because the bevel is cut after plating and its geometry interacts with the finger length.</p>
+<p>The bevel also eats into the leading edge of the fingers, so they must be long enough that the contact point — where the connector&#x27;s springs actually land — sits well behind the bevelled zone. A common rule is to keep the contact area at least 1.5 mm behind the start of the bevel, and to confirm the connector&#x27;s contact position from its datasheet rather than guessing.</p>
+<h2>Finger layout: spacing, length and alignment</h2>
+<p>Gold fingers follow the connector&#x27;s pitch, and the pitch sets most of the layout:</p>
+<ul>
+<li><strong>Pitch and spacing.</strong> Card-edge connectors commonly use 2.54 mm, 1.27 mm or 1.00 mm pitch. Finger width and the gap between fingers follow the connector&#x27;s contact width; leave enough gap that plating bridging cannot short adjacent fingers.</li>
+<li><strong>Finger length.</strong> Fingers must cover the full travel of the connector contact, including insertion tolerance. Too short, and the contact lands past the finger end or on the bevel.</li>
+<li><strong>Alignment.</strong> The finger pattern must be centred on the board edge and square to it. A skewed row means the contacts on one side land early and on the other side late — uneven wear, and in the worst case an open contact at one end.</li>
+<li><strong>Keep-out behind the fingers.</strong> Keep vias and components clear of the connector&#x27;s insertion zone: a component near the edge can collide with the connector housing, and a via under the finger area can show through as a dimple in the plating.</li>
+<li><strong>Solder mask.</strong> Fingers are left bare — no solder mask over the contact area — and the mask opening must stop cleanly behind the fingers. Mask creeping onto a finger is a contact failure waiting to happen.</li>
+</ul>
+<h2>Hard gold vs ENIG: a decision checklist</h2>
+<p>The choice is driven by what the gold has to do. Hard gold (30–50 µin, electroplated, hardened) is the contact finish: it survives repeated mating. ENIG (2–5 µin, soft) is the solder finish: excellent for pads, it wears through in a few dozen insertion cycles. A board with both edge connectors and soldered components needs both finishes, applied selectively — hard gold on the fingers, ENIG on the pads. This is a two-step plating process that must be specified explicitly on the fabrication drawing, with the finger area clearly defined. A drawing that just says &quot;gold&quot; will be quoted as one finish, and the wrong one will be applied somewhere.</p>
+<h2>Durability: what wears out</h2>
+<p>Connector datasheets quote a mating-cycle rating — commonly 500, 1,000 or more cycles for card-edge connectors. The rating assumes the specified gold thickness and a correct bevel. Three things degrade the contact before the rating is reached:</p>
+<ul>
+<li><strong>Gold wear.</strong> Each insertion scrapes a microscopic amount of gold. Below the specified thickness the nickel shows through, and nickel oxidises — contact resistance climbs and intermittent connections appear. A finger plated at 15 µin instead of 30 µin has roughly half the wear life.</li>
+<li><strong>Contamination.</strong> Fingers attract handling contamination — skin oils, dust, flux residue from nearby soldering. A contaminated finger reads as a high-resistance contact even when the plating is perfect. Handle edge-connector boards by the edges away from the fingers, and keep the fingers covered until assembly.</li>
+<li><strong>Mechanical damage.</strong> A board dropped on its edge, or forced into a connector at an angle, dents or scratches the fingers. A single deep scratch across a finger can be a permanent open. Inspect the finger area visually before assembly; a damaged finger is a board to rework or scrap, not to ship.</li>
+</ul>
+<h2>Specifying gold fingers on a fabrication drawing</h2>
+<p>The drawing is where gold-finger requirements live or die. Include the finish by area (&quot;hard gold, 30 µin min over 100 µin min nickel, on edge fingers; ENIG on all other pads&quot;), the bevel angle and which edges are bevelled, the finger dimensions, and a note that plating thickness is measured on the finger, not on a coupon elsewhere on the panel. State that the finger area must be free of solder mask, and name the mating connector part number so the fabricator can check the contact position against the finger layout. For boards with fine features elsewhere — 3/3 mil trace and space, 0.10 mm laser vias, 0.15 mm mechanical drills — the finger area is comparatively coarse, but it still needs its own checks.</p>
+<h2>Common mistakes</h2>
+<p><strong>Specifying ENIG for an edge connector.</strong> The single most common error. ENIG is a solder finish, not a contact finish.</p>
+<p><strong>No bevel, or a bevel on the wrong edge.</strong> A square edge damages connector contacts on the first insertion and shortens the connector&#x27;s life as well as the board&#x27;s.</p>
+<p><strong>Fingers too short for the connector&#x27;s contact travel.</strong> The contact lands on the bevel or past the finger end, and the connection is intermittent from day one.</p>
+<p><strong>Solder mask over the fingers.</strong> Usually a drawing error — the mask opening was not drawn, or was drawn too small. The board may pass electrical test and fail in the system.</p>
+<p><strong>Handling damage before assembly.</strong> Fingers are the most exposed part of the board. Store and ship edge-connector boards with the finger edge protected.</p>
+<p><strong>Forgetting the second finish.</strong> A board with fingers and solder pads needs two finishes specified separately. One word — &quot;gold&quot; — on the drawing is not enough.</p>
+<h2>Pre-order checklist</h2>
+<ul>
+<li>[ ] Mating connector identified by part number; contact position and pitch confirmed from its datasheet</li>
+<li>[ ] Hard gold specified for the fingers (thickness and nickel underplate stated); ENIG or another solderable finish specified for pads</li>
+<li>[ ] Bevel angle stated (typically 20–45°), with the bevelled edges identified</li>
+<li>[ ] Finger length covers the full contact travel, with the contact zone behind the bevel</li>
+<li>[ ] Finger pitch, width and gap match the connector; plating thickness accounted for in the gap</li>
+<li>[ ] Solder mask opening stops behind the fingers; no mask over the contact area</li>
+<li>[ ] Keep-out behind the fingers respected: no components or vias in the connector&#x27;s insertion zone</li>
+<li>[ ] Finger pattern centred and square to the board edge</li>
+<li>[ ] Plating thickness to be measured on the finger area, not only on a test coupon</li>
+<li>[ ] Handling and packaging defined so the finger edge is protected through assembly and shipping</li>
+<li>[ ] Board thickness and panel size within the fabrication envelope (finished thickness 0.15–7.0 mm; panels up to 850 × 520 mm)</li>
+<li>[ ] Finger finish, bevel and connector called out in a DFM review before the layout is frozen</li>
+</ul>
+<h2>Get a second pair of eyes before you build</h2>
+<p>Gold fingers fail in the field, not on the test bench — a board can pass every electrical test and still lose contact after fifty insertions. The expensive mistakes are all visible on paper: the wrong gold, a missing bevel, a finger too short for the connector&#x27;s travel. HXLFAB offers a free DFM review — send your Gerbers, fabrication drawing and mating connector part number to <a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a>, and flag the edge-connector area so the finger finish and bevel are checked before the layout is frozen.</p>
+<h2>Related capabilities</h2>
+<ul>
+<li><a href="/pcb-manufacturing/">PCB manufacturing capabilities</a></li>
+<li><a href="/pcb-prototype/">PCB prototype capabilities</a></li>
+<li><a href="/articles/pcb-surface-finish-selection/">PCB surface finish selection</a></li>
+<li><a href="/multilayer-pcb/">Multilayer PCB capabilities</a></li>
+<li><a href="/help-center/articles/what-dfm-review-covers/">Free DFM review</a></li>
+</ul>
+    </article><aside class="side-panel"><p class="eyebrow">Free DFM review</p><h2>Get a second pair of eyes before you build</h2><p>Send your stackup and design files and an engineer checks them against HXLFAB capabilities — free, before you commit to an order.</p><a class="button" href="/help-center/articles/what-dfm-review-covers/">What the review covers <span>↗</span></a><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a></aside></div></section>
+    <section class="page-cta"><div class="shell page-cta-grid"><h2>Ready to review your PCB build?</h2><a class="button" href="/#quote">Upload Gerber files <span>↗</span></a></div></section>
+  </main>
+  <footer><div class="shell footer-grid"><div><a class="brand footer-brand" href="/"><span class="brand-bars"><i></i><i></i><i></i></span><span>HXL<strong>FAB</strong></span></a><p>PCB manufacturing brand<br>Guilin production base · Shenzhen service office</p></div><div><span>Evidence</span><p><a href="/quality-certifications/">Quality & certifications</a><br><a href="/factory-process/">Factory & process</a><br><a href="/engineering-scenarios/">Engineering scenarios</a></p></div><div><span>Working together</span><p><a href="/help-center/">Help center</a><br><a href="/working-with-us/">Working with us</a><br><a href="/about/">About & team</a><br><a href="/contact/">Contact engineering</a></p></div><div><span>Contact</span><p><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a><br><a href="tel:+8613823663114">+86 138 2366 3114</a></p></div></div><div class="shell footer-bottom"><span>© 2026 HXLFAB. All rights reserved.</span><span><a href="/privacy-file-handling/">Privacy & file handling</a> · Technical data subject to engineering confirmation.</span></div></footer>
+</body>
+</html>
