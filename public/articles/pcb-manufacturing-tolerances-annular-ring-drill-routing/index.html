@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PCB Manufacturing Tolerances: Annular Ring &amp; Drill | HXLFAB</title>
+  <meta name="description" content="PCB manufacturing tolerances explained: annular ring, drill hole and routing tolerances, how they stack up, and the design margins that keep boards buildable.">
+  <meta name="theme-color" content="#08242e">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://hxlfab.com/articles/pcb-manufacturing-tolerances-annular-ring-drill-routing/">
+  <meta property="og:type" content="article"><meta property="og:site_name" content="HXLFAB"><meta property="og:title" content="PCB Manufacturing Tolerances: Annular Ring &amp; Drill | HXLFAB"><meta property="og:description" content="PCB manufacturing tolerances explained: annular ring, drill hole and routing tolerances, how they stack up, and the design margins that keep boards buildable."><meta property="og:url" content="https://hxlfab.com/articles/pcb-manufacturing-tolerances-annular-ring-drill-routing/"><meta property="og:image" content="https://hxlfab.com/images/cnc-drilling.webp">
+  <link rel="stylesheet" href="/styles.css?v=20260815f"><link rel="stylesheet" href="/product-pages.css?v=20260815f">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://hxlfab.com/#organization","name":"HXLFAB","url":"https://hxlfab.com/","email":"sales@hxlfab.com","telephone":"+86 138 2366 3114"},{"@type":"Article","@id":"https://hxlfab.com/articles/pcb-manufacturing-tolerances-annular-ring-drill-routing/#article","headline":"PCB Manufacturing Tolerances: Annular Ring, Drill and Routing","description":"PCB manufacturing tolerances explained: annular ring, drill hole and routing tolerances, how they stack up, and the design margins that keep boards buildable.","url":"https://hxlfab.com/articles/pcb-manufacturing-tolerances-annular-ring-drill-routing/","datePublished":"2026-11-20","author":{"@id":"https://hxlfab.com/#organization"},"publisher":{"@id":"https://hxlfab.com/#organization"},"about":"Printed circuit board manufacturing"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hxlfab.com/"},{"@type":"ListItem","position":2,"name":"Articles","item":"https://hxlfab.com/articles/"},{"@type":"ListItem","position":3,"name":"PCB Manufacturing Tolerances: Annular Ring, Drill and Routing","item":"https://hxlfab.com/articles/pcb-manufacturing-tolerances-annular-ring-drill-routing/"}]}]}</script>
+  <script src="/site.js?v=20260815f" defer></script>
+</head>
+<body>
+  <div class="utility"><div class="shell utility-inner"><span>PCB manufacturing · Guilin production base · Shenzhen service office</span><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a></div></div>
+  <header class="header"><div class="shell nav"><a class="brand" href="/" aria-label="HXLFAB home"><span class="brand-bars"><i></i><i></i><i></i></span><span>HXL<strong>FAB</strong></span></a><nav aria-label="Main navigation"><a href="/pcb-manufacturing/">Manufacturing</a><a href="/quality-certifications/">Quality</a><a href="/factory-process/">Factory</a><a href="/engineering-scenarios/">Engineering reviews</a><a href="/articles/">Articles</a><a href="/help-center/">Help</a><a href="/about/">About</a></nav><a class="button small" href="/#quote">Start an RFQ <span>↗</span></a></div></header>
+  <main>
+    <section class="page-hero"><div class="shell"><p class="breadcrumbs"><a href="/">Home</a> / <a href="/articles/">Articles</a> / PCB Manufacturing Tolerances: Annular Ring, Drill and Routing</p><div class="page-hero-grid"><div><p class="eyebrow">HXLFAB engineering notes</p><h1>PCB Manufacturing Tolerances: Annular Ring, Drill and Routing</h1><p class="lede">PCB manufacturing tolerances explained: annular ring, drill hole and routing tolerances, how they stack up, and the design margins that keep boards buildable.</p><p class="breadcrumbs">Published November 20, 2026</p><div class="hero-actions"><a class="button" href="/help-center/articles/what-dfm-review-covers/">Get a free DFM review <span>↗</span></a><a class="text-link" href="/#quote">Start an RFQ <span>→</span></a></div></div></div></div></section>
+    <section class="section"><div class="shell content-grid"><article class="content-copy">
+<p>Tolerances are not a single number. The three that cause the most fabrication holds and scrap are the annular ring around drilled holes, the drilled hole itself, and the routed board outline. Each is small on its own. Together, they decide whether a board is buildable at the price quoted — or at all.</p>
+<h2>Annular ring: the copper that keeps a hole connected</h2>
+<p>The ring exists because drilling is never perfectly centred. The drill bit flexes, the panel moves a fraction of a millimetre during handling, and the artwork is registered to the panel with a small offset. The ring is the margin that absorbs all of that. A common design rule is to size the pad as the finished hole diameter plus twice the required minimum ring: a 0.3 mm hole needing a 0.15 mm ring wants a pad of at least 0.6 mm, before any trace-width or clearance rules are applied.</p>
+<p>Industry specifications give the floor. IPC-6012, the widely used performance specification for rigid boards, calls for a minimum external annular ring of 0.05 mm (2 mil) for both Class 2 and Class 3 work, with a tighter 0.025 mm minimum on internal layers; Class 3 adds stricter limits on how much of the ring may be broken out. Those are minimums for acceptance, not design targets — designing to the minimum leaves no margin for the next tolerance in the chain.</p>
+<p>Three design choices protect the ring:</p>
+<ul>
+<li><strong>Pad sizing.</strong> Size pads from the hole plus the ring, not from a library default. A pad copied from a different design may carry a ring that was fine for a 0.5 mm drill and is inadequate for a 0.3 mm one.</li>
+<li><strong>Teardropping.</strong> A small fillet of copper where the trace meets the pad spreads the connection over a wider area, so a drill drifting toward the trace entry still leaves copper in contact with the barrel. It costs nothing in board area and improves yield on fine-pitch and high-layer-count boards.</li>
+<li><strong>Via-in-pad discipline.</strong> When a via sits under a BGA pad, the ring is the pad itself. Filled and capped vias keep the pad surface flat for soldering, but they do not relax the ring requirement — the drill still has to land inside the pad.</li>
+</ul>
+<p>The smallest mechanical drill HXLFAB publishes is 0.15 mm, and laser-drilled microvias go down to 0.10 mm. At those diameters the ring arithmetic gets unforgiving: a 0.15 mm hole with a 0.15 mm ring needs a 0.45 mm pad, and the trace leaving it still has to clear its neighbours at 3/3 mil trace and space. Fine features and generous rings compete for the same copper — the layout has to settle that trade before the design is sent out, not after the first fabrication hold.</p>
+<h2>Drill tolerance: the hole is not the number on the drawing</h2>
+<p>A drilled hole has its own tolerance, separate from the ring. A typical drilled-hole diameter tolerance is ±0.05 mm (±2 mil) for standard mechanical drilling, and the finished hole is smaller than the drill bit by the plating thickness — roughly 0.025 mm of copper builds up on the barrel wall. A 0.8 mm hole drawn for a press-fit pin is not an 0.8 mm hole until the plating allowance is accounted for: the drill is sized up so the finished, plated hole lands on the nominal value.</p>
+<ul>
+<li><strong>Plated through-holes for components.</strong> Too small, and a lead will not fit or the solder joint is starved. Too large, and the joint is weak and the component sits loose during assembly.</li>
+<li><strong>Press-fit holes.</strong> These are the least forgiving. A press-fit pin needs a finished hole within a narrow band — typically a few hundredths of a millimetre — and the tolerance has to be stated explicitly on the fabrication drawing. A generic ±0.05 mm note is not a press-fit specification.</li>
+<li><strong>Non-plated mounting holes.</strong> These are usually drilled oversize after plating, and their tolerance is set by the screw or standoff, not by the circuit. State the finished diameter and whether the hole is plated.</li>
+<li><strong>Back-drilled holes.</strong> Backdrilling removes the unused stub of a plated via to improve high-speed signal integrity. The backdrill depth tolerance is set by the stub length that remains, and it interacts with the layer stack — the depth is measured from the board surface, so board thickness tolerance feeds directly into it.</li>
+</ul>
+<h2>Routing tolerance: the outline is a dimension too</h2>
+<p>The routed board outline is a machined dimension, and it carries a tolerance like any other: a typical routing tolerance is ±0.10 mm (±4 mil), with ±0.15 mm or ±0.20 mm common for large panels or thick boards. The number matters wherever the board meets something else — a card guide, an enclosure slot, a connector housing, or a neighbouring board in the same assembly. A board that is 0.2 mm too wide does not fit its slot; a board that is 0.2 mm too narrow rattles in it.</p>
+<p>Routing interacts with the rest of the design in a few specific ways:</p>
+<ul>
+<li><strong>Keep-out from the edge.</strong> Traces and copper should stay clear of the routed edge by a margin the fabricator can hold — typically 0.5 mm or more for copper, more for components. Copper that reaches the edge can be nicked by the router and can short to a metal enclosure.</li>
+<li><strong>Slots and cutouts.</strong> Internal slots are routed, not drilled, and their width tolerance follows the router bit, not the drill. A slot drawn at exactly the bit diameter has no room for tolerance at all; size slots with margin, and remember that internal corners are rounded to the bit radius — a sharp inside corner on the drawing becomes a radius in the board.</li>
+<li><strong>Mouse bites and V-scores.</strong> Panel breakouts — the small tabs and scored lines that hold boards in a panel — are themselves tolerance-sensitive. A mouse-bite tab that is too thin breaks in handling; a V-score that is too deep breaks in shipping.</li>
+<li><strong>Board thickness.</strong> Finished thickness carries its own tolerance, and it feeds the backdrill depth, the press-fit hole, and the edge-connector fit. HXLFAB publishes a finished thickness range of 0.15–7.0 mm; the tolerance band within that range depends on the stackup and should be confirmed for the specific build, especially on boards with edge connectors or controlled impedance.</li>
+</ul>
+<h2>How tolerances stack up</h2>
+<p>No tolerance acts alone. The annular ring is what remains after drill diameter tolerance, drill registration error and artwork registration are all spent. A design that is safe against each tolerance individually can still fail when they combine in the same direction — the drill at the large end of its tolerance, registered toward the trace, on a panel that shifted during lamination. That is why fabrication drawings state each tolerance separately, and why experienced designers add margin on top of the specification minimums rather than designing to them.</p>
+<h2>Common mistakes</h2>
+<p><strong>Designing pads to the IPC minimum ring.</strong> The minimum is an acceptance criterion. Designing to it means half the boards in a run can be marginal, and a small registration drift turns into a fabrication hold.</p>
+<p><strong>Forgetting the plating allowance on hole diameters.</strong> The drill is not the finished hole. Press-fit and tight-tolerance holes need the finished, plated diameter stated on the drawing.</p>
+<p><strong>Drawing sharp internal corners.</strong> A routed slot or cutout cannot have a zero-radius inside corner. The router bit leaves a radius, and the design must allow for it — or specify a smaller bit and accept the cost.</p>
+<p><strong>Copper too close to the board edge.</strong> Edge copper gets damaged by the router and can short to enclosures. Keep copper and components clear of the outline by a stated margin.</p>
+<p><strong>No tolerance notes on the fabrication drawing.</strong> A drawing with no stated tolerances is quoted at the fabricator&#x27;s defaults, which may not match the design&#x27;s needs — especially for press-fit holes, edge connectors and tight outlines.</p>
+<p><strong>Treating the outline as exact.</strong> Enclosures, card guides and mating connectors all have their own tolerances. A board drawn to nominal dimensions with no allowance for its own routing tolerance will not fit every time.</p>
+<h2>Pre-order checklist</h2>
+<ul>
+<li>[ ] Pad diameters sized from hole diameter plus twice the required annular ring — not from a library default</li>
+<li>[ ] Teardrops added where traces meet small pads, especially on fine-pitch and high-layer boards</li>
+<li>[ ] Finished hole diameters stated (plated vs non-plated), with the plating allowance accounted for</li>
+<li>[ ] Press-fit holes specified with their own tolerance band, not the generic drill tolerance</li>
+<li>[ ] Backdrill depth and remaining stub checked against board thickness tolerance</li>
+<li>[ ] Board outline tolerance stated; enclosure and connector fit checked against the worst case, not the nominal</li>
+<li>[ ] Copper and component keep-out from the routed edge defined</li>
+<li>[ ] Slots and cutouts sized with router-bit radius and tolerance in mind; no zero-radius internal corners</li>
+<li>[ ] Panel breakouts (mouse bites, V-scores) checked against the panelization rules</li>
+<li>[ ] All tolerances written on the fabrication drawing, with the tight ones called out explicitly</li>
+<li>[ ] Board within the fabrication envelope (1–30 layers, 0.15 mm minimum mechanical drill, 0.10 mm laser microvias, panels up to 850 × 520 mm, finished thickness 0.15–7.0 mm)</li>
+<li>[ ] Tolerances reviewed in a DFM check before the layout is frozen</li>
+</ul>
+<h2>Get a second pair of eyes before you build</h2>
+<p>Tolerance problems are the most expensive kind of cheap mistake: they are invisible in the CAD view, they pass electrical test on the boards that survive, and they show up as yield loss, fabrication holds and boards that do not fit their enclosures. HXLFAB offers a free DFM review — send your Gerbers and fabrication drawing to <a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a>, and flag the tight-tolerance features (small annular rings, press-fit holes, routed outlines) so they are checked against the process before the layout is frozen.</p>
+<h2>Related capabilities</h2>
+<ul>
+<li><a href="/pcb-manufacturing/">PCB manufacturing capabilities</a></li>
+<li><a href="/multilayer-pcb/">Multilayer PCB capabilities</a></li>
+<li><a href="/hdi-pcb/">HDI PCB capabilities</a></li>
+<li><a href="/articles/pcb-via-in-pad-filled-capped-vias/">Via-in-pad: filled and capped vias</a></li>
+<li><a href="/articles/pcb-backdrilling/">Backdrilling for high-speed boards</a></li>
+<li><a href="/articles/pcb-panelization-mouse-bites/">Panelization and mouse bites</a></li>
+<li><a href="/help-center/articles/what-dfm-review-covers/">Free DFM review</a></li>
+</ul>
+    </article><aside class="side-panel"><p class="eyebrow">Free DFM review</p><h2>Get a second pair of eyes before you build</h2><p>Send your stackup and design files and an engineer checks them against HXLFAB capabilities — free, before you commit to an order.</p><a class="button" href="/help-center/articles/what-dfm-review-covers/">What the review covers <span>↗</span></a><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a></aside></div></section>
+    <section class="page-cta"><div class="shell page-cta-grid"><h2>Ready to review your PCB build?</h2><a class="button" href="/#quote">Upload Gerber files <span>↗</span></a></div></section>
+  </main>
+  <footer><div class="shell footer-grid"><div><a class="brand footer-brand" href="/"><span class="brand-bars"><i></i><i></i><i></i></span><span>HXL<strong>FAB</strong></span></a><p>PCB manufacturing brand<br>Guilin production base · Shenzhen service office</p></div><div><span>Evidence</span><p><a href="/quality-certifications/">Quality & certifications</a><br><a href="/factory-process/">Factory & process</a><br><a href="/engineering-scenarios/">Engineering scenarios</a></p></div><div><span>Working together</span><p><a href="/help-center/">Help center</a><br><a href="/working-with-us/">Working with us</a><br><a href="/about/">About & team</a><br><a href="/contact/">Contact engineering</a></p></div><div><span>Contact</span><p><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a><br><a href="tel:+8613823663114">+86 138 2366 3114</a></p></div></div><div class="shell footer-bottom"><span>© 2026 HXLFAB. All rights reserved.</span><span><a href="/privacy-file-handling/">Privacy & file handling</a> · Technical data subject to engineering confirmation.</span></div></footer>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PCB Inspection: AOI, X-Ray &amp; Quality Gates | HXLFAB</title>
+  <meta name="description" content="AOI, X-ray and visual inspection catch the PCB defects electrical testing misses: bridges, voids and hidden BGA joints. What each method sees.">
+  <meta name="theme-color" content="#08242e">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://hxlfab.com/articles/pcb-inspection-aoi-xray-quality-gates/">
+  <meta property="og:type" content="article"><meta property="og:site_name" content="HXLFAB"><meta property="og:title" content="PCB Inspection: AOI, X-Ray &amp; Quality Gates | HXLFAB"><meta property="og:description" content="AOI, X-ray and visual inspection catch the PCB defects electrical testing misses: bridges, voids and hidden BGA joints. What each method sees."><meta property="og:url" content="https://hxlfab.com/articles/pcb-inspection-aoi-xray-quality-gates/"><meta property="og:image" content="https://hxlfab.com/images/cnc-drilling.webp">
+  <link rel="stylesheet" href="/styles.css?v=20260815f"><link rel="stylesheet" href="/product-pages.css?v=20260815f">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://hxlfab.com/#organization","name":"HXLFAB","url":"https://hxlfab.com/","email":"sales@hxlfab.com","telephone":"+86 138 2366 3114"},{"@type":"Article","@id":"https://hxlfab.com/articles/pcb-inspection-aoi-xray-quality-gates/#article","headline":"PCB Inspection Beyond Electrical Testing: AOI, X-Ray and the Quality Gates That Catch What a Probe Can&#x27;t","description":"AOI, X-ray and visual inspection catch the PCB defects electrical testing misses: bridges, voids and hidden BGA joints. What each method sees.","url":"https://hxlfab.com/articles/pcb-inspection-aoi-xray-quality-gates/","datePublished":"2026-11-21","author":{"@id":"https://hxlfab.com/#organization"},"publisher":{"@id":"https://hxlfab.com/#organization"},"about":"Printed circuit board manufacturing"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hxlfab.com/"},{"@type":"ListItem","position":2,"name":"Articles","item":"https://hxlfab.com/articles/"},{"@type":"ListItem","position":3,"name":"PCB Inspection Beyond Electrical Testing: AOI, X-Ray and the Quality Gates That Catch What a Probe Can&#x27;t","item":"https://hxlfab.com/articles/pcb-inspection-aoi-xray-quality-gates/"}]}]}</script>
+  <script src="/site.js?v=20260815f" defer></script>
+</head>
+<body>
+  <div class="utility"><div class="shell utility-inner"><span>PCB manufacturing · Guilin production base · Shenzhen service office</span><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a></div></div>
+  <header class="header"><div class="shell nav"><a class="brand" href="/" aria-label="HXLFAB home"><span class="brand-bars"><i></i><i></i><i></i></span><span>HXL<strong>FAB</strong></span></a><nav aria-label="Main navigation"><a href="/pcb-manufacturing/">Manufacturing</a><a href="/quality-certifications/">Quality</a><a href="/factory-process/">Factory</a><a href="/engineering-scenarios/">Engineering reviews</a><a href="/articles/">Articles</a><a href="/help-center/">Help</a><a href="/about/">About</a></nav><a class="button small" href="/#quote">Start an RFQ <span>↗</span></a></div></header>
+  <main>
+    <section class="page-hero"><div class="shell"><p class="breadcrumbs"><a href="/">Home</a> / <a href="/articles/">Articles</a> / PCB Inspection Beyond Electrical Testing: AOI, X-Ray and the Quality Gates That Catch What a Probe Can&#x27;t</p><div class="page-hero-grid"><div><p class="eyebrow">HXLFAB engineering notes</p><h1>PCB Inspection Beyond Electrical Testing: AOI, X-Ray and the Quality Gates That Catch What a Probe Can&#x27;t</h1><p class="lede">AOI, X-ray and visual inspection catch the PCB defects electrical testing misses: bridges, voids and hidden BGA joints. What each method sees.</p><p class="breadcrumbs">Published November 21, 2026</p><div class="hero-actions"><a class="button" href="/help-center/articles/what-dfm-review-covers/">Get a free DFM review <span>↗</span></a><a class="text-link" href="/#quote">Start an RFQ <span>→</span></a></div></div></div></div></section>
+    <section class="section"><div class="shell content-grid"><article class="content-copy">
+<p>An electrical test proves that a board&#x27;s nets are connected the way the design says they should be. It does not prove the board is a good board. A trace narrowed to half its width by over-etching still conducts. A BGA joint with a void under it still passes a continuity check.</p>
+<p>That is why fabrication does not end with the flying probe or the test fixture. Optical inspection, X-ray inspection and a trained human eye form a second layer of quality gates, each catching a class of defect the others cannot see.</p>
+<h2>What electrical testing misses</h2>
+<p>Electrical testing answers one question: is every net continuous, and is every net isolated from every other? It is silent on everything else:</p>
+<ul>
+<li><strong>A trace that is too thin but not open.</strong> Over-etching can remove a third of a trace&#x27;s width. The net still conducts, the test still passes, and the trace runs hot in the field.</li>
+<li><strong>A solder joint that is connected but weak.</strong> A cold joint, a large void, or a BGA ball touching its pad at a single point will pass continuity and fail later under thermal cycling or vibration.</li>
+<li><strong>Surface defects.</strong> Scratches through solder mask, mask on a pad, a damaged gold finger, a bowed panel — none of these change a net&#x27;s resistance, and none are caught by a probe.</li>
+<li><strong>Defects inside the board.</strong> A void in a filled via, a delamination between layers, a misregistered inner layer: invisible from the surface and decisive for the board&#x27;s life.</li>
+</ul>
+<p>Inspection exists to close those gaps.</p>
+<h2>AOI: automated optical inspection</h2>
+<p>AOI is a camera system that photographs the board and compares what it sees against the design data — Gerbers, or a known-good &quot;golden board&quot;. Modern systems resolve features down to a few microns, which is what makes them usable on dense boards with 3/3 mil trace and space, 0.10 mm laser vias and 0.15 mm mechanical drills.</p>
+<p>On a bare board, AOI is typically run after etching and again after solder mask. It catches:</p>
+<ul>
+<li><strong>Opens and shorts.</strong> A trace broken by a scratch or a particle, or two traces bridged by leftover copper — caught earlier than electrical test, before the cost of drilling, plating and finishing.</li>
+<li><strong>Trace width violations.</strong> A trace etched narrower than drawn, or a neck-down at a pad entry. AOI measures the actual copper, so a systematic etch problem shows up on the first panel, not the first field failure.</li>
+<li><strong>Missing or damaged features.</strong> A missing drill, a broken annular ring, a pad lifted by handling, solder mask missing where it should be — or mask sitting on a pad that must stay bare.</li>
+<li><strong>Registration errors.</strong> Inner-layer artwork shifted relative to the outer layers shows up as pads that no longer line up with their holes, or annular rings thin on one side and fat on the other.</li>
+</ul>
+<p>AOI&#x27;s blind spot is depth. It sees the surface and only the surface: it cannot see an inner-layer defect, a void inside a solder joint, or anything under a component. It is also only as good as its program — wrong comparison data passes real defects, and over-aggressive tuning drowns real defects in false calls. Ask how false calls are dispositioned: a shop that reviews every AOI flag with a trained operator is running a quality gate; a shop that auto-passes flags is running a camera.</p>
+<h2>X-ray inspection: seeing under the surface</h2>
+<p>X-ray is the answer to AOI&#x27;s blind spot. X-rays pass through the board, so the method sees what is hidden: joints under BGAs and QFNs, voids inside solder, the fill inside a via, the alignment of inner layers. 2D X-ray is fast enough for production sampling; 3D X-ray (CT) reconstructs the joint in slices for ambiguous cases, but is slower and usually a failure-analysis tool rather than a production gate.</p>
+<p>The main uses are:</p>
+<ul>
+<li><strong>BGA and QFN joints.</strong> The balls under a BGA cannot be seen optically at all. X-ray shows whether each ball is present, whether it has wetted its pad, and whether balls have bridged. A ball present but not wetted — head-in-pillow — looks identical to a good joint from every other angle.</li>
+<li><strong>Voids in solder joints.</strong> A small void is normal; a large void, or a void at the joint interface, reduces the joint&#x27;s strength and thermal path. X-ray measures void area as a percentage of the joint, which is how acceptance criteria are usually written.</li>
+<li><strong>Via fill.</strong> For filled and capped vias — the via-in-pad structures used for dense BGA fan-out — X-ray confirms the fill is complete and void-free. An unfilled via under a BGA pad can outgas during reflow and blow a hole in the joint.</li>
+<li><strong>Inner-layer registration.</strong> X-ray can verify that inner-layer features line up with drilled holes, and reveal a delamination or misregistered layer that no surface check would ever find.</li>
+</ul>
+<p>X-ray has its own limits. It cannot see a defect with no density contrast against its surroundings — a hairline crack in a trace is invisible. And it is a sampling tool on most production lines: every board may get AOI, but only a sample gets X-ray, unless the design justifies 100% coverage. If your board has hidden joints, say so on the order and agree the sampling rate before production starts.</p>
+<h2>Visual inspection: the check that still needs a human</h2>
+<p>Between the machines sits the oldest method: a person looking at the board. It catches the defects that are obvious to a trained eye and invisible to a programmed threshold — and it is the only check that judges the board as a finished object.</p>
+<p>What a visual inspector is looking for:</p>
+<ul>
+<li><strong>Solder mask and silkscreen.</strong> Mask peeling at an edge, mask bridging between pads, silkscreen text smeared or printed over a pad. These are usually process problems, and they show up as a pattern across a panel rather than on a single board.</li>
+<li><strong>Surface finish.</strong> Discoloured or patchy finish, contamination on exposed pads, gold fingers scratched or showing nickel through the gold.</li>
+<li><strong>Mechanical damage.</strong> A chipped board edge, a cracked corner, a mouse-bite tab that broke out rough, a panel visibly bowed or twisted. Boards up to 850 × 520 mm and finished thicknesses from 0.15 to 7.0 mm all have to survive handling, and damage accumulates between processes.</li>
+<li><strong>The things the machines were not asked to check.</strong> A wrong solder mask colour, a missing logo, a date code on the wrong side — errors no AOI program or X-ray will flag because they were never in the comparison data.</li>
+</ul>
+<h2>Cross-sectioning: the destructive check that settles arguments</h2>
+<p>When AOI, X-ray and visual inspection disagree — or when a new process needs proving — the board is cut. A cross-section is a slice through the board, polished and examined under a microscope: plating thickness in a hole, the fill inside a via, the bond between layers, the true shape of a solder joint. It is destructive, so it is done on coupons and sacrificial boards, as a process proof: the first article of a new stackup, a new material such as a PTFE/FR-4 hybrid or a high-Tg TG170 laminate, or a via-in-pad design with 0.10 mm laser vias gets cross-sectioned before volume runs.</p>
+<h2>How the gates fit together</h2>
+<p>No single method is enough. A defect caught at etching costs a panel; the same defect caught after assembly costs a finished board, components and rework time. The practical stack for a typical multilayer board:</p>
+<ul>
+<li><strong>After etching:</strong> AOI on inner and outer layers.</li>
+<li><strong>After drilling and plating:</strong> visual and AOI checks on hole quality and annular ring, plus cross-sections on first-article coupons.</li>
+<li><strong>After solder mask:</strong> AOI and visual inspection for mask coverage and registration.</li>
+<li><strong>After surface finish:</strong> visual inspection of pads and fingers, plus electrical testing.</li>
+<li><strong>For assembled boards with hidden joints:</strong> X-ray on a sample — or on every board, if the design justifies it.</li>
+</ul>
+<h2>Specifying inspection on your order</h2>
+<p>Inspection is not automatic, and its scope is not standard — two fabricators quoting the same Gerbers can quote very different inspection regimes. Put the following on your fabrication drawing or purchase order:</p>
+<ul>
+<li><strong>AOI coverage.</strong> 100% AOI on outer layers is the usual expectation for dense boards; confirm it rather than assuming it, and confirm inner-layer AOI for multilayer boards (1–30 layers) where an inner defect cannot be reworked.</li>
+<li><strong>X-ray scope and sampling.</strong> State which components need X-ray — BGAs, QFNs, any via-in-pad area — and the sampling rate. If you need 100% X-ray on a BGA board, say so explicitly; the default is usually a sample.</li>
+<li><strong>Acceptance criteria.</strong> Name the standard your board is judged against, and the class. A Class 2 board and a Class 3 board are inspected to different thresholds for the same defect.</li>
+<li><strong>Cross-section requirements.</strong> For a new stackup, a new material or a via-in-pad design, ask for first-article cross-sections and the report that goes with them.</li>
+<li><strong>What happens to a failed board.</strong> Scrap, rework or use-as-is with a concession — agree it in advance, not after a panel fails.</li>
+</ul>
+<h2>Common mistakes</h2>
+<p><strong>Assuming electrical test equals inspection.</strong> A board can pass every net test and still be a bad board. Continuity is one property, not the whole quality picture.</p>
+<p><strong>Ordering X-ray for a board with no hidden joints.</strong> If every joint is visible from the surface, AOI and visual inspection cover it. X-ray adds cost and time without adding information.</p>
+<p><strong>Skipping inspection on a prototype.</strong> Prototypes are where new stackups and new materials are proven. A cross-section on the first article is the cheapest insurance in the whole build.</p>
+<p><strong>Not stating the acceptance class.</strong> Without a named class, the fabricator inspects to its own default — which may be looser than your product needs, and you will only find out when a customer does.</p>
+<p><strong>Treating AOI flags as defects.</strong> An AOI flag is a candidate, not a verdict. Boards scrapped on unreviewed flags waste good product; boards shipped on unreviewed flags ship real defects.</p>
+<h2>Pre-order checklist</h2>
+<ul>
+<li>[ ] Inspection scope written on the drawing or PO: AOI coverage, X-ray scope and sampling, visual inspection</li>
+<li>[ ] Acceptance standard and class named explicitly</li>
+<li>[ ] Hidden-joint components (BGA, QFN, via-in-pad) identified so X-ray coverage is planned, not improvised</li>
+<li>[ ] First-article cross-sections requested for a new stackup, new material or via-in-pad design</li>
+<li>[ ] AOI flag review and disposition process confirmed — flags are reviewed by an operator, not auto-passed</li>
+<li>[ ] Board features within the fabrication envelope (3/3 mil trace and space, 0.10 mm laser vias, 0.15 mm mechanical drills, panels up to 850 × 520 mm, finished thickness 0.15–7.0 mm)</li>
+<li>[ ] Fail disposition agreed in advance: scrap, rework, or concession</li>
+<li>[ ] Inspection requirements included in the DFM review before the layout is frozen</li>
+</ul>
+<h2>Get a second pair of eyes before you build</h2>
+<p>Most inspection failures trace back to a design decision, not a factory error: a BGA with no X-ray access planned, a via-in-pad layout with no fill specification, a dense board ordered with no stated acceptance class. Those are all visible on paper before a single panel is etched. HXLFAB offers a free DFM review — send your Gerbers and fabrication drawing to <a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a>, and flag any hidden-joint components or via-in-pad areas so the inspection scope is agreed before production starts.</p>
+<h2>Related capabilities</h2>
+<ul>
+<li><a href="/pcb-manufacturing/">PCB manufacturing capabilities</a></li>
+<li><a href="/articles/pcb-electrical-testing-methods/">PCB electrical testing methods</a></li>
+<li><a href="/articles/dfm-checklist/">PCB DFM checklist</a></li>
+<li><a href="/multilayer-pcb/">Multilayer PCB capabilities</a></li>
+<li><a href="/help-center/articles/what-dfm-review-covers/">Free DFM review</a></li>
+</ul>
+    </article><aside class="side-panel"><p class="eyebrow">Free DFM review</p><h2>Get a second pair of eyes before you build</h2><p>Send your stackup and design files and an engineer checks them against HXLFAB capabilities — free, before you commit to an order.</p><a class="button" href="/help-center/articles/what-dfm-review-covers/">What the review covers <span>↗</span></a><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a></aside></div></section>
+    <section class="page-cta"><div class="shell page-cta-grid"><h2>Ready to review your PCB build?</h2><a class="button" href="/#quote">Upload Gerber files <span>↗</span></a></div></section>
+  </main>
+  <footer><div class="shell footer-grid"><div><a class="brand footer-brand" href="/"><span class="brand-bars"><i></i><i></i><i></i></span><span>HXL<strong>FAB</strong></span></a><p>PCB manufacturing brand<br>Guilin production base · Shenzhen service office</p></div><div><span>Evidence</span><p><a href="/quality-certifications/">Quality & certifications</a><br><a href="/factory-process/">Factory & process</a><br><a href="/engineering-scenarios/">Engineering scenarios</a></p></div><div><span>Working together</span><p><a href="/help-center/">Help center</a><br><a href="/working-with-us/">Working with us</a><br><a href="/about/">About & team</a><br><a href="/contact/">Contact engineering</a></p></div><div><span>Contact</span><p><a href="mailto:sales@hxlfab.com">sales@hxlfab.com</a><br><a href="tel:+8613823663114">+86 138 2366 3114</a></p></div></div><div class="shell footer-bottom"><span>© 2026 HXLFAB. All rights reserved.</span><span><a href="/privacy-file-handling/">Privacy & file handling</a> · Technical data subject to engineering confirmation.</span></div></footer>
+</body>
+</html>
