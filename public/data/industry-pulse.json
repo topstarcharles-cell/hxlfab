@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-24T16:57:10.000Z",
+  "updatedAt": "2026-11-25T21:44:44.000Z",
   "copper": {
     "seriesId": "PCOPPUSDM",
     "benchmark": "Global copper price",
@@ -51,6 +51,12 @@
   },
   "news": [
     {
+      "title": "The Global Electronics Association Issues a Section 301 Tariffs Statement",
+      "url": "https://www.electronics.org/news-release/global-electronics-association-issues-section-301-tariffs-statement",
+      "source": "Global Electronics Association",
+      "publishedAt": "2026-11-25T21:44:44.000Z"
+    },
+    {
       "title": "North American PCB Industry Posts Strong Year-Over-Year Growth in October",
       "url": "https://www.electronics.org/news-release/north-american-pcb-industry-posts-strong-year-over-year-growth-october",
       "source": "Global Electronics Association",
@@ -67,12 +73,6 @@
       "url": "https://www.electronics.org/event/3rd-pan-european-electronics-design-conference",
       "source": "Global Electronics Association",
       "publishedAt": "2026-11-23T12:53:17.000Z"
-    },
-    {
-      "title": "Global Electronics Association: Growing Shortages Across the PCB Supply Chain Threaten the Next Wave of AI and Electronics",
-      "url": "https://www.electronics.org/news-release/global-electronics-association-growing-shortages-across-pcb-supply-chain-threaten-next",
-      "source": "Global Electronics Association",
-      "publishedAt": "2026-11-19T04:31:03.000Z"
     }
   ],
   "newsSources": [
